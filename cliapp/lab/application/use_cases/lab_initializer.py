@@ -14,6 +14,7 @@ from lab.core.interfaces.lab_port import LabPort
 from lab.infrastructure.ui.progress_notifier_adapter import ProgressNotifierAdapter
 from lab.infrastructure.adapters.container_adapter import ContainerAdapter
 from lab.infrastructure.adapters.registry_adapter import RegistryAdapter
+from lab.infrastructure.ui.i18n import get_text
 
 class LabInitializer:
 
@@ -57,21 +58,21 @@ class LabInitializer:
     def execute(self, service: LabPort, repo_adapter: LabRepository, lab: Lab) -> None:
         notifier = ProgressNotifierAdapter()
 
-        event_info = EventInfo(name='Verificando si Ansible esta instalado')
+        event_info = EventInfo(name=get_text('verificando_ansible'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = service.verify_context()
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Definiendo fichero de configuracion')
+        event_info = EventInfo(name=get_text('definiendo_fichero'))
         spinner_handle, finished_event = notifier.start(event_info)
         repo_adapter.save(lab)
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Inicializando laboratorio')
+        event_info = EventInfo(name=get_text('inicializando_lab'))
         spinner_handle, finished_event = notifier.start(event_info)
         LAB_IMAGES = RegistryAdapter().auto_discover_images()
         failed, error_output = service.init(ContainerAdapter(engine=lab.engine), LAB_IMAGES)
@@ -79,7 +80,7 @@ class LabInitializer:
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Desplegando la clave privada del laboratorio')
+        event_info = EventInfo(name=get_text('desplegando_clave'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._deploy_priv_key()
         event_info.failed = failed; event_info.error_msg = error_output

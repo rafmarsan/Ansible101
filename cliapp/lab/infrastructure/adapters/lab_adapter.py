@@ -7,6 +7,7 @@ from typing import Tuple, Dict
 import logging
 
 from lab.core.interfaces.container_port import ContainerPort
+from lab.infrastructure.ui.i18n import get_text
 
 logger = logging.getLogger("lab")
 
@@ -22,7 +23,7 @@ class LabAdapter:
         # if ansible_path is None:
         if ansible_path is None:
             failed = True
-            error_output = 'Ansible no esta disponible en el entorno actual'
+            error_output = get_text('ansible_no_disponible')
             return failed, error_output 
         try:
             result = subprocess.run(
@@ -35,11 +36,11 @@ class LabAdapter:
             return failed, error_output
         except subprocess.CalledProcessError as e:
             failed = True
-            error_output = "No se pudo ejecutar `ansible --version`. Verifica la instalacion"
+            error_output = get_text('error_ansible_version')
             return failed, error_output 
         except FileNotFoundError:
             failed = True
-            error_output = "No se encontro el ejecutable de Ansible en el PATH"
+            error_output = get_text('error_ansible_path')
             return failed, error_output 
 
     

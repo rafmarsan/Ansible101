@@ -31,7 +31,8 @@ class LabRepositoryAdapter:
             error_output = f"{type(e).__name__}: {e}"
             return False, Lab(), error_output
         engine = data.get('engine')
-        lab = Lab(engine=engine) 
+        language = data.get('language', 'es')
+        lab = Lab(engine=engine, language=language) 
         # if LAB_CONFIG_PATH.exists() and not force:
         #     failed = True
         #     error_output = f"Ya existe una instancia de Lab [engine={lab.engine}]. Para crear una nueva instancia, usar 'lab init <engine> -f' o borrar el fichero '~/.lab_config.json'"
