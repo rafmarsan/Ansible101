@@ -22,6 +22,27 @@ theme:
         icon: material/brightness-7 
         name: Switch to dark mode
 
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: es
+          default: true
+          name: Español
+        - locale: en
+          name: English
+          nav_translations:
+            Contenido: Content
+            Introduccion: Introduction
+            Fundamentos: Basics
+            Variables: Variables
+            Tasks, Roles y Handlers: Tasks, Roles and Handlers
+            Templates: Templates
+            Configurar WebServers: Configure WebServers
+            Configurar Databases: Configure Databases
+            Proyecto final: Final project
+
 markdown_extensions:
   - admonition
   - pymdownx.details
