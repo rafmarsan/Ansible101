@@ -92,7 +92,7 @@ RUN pip install --no-cache-dir \
     paramiko==4.0.0
 ```
 
-```shell
+<!-- ```shell
 podman run --name lab-build -it \
   -v "$PWD:/src:Z" \
   -w /src \
@@ -104,11 +104,35 @@ podman run --name lab-build -it \
     --static-libpython=no \
     --include-distribution-metadata=lab \
     --include-data-dir=lab/infrastructure/containerfiles=lab/infrastructure/containerfiles \
-    lab/main.py \
     --output-dir=/home/builder/build_output \
-    --output-filename=lab-cli
+    --output-filename=lab-cli \
+    lab/main.py
+"
+``` -->
+```shell
+podman rm -f lab-build
+podman run --name lab-build -it \
+  -v "$PWD:/src:Z" \
+  lab-build-ol8 \
+  bash -c "
+    cp -r /src /tmp/build_dir && \
+    cd /tmp/build_dir && \
+    pip install -r build_requirements.txt && \
+    pip install . && \
+    python -m nuitka \
+      --standalone \
+      --onefile \
+      --static-libpython=no \
+      --include-distribution-metadata=lab \
+      --include-data-dir=lab/infrastructure/containerfiles=lab/infrastructure/containerfiles \
+      --include-package=lab \
+      --include-module=yaml \
+      --output-dir=/home/builder/build_output \
+      --output-filename=lab-cli \
+      lab/main.py
 "
 ```
+
 ```shell
 podman cp lab-build:/home/builder/build_output/lab-cli lab && \
 podman rm -f lab-build

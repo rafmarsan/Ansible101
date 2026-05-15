@@ -1,7 +1,7 @@
 [project]
 # Información general del proyecto
 name = "lab"  # Nombre del proyecto. Usado para empaquetado e instalación.
-version = "0.7.3"  # Versión actual del proyecto.
+version = "0.8.7"  # Versión actual del proyecto.
 description = "CLI para la gestión de ejercicios de laboratorio de un curso Ansible."  # Descripción corta.
 authors = [
   { name = "Rafael Marín", email = "trainedbronze@gmail.com" }
@@ -16,10 +16,12 @@ dependencies = [
   "rich==14.1.0",
   "podman==5.6.0",
   "paramiko==4.0.0",
+  "PyYAML==6.0.0",
 ]
 # "docker==7.1.0",
 
-license = { text = "GPL-3.0-or-later" }
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
 
 [project.scripts]
 # Define los scripts de consola que se instalan con el paquete.
@@ -37,9 +39,6 @@ requires = [               # Herramientas necesarias para construirlo
 # build-backend indica qué herramienta se usa para construir
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-license-files = ["LICENSE"]
-
 # Opcional: secciones de datos adicionales para setuptools
 [tool.setuptools.package-data]
 lab = [
@@ -50,3 +49,18 @@ lab = [
 
 # Otras opciones avanzadas (comentadas) para excluir ciertos módulos o tests
 # nofollow-import-to = ["*.tests", "*.distutils"]
+
+[tool.nuitka]
+# Forzar comportamiento standalone y empaquetar en un solo ejecutable
+standalone = true
+onefile = true
+static-libpython = "no"
+# Incluir explícitamente todo tu paquete 'lab' y sus submódulos
+include-package = ["lab"]
+# Solucionar el problema de PyYAML forzando la inclusión del módulo 'yaml'
+include-module = ["yaml"]
+# Metadatos del proyecto requeridos en tiempo de ejecución
+include-distribution-metadata = ["lab"]
+# Copiar tus archivos de configuración/infraestructura dentro del binario
+include-data-dir = ["lab/infrastructure/containerfiles=lab/infrastructure/containerfiles"]
+

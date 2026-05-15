@@ -58,16 +58,15 @@ class LabInitializer:
     def execute(self, service: LabPort, repo_adapter: LabRepository, lab: Lab) -> None:
         notifier = ProgressNotifierAdapter()
 
-        event_info = EventInfo(name=get_text('verificando_ansible'))
-        spinner_handle, finished_event = notifier.start(event_info)
-        failed, error_output = service.verify_context()
-        event_info.failed = failed; event_info.error_msg = error_output
-        notifier.finish(spinner_handle, finished_event)
-        sys.exit(1) if event_info.failed else None
-
         event_info = EventInfo(name=get_text('definiendo_fichero'))
         spinner_handle, finished_event = notifier.start(event_info)
         repo_adapter.save(lab)
+        notifier.finish(spinner_handle, finished_event)
+        sys.exit(1) if event_info.failed else None
+
+        event_info = EventInfo(name=get_text('verificando_ansible'))
+        spinner_handle, finished_event = notifier.start(event_info)
+        failed, error_output = service.verify_context()
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
