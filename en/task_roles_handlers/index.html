@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="es" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -16,25 +16,25 @@
       
       
         
-          <link rel="alternate" href="./" hreflang="es">
+          <link rel="alternate" href="../../task_roles_handlers/" hreflang="es">
         
-          <link rel="alternate" href="../en/task_roles_handlers/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Tasks, Roles y Handlers - Ansible101</title>
+        <title>Tasks, Roles and Handlers - Ansible101</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,8 +78,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#4-manejo-de-tareas-roles-y-handlers" class="md-skip">
-          Saltar a contenido
+        <a href="#4-managing-tasks-roles-and-handlers" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -93,8 +93,8 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href=".." title="Ansible101" class="md-header__button md-logo" aria-label="Ansible101" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Ansible101" class="md-header__button md-logo" aria-label="Ansible101" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tasks, Roles y Handlers
+              Tasks, Roles and Handlers
             
           </span>
         </div>
@@ -154,20 +154,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="es" class="md-select__link">
+            <a href="../../task_roles_handlers/" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../en/task_roles_handlers/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -188,16 +188,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -208,7 +208,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando búsqueda
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -220,7 +220,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/rafmarsan/Ansible101" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/rafmarsan/Ansible101" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -254,9 +254,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Ansible101" class="md-nav__button md-logo" aria-label="Ansible101" data-md-component="logo">
+    <a href="../" title="Ansible101" class="md-nav__button md-logo" aria-label="Ansible101" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -266,7 +266,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/rafmarsan/Ansible101" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/rafmarsan/Ansible101" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -286,7 +286,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -333,7 +333,7 @@
   <span class="md-ellipsis">
     
   
-    Contenido
+    Content
   
 
     
@@ -349,7 +349,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Contenido
+    Content
   
 
           </label>
@@ -369,7 +369,7 @@
   <span class="md-ellipsis">
     
   
-    Introduccion
+    Introduction
   
 
     
@@ -397,7 +397,7 @@
   <span class="md-ellipsis">
     
   
-    Fundamentos
+    Basics
   
 
     
@@ -462,7 +462,7 @@
   <span class="md-ellipsis">
     
   
-    Tasks, Roles y Handlers
+    Tasks, Roles and Handlers
   
 
     
@@ -480,7 +480,7 @@
   <span class="md-ellipsis">
     
   
-    Tasks, Roles y Handlers
+    Tasks, Roles and Handlers
   
 
     
@@ -492,7 +492,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -501,15 +501,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
+  <a href="#objectives" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 Objetivos
+        🎯 Objectives
       
     </span>
   </a>
@@ -517,22 +517,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#teoria" class="md-nav__link">
+  <a href="#theory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧠 Teoría
+        🧠 Theory
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧠 Teoría">
+    <nav class="md-nav" aria-label="🧠 Theory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#que-son-las-tasks" class="md-nav__link">
+  <a href="#what-are-tasks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ¿Qué son las Tasks?
+        What are Tasks?
       
     </span>
   </a>
@@ -540,15 +540,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#separacion-de-tareas-en-archivos" class="md-nav__link">
+  <a href="#separating-tasks-into-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Separación de Tareas en Archivos
+        Separating Tasks into Files
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Separación de Tareas en Archivos">
+    <nav class="md-nav" aria-label="Separating Tasks into Files">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -596,10 +596,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#estructura-interna-de-un-rol" class="md-nav__link">
+  <a href="#internal-structure-of-a-role" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estructura interna de un rol
+        Internal structure of a role
       
     </span>
   </a>
@@ -607,10 +607,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#como-funciona-un-rol-internamente" class="md-nav__link">
+  <a href="#how-does-a-role-work-internally" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ¿Cómo funciona un rol internamente?
+        How does a role work internally?
       
     </span>
   </a>
@@ -618,10 +618,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#variables-internas-del-rol" class="md-nav__link">
+  <a href="#internal-role-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Variables internas del rol
+        Internal role variables
       
     </span>
   </a>
@@ -629,10 +629,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#plantillas-y-archivos-del-rol" class="md-nav__link">
+  <a href="#role-templates-and-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plantillas y archivos del rol
+        Role templates and files
       
     </span>
   </a>
@@ -640,10 +640,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dependencias-entre-roles" class="md-nav__link">
+  <a href="#dependencies-between-roles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dependencias entre roles
+        Dependencies between roles
       
     </span>
   </a>
@@ -651,10 +651,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-completo-de-rol" class="md-nav__link">
+  <a href="#complete-role-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo completo de rol
+        Complete role example
       
     </span>
   </a>
@@ -662,10 +662,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#usar-un-rol-en-un-playbook" class="md-nav__link">
+  <a href="#using-a-role-in-a-playbook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usar un rol en un playbook
+        Using a role in a playbook
       
     </span>
   </a>
@@ -690,10 +690,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#encadenamiento-de-handlers" class="md-nav__link">
+  <a href="#chaining-handlers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧬 Encadenamiento de Handlers
+        🧬 Chaining Handlers
       
     </span>
   </a>
@@ -706,22 +706,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#errores-comunes-y-buenas-practicas" class="md-nav__link">
+  <a href="#common-errors-and-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚨 Errores Comunes y Buenas Prácticas
+        🚨 Common Errors and Best Practices
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚨 Errores Comunes y Buenas Prácticas">
+    <nav class="md-nav" aria-label="🚨 Common Errors and Best Practices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#errores-comunes" class="md-nav__link">
+  <a href="#common-errors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Errores Comunes
+        Common Errors
       
     </span>
   </a>
@@ -729,10 +729,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buenas-practicas" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Buenas Prácticas
+        Best Practices
       
     </span>
   </a>
@@ -745,10 +745,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-practico" class="md-nav__link">
+  <a href="#practical-exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio Práctico
+        📚 Practical Exercise
       
     </span>
   </a>
@@ -806,7 +806,7 @@
   <span class="md-ellipsis">
     
   
-    Configurar WebServers
+    Configure WebServers
   
 
     
@@ -834,7 +834,7 @@
   <span class="md-ellipsis">
     
   
-    Configurar Databases
+    Configure Databases
   
 
     
@@ -862,7 +862,7 @@
   <span class="md-ellipsis">
     
   
-    Proyecto final
+    Final project
   
 
     
@@ -896,7 +896,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -905,15 +905,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
+  <a href="#objectives" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 Objetivos
+        🎯 Objectives
       
     </span>
   </a>
@@ -921,22 +921,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#teoria" class="md-nav__link">
+  <a href="#theory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧠 Teoría
+        🧠 Theory
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧠 Teoría">
+    <nav class="md-nav" aria-label="🧠 Theory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#que-son-las-tasks" class="md-nav__link">
+  <a href="#what-are-tasks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ¿Qué son las Tasks?
+        What are Tasks?
       
     </span>
   </a>
@@ -944,15 +944,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#separacion-de-tareas-en-archivos" class="md-nav__link">
+  <a href="#separating-tasks-into-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Separación de Tareas en Archivos
+        Separating Tasks into Files
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Separación de Tareas en Archivos">
+    <nav class="md-nav" aria-label="Separating Tasks into Files">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1000,10 +1000,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#estructura-interna-de-un-rol" class="md-nav__link">
+  <a href="#internal-structure-of-a-role" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estructura interna de un rol
+        Internal structure of a role
       
     </span>
   </a>
@@ -1011,10 +1011,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#como-funciona-un-rol-internamente" class="md-nav__link">
+  <a href="#how-does-a-role-work-internally" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ¿Cómo funciona un rol internamente?
+        How does a role work internally?
       
     </span>
   </a>
@@ -1022,10 +1022,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#variables-internas-del-rol" class="md-nav__link">
+  <a href="#internal-role-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Variables internas del rol
+        Internal role variables
       
     </span>
   </a>
@@ -1033,10 +1033,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#plantillas-y-archivos-del-rol" class="md-nav__link">
+  <a href="#role-templates-and-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Plantillas y archivos del rol
+        Role templates and files
       
     </span>
   </a>
@@ -1044,10 +1044,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dependencias-entre-roles" class="md-nav__link">
+  <a href="#dependencies-between-roles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Dependencias entre roles
+        Dependencies between roles
       
     </span>
   </a>
@@ -1055,10 +1055,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-completo-de-rol" class="md-nav__link">
+  <a href="#complete-role-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo completo de rol
+        Complete role example
       
     </span>
   </a>
@@ -1066,10 +1066,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#usar-un-rol-en-un-playbook" class="md-nav__link">
+  <a href="#using-a-role-in-a-playbook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usar un rol en un playbook
+        Using a role in a playbook
       
     </span>
   </a>
@@ -1094,10 +1094,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#encadenamiento-de-handlers" class="md-nav__link">
+  <a href="#chaining-handlers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧬 Encadenamiento de Handlers
+        🧬 Chaining Handlers
       
     </span>
   </a>
@@ -1110,22 +1110,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#errores-comunes-y-buenas-practicas" class="md-nav__link">
+  <a href="#common-errors-and-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚨 Errores Comunes y Buenas Prácticas
+        🚨 Common Errors and Best Practices
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚨 Errores Comunes y Buenas Prácticas">
+    <nav class="md-nav" aria-label="🚨 Common Errors and Best Practices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#errores-comunes" class="md-nav__link">
+  <a href="#common-errors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Errores Comunes
+        Common Errors
       
     </span>
   </a>
@@ -1133,10 +1133,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buenas-practicas" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Buenas Prácticas
+        Best Practices
       
     </span>
   </a>
@@ -1149,10 +1149,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-practico" class="md-nav__link">
+  <a href="#practical-exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio Práctico
+        📚 Practical Exercise
       
     </span>
   </a>
@@ -1183,61 +1183,61 @@
 <!-- Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan) -->
 <!-- Licensed under the GNU GPLv3. See LICENSE file for details. -->
 
-<h1 id="4-manejo-de-tareas-roles-y-handlers">🧩 4: Manejo de <em>Tareas</em>, <em>Roles</em> y <em>Handlers</em></h1>
-<h2 id="objetivos">🎯 Objetivos</h2>
-<p>Al finalizar este módulo serás capaz de:</p>
+<h1 id="4-managing-tasks-roles-and-handlers">🧩 4: Managing <em>Tasks</em>, <em>Roles</em>, and <em>Handlers</em></h1>
+<h2 id="objectives">🎯 Objectives</h2>
+<p>By the end of this module, you will be able to:</p>
 <ol>
-<li>Organizar tareas dentro de un playbook de forma limpia y estructurada.</li>
-<li>Crear y utilizar <strong>roles</strong> para separar lógica y reutilizar código.</li>
-<li>Definir y ejecutar <strong>handlers</strong> para gestionar reinicios, recargas o acciones condicionales.</li>
-<li>Aplicar buenas prácticas de estructura en proyectos Ansible.</li>
+<li>Organize tasks within a playbook in a clean and structured way.</li>
+<li>Create and use <strong>roles</strong> to separate logic and reuse code.</li>
+<li>Define and execute <strong>handlers</strong> to manage restarts, reloads, or conditional actions.</li>
+<li>Apply structural best practices in Ansible projects.</li>
 </ol>
 <hr />
-<h2 id="teoria">🧠 Teoría</h2>
-<h3 id="que-son-las-tasks">¿Qué son las <em>Tasks</em>?</h3>
-<p>Las <strong>tasks</strong> son el conjuto de acciones que Ansible ejecuta sobre los hosts: instalar paquetes, crear archivos, gestionar servicios, etc, apoyandose en los diferentes módulos. Se definen dentro de <code>tasks:</code> en un playbook o en archivos externos.</p>
-<p>Ejemplo básico:</p>
+<h2 id="theory">🧠 Theory</h2>
+<h3 id="what-are-tasks">What are <em>Tasks</em>?</h3>
+<p><strong>Tasks</strong> are the set of actions that Ansible executes on the hosts: installing packages, creating files, managing services, etc., relying on the different modules. They are defined inside <code>tasks:</code> in a playbook or in external files.</p>
+<p>Basic example:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">tasks</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Instalar Nginx</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Nginx</span>
 <span class="w">    </span><span class="nt">ansible.builtin.package</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
 <span class="w">      </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span>
 </code></pre></div>
-<p>Las tareas se ejecutan <strong>de arriba a abajo</strong> en el orden en que aparecen.</p>
+<p>Tasks are executed <strong>top-down</strong> in the order they appear.</p>
 <hr />
-<h3 id="separacion-de-tareas-en-archivos">Separación de Tareas en Archivos</h3>
-<p>Para playbooks grandes, es común mover las tareas a archivos externos. Esto permite playbooks más limpios y estructurados:</p>
+<h3 id="separating-tasks-into-files">Separating Tasks into Files</h3>
+<p>For large playbooks, it is common to move tasks to external files. This allows for cleaner and more structured playbooks:</p>
 <h4 id="mainyml"><code>main.yml</code></h4>
 <div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
 <span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Incluir tareas</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Include tasks</span>
 <span class="w">      </span><span class="nt">ansible.builtin.include_tasks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tasks/web.yml</span>
 </code></pre></div>
 <h4 id="taskswebyml"><code>tasks/web.yml</code></h4>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Crear directorio web</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create web directory</span>
 <span class="w">  </span><span class="nt">ansible.builtin.file</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/web</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">directory</span>
 </code></pre></div>
 <hr />
 <h2 id="roles">🏗️ Roles</h2>
-<p>Los <strong>roles</strong> son la forma estándar y recomendada de <strong>organizar, modularizar y reutilizar</strong> lógica en Ansible.
-Un rol encapsula:</p>
+<p><strong>Roles</strong> are the standard and recommended way to <strong>organize, modularize, and reuse</strong> logic in Ansible.
+A role encapsulates:</p>
 <ul>
-<li>Defaults (Variables por defecto)</li>
-<li>Tareas (Tasks)</li>
-<li>Variables (Vars)</li>
+<li>Defaults</li>
+<li>Tasks</li>
+<li>Vars</li>
 <li>Handlers</li>
-<li>Archivos (Files)</li>
-<li>Plantillas (Templates)</li>
+<li>Files</li>
+<li>Templates</li>
 </ul>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p><a href="https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_reuse_roles.html">Link</a> a la documentación oficial</p>
+<p><a href="https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_reuse_roles.html">Link</a> to the official documentation</p>
 </div>
 <hr />
-<h3 id="estructura-interna-de-un-rol">Estructura interna de un rol</h3>
-<p>Estructura típica:</p>
+<h3 id="internal-structure-of-a-role">Internal structure of a role</h3>
+<p>Typical structure:</p>
 <div class="highlight"><pre><span></span><code>roles/
 └── webserver/
     ├── tasks/
@@ -1258,55 +1258,55 @@ Un rol encapsula:</p>
     │   └── main.yml
     └── README.md
 </code></pre></div>
-<p>No es obligatorio usar todas las carpetas, pero <strong>tasks/</strong> y <strong>templates/</strong> suelen ser esenciales.</p>
+<p>It is not mandatory to use all folders, but <strong>tasks/</strong> and <strong>templates/</strong> are usually essential.</p>
 <hr />
-<h3 id="como-funciona-un-rol-internamente"><strong>¿Cómo funciona un rol internamente?</strong></h3>
-<p><strong>El punto de entrada es siempre <code>tasks/main.yml</code></strong>. Es equivalente al <code>main()</code> de un programa.</p>
-<p>Ejemplo:</p>
+<h3 id="how-does-a-role-work-internally"><strong>How does a role work internally?</strong></h3>
+<p><strong>The entry point is always <code>tasks/main.yml</code></strong>. It is equivalent to the <code>main()</code> of a program.</p>
+<p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># roles/webserver/tasks/main.yml</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Instalar paquetes</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install packages</span>
 <span class="w">  </span><span class="nt">ansible.builtin.include_tasks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">install.yml</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Configurar archivos</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Configure files</span>
 <span class="w">  </span><span class="nt">ansible.builtin.include_tasks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">configure.yml</span>
 </code></pre></div>
-<p><code>main.yml</code> <strong>orquesta</strong> internamente el rol, ejecutando <strong>secuencialmente</strong> otros archivos de tareas. También puede contener toda la lógica directamente, pero no es una práctica recomendable por mantenibilidad.</p>
-<p>Esto permite dividir la lógica:</p>
+<p><code>main.yml</code> internally <strong>orchestrates</strong> the role, <strong>sequentially</strong> executing other task files. It can also contain all the logic directly, but it is not a recommended practice for maintainability.</p>
+<p>This allows splitting the logic:</p>
 <ul>
-<li><code>install.yml</code> → instalación de paquetes</li>
-<li><code>configure.yml</code> → plantillas, permisos, etc.</li>
-<li><code>validate.yml</code> → comprobaciones finales</li>
+<li><code>install.yml</code> → package installation</li>
+<li><code>configure.yml</code> → templates, permissions, etc.</li>
+<li><code>validate.yml</code> → final checks</li>
 </ul>
-<p>Orden típico:</p>
+<p>Typical order:</p>
 <ol>
 <li><code>tasks/main.yml</code></li>
-<li>Cualquier include/import dentro del main</li>
-<li>handlers <em>al final del play</em>, si fueron notificados</li>
+<li>Any include/import within main</li>
+<li>handlers <em>at the end of the play</em>, if they were notified</li>
 </ol>
 <hr />
-<h3 id="variables-internas-del-rol"><strong>Variables internas del rol</strong></h3>
+<h3 id="internal-role-variables"><strong>Internal role variables</strong></h3>
 <p><strong><code>defaults/main.yml</code></strong></p>
 <ul>
-<li>Prioridad <strong>más baja</strong> de Ansible.</li>
-<li>Perfecto para valores por defecto que el usuario puede sobrescribir.</li>
+<li><strong>Lowest</strong> priority in Ansible.</li>
+<li>Perfect for default values that the user can override.</li>
 </ul>
-<p>Ejemplo:</p>
+<p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># roles/webserver/defaults/main.yml</span>
 <span class="nt">web_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
 <span class="nt">web_root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/www/html</span>
 </code></pre></div>
 <p><strong><code>vars/main.yml</code></strong></p>
 <ul>
-<li>Alta prioridad.</li>
-<li>Poco recomendado salvo casos especiales.</li>
+<li>High priority.</li>
+<li>Not recommended except for special cases.</li>
 </ul>
-<p>Ejemplo:</p>
+<p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># roles/webserver/vars/main.yml</span>
 <span class="nt">nginx_package_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
 </code></pre></div>
 <hr />
-<h3 id="plantillas-y-archivos-del-rol"><strong>Plantillas y archivos del rol</strong></h3>
-<p>Se acceden dentro del rol sin rutas relativas:</p>
+<h3 id="role-templates-and-files"><strong>Role templates and files</strong></h3>
+<p>They are accessed inside the role without relative paths:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">ansible.builtin.template</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.html.j2</span>
 <span class="w">  </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">web_root</span><span class="nv"> </span><span class="s">}}/index.html&quot;</span>
@@ -1316,28 +1316,28 @@ Un rol encapsula:</p>
 <span class="w">  </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/static_file.txt</span>
 </code></pre></div>
 <hr />
-<h3 id="dependencias-entre-roles"><strong>Dependencias entre roles</strong></h3>
-<p>Se declaran en: <code>roles/webserver/meta/main.yml</code></p>
+<h3 id="dependencies-between-roles"><strong>Dependencies between roles</strong></h3>
+<p>They are declared in: <code>roles/webserver/meta/main.yml</code></p>
 <div class="highlight"><pre><span></span><code><span class="nt">dependencies</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">common</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">firewall</span>
 </code></pre></div>
 <hr />
-<h3 id="ejemplo-completo-de-rol"><strong>Ejemplo completo de rol</strong></h3>
-<p>Tenemos el role <code>webserver</code>, las partes de este serían:</p>
+<h3 id="complete-role-example"><strong>Complete role example</strong></h3>
+<p>We have the <code>webserver</code> role, its parts would be:</p>
 <ol>
 <li><code>roles/webserver/tasks/main.yml</code></li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Incluir instalacion</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Include installation</span>
 <span class="w">  </span><span class="nt">ansible.builtin.include_tasks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">install.yml</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Incluir configuracion</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Include configuration</span>
 <span class="w">  </span><span class="nt">ansible.builtin.include_tasks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">configure.yml</span>
 </code></pre></div>
 <ol>
 <li><code>roles/webserver/tasks/install.yml</code></li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Instalar nginx</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install nginx</span>
 <span class="w">  </span><span class="nt">ansible.builtin.package</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span>
@@ -1345,27 +1345,27 @@ Un rol encapsula:</p>
 <ol>
 <li><code>roles/webserver/tasks/configure.yml</code></li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy del index.html</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy index.html</span>
 <span class="w">  </span><span class="nt">ansible.builtin.template</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.j2</span>
 <span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">web_root</span><span class="nv"> </span><span class="s">}}/index.html&quot;</span>
-<span class="w">  </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recargar nginx</span>
+<span class="w">  </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reload nginx</span>
 </code></pre></div>
 <ol>
 <li><code>roles/webserver/handlers/main.yml</code></li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recargar nginx</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reload nginx</span>
 <span class="w">  </span><span class="nt">ansible.builtin.service</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reloaded</span>
 </code></pre></div>
 <hr />
-<h3 id="usar-un-rol-en-un-playbook"><strong>Usar un rol en un playbook</strong></h3>
+<h3 id="using-a-role-in-a-playbook"><strong>Using a role in a playbook</strong></h3>
 <div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webservers</span>
 <span class="w">  </span><span class="nt">roles</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webserver</span>
 </code></pre></div>
-<p>O con parámetros:</p>
+<p>Or with parameters:</p>
 <div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webservers</span>
 <span class="w">  </span><span class="nt">roles</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webserver</span>
@@ -1373,37 +1373,37 @@ Un rol encapsula:</p>
 </code></pre></div>
 <hr />
 <h2 id="handlers">🔥 Handlers</h2>
-<p>Los <strong>handlers</strong> son tareas especiales que se ejecutan <strong>solo cuando son notificadas</strong> por otra tarea.</p>
-<p><strong>Ejemplo típico: reiniciar un servicio solo cuando hay cambios</strong></p>
+<p><strong>Handlers</strong> are special tasks that are executed <strong>only when notified</strong> by another task.</p>
+<p><strong>Typical example: restart a service only when there are changes</strong></p>
 <div class="highlight"><pre><span></span><code><span class="nt">tasks</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copiar archivo de configuración</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copy configuration file</span>
 <span class="w">    </span><span class="nt">ansible.builtin.template</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx.conf.j2</span>
 <span class="w">      </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/nginx/nginx.conf</span>
-<span class="w">    </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reiniciar nginx</span>
+<span class="w">    </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Restart nginx</span>
 
 <span class="nt">handlers</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reiniciar nginx</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Restart nginx</span>
 <span class="w">    </span><span class="nt">ansible.builtin.service</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
 <span class="w">      </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restarted</span>
 </code></pre></div>
-<p>Características:</p>
+<p>Features:</p>
 <ul>
-<li>Solo se ejecutan <strong>si hubo cambios</strong> en la tarea que los notifica</li>
-<li>Se ejecutan <strong>al final del play</strong>, después de todas las tareas</li>
-<li>Se pueden notificar varias veces, pero solo se ejecutan una vez</li>
-<li>Pueden estar dentro de un <strong>rol</strong> en su carpeta <code>handlers/</code></li>
+<li>They are only executed <strong>if there were changes</strong> in the notifying task</li>
+<li>They are executed <strong>at the end of the play</strong>, after all tasks</li>
+<li>They can be notified multiple times, but are executed only once</li>
+<li>They can be inside a <strong>role</strong> in its <code>handlers/</code> folder</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Se puede forzar que los handlers se ejecuten en un determinado momento usando sin esperar al final
+<p>You can force handlers to execute at a given moment without waiting for the end
 <div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ansible.builtin.meta</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flush_handlers</span>
 </code></pre></div></p>
 </div>
 <hr />
-<h3 id="encadenamiento-de-handlers">🧬 Encadenamiento de Handlers</h3>
-<p>Se pueden <strong>encadenar</strong> handlers usando <code>notify</code> dentro de un handler:</p>
+<h3 id="chaining-handlers">🧬 Chaining Handlers</h3>
+<p>You can <strong>chain</strong> handlers using <code>notify</code> inside a handler:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">handlers</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reload nginx</span>
 <span class="w">    </span><span class="nt">ansible.builtin.service</span><span class="p">:</span>
@@ -1417,42 +1417,42 @@ Un rol encapsula:</p>
 <span class="w">      </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restarted</span>
 </code></pre></div>
 <hr />
-<h2 id="errores-comunes-y-buenas-practicas">🚨 Errores Comunes y Buenas Prácticas</h2>
-<h3 id="errores-comunes">Errores Comunes</h3>
+<h2 id="common-errors-and-best-practices">🚨 Common Errors and Best Practices</h2>
+<h3 id="common-errors">Common Errors</h3>
 <ol>
 <li>
-<p><strong>Diferencia entre <code>include_tasks</code> y <code>import_tasks</code></strong></p>
+<p><strong>Difference between <code>include_tasks</code> and <code>import_tasks</code></strong></p>
 <ul>
-<li><code>import_tasks</code> → <strong>estático</strong>, se carga en parse time</li>
-<li><code>include_tasks</code> → <strong>dinámico</strong>, se evalúa en runtime</li>
+<li><code>import_tasks</code> → <strong>static</strong>, parsed at parse time</li>
+<li><code>include_tasks</code> → <strong>dynamic</strong>, evaluated at runtime</li>
 </ul>
-<p>Ejemplo:
+<p>Example:
 <div class="highlight"><pre><span></span><code><span class="nt">import_tasks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">install.yml</span>
 <span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">some_condition</span>
 </code></pre></div>
-→ No funciona: <code>import_tasks</code> ignora el <code>when</code></p>
+→ Does not work: <code>import_tasks</code> ignores the <code>when</code></p>
 </li>
 </ol>
-<h3 id="buenas-practicas">Buenas Prácticas</h3>
+<h3 id="best-practices">Best Practices</h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <ul>
-<li>Divide <code>tasks/main.yml</code> en múltiples includes para mayor claridad</li>
-<li>Pon variables modificables en <code>defaults/</code>, no en <code>vars/</code></li>
-<li>Usa nombres de variables con prefijo del rol: <code>webserver_port</code>, <code>webserver_root</code></li>
-<li>Mantén los roles autocontenidos: no dependas del proyecto</li>
-<li>Usa handlers <strong>solo</strong> para acciones idempotentes y necesarias</li>
-<li>Evita rutas absolutas dentro del rol cuando puedas parametrizar</li>
-<li>Documenta el rol (README.md dentro del rol)</li>
+<li>Split <code>tasks/main.yml</code> into multiple includes for clarity</li>
+<li>Put modifiable variables in <code>defaults/</code>, not in <code>vars/</code></li>
+<li>Use variable names prefixed with the role name: <code>webserver_port</code>, <code>webserver_root</code></li>
+<li>Keep roles self-contained: do not rely on the project</li>
+<li>Use handlers <strong>only</strong> for idempotent and necessary actions</li>
+<li>Avoid absolute paths within the role when you can parameterize</li>
+<li>Document the role (README.md inside the role)</li>
 </ul>
 </div>
 <hr />
-<h2 id="ejercicio-practico">📚 Ejercicio Práctico</h2>
-<p>Crear un rol llamado <code>webdemo</code> que encapsule lo lógica del ejercicio del tema anterior.</p>
-<p>Para iniciar el ejercicio, ejecuta:
+<h2 id="practical-exercise">📚 Practical Exercise</h2>
+<p>Create a role named <code>webdemo</code> that encapsulates the logic of the previous topic's exercise.</p>
+<p>To start the exercise, run:
 <div class="highlight"><pre><span></span><code>lab<span class="w"> </span>start<span class="w"> </span>role
 </code></pre></div>
-Esto generará la estructura:</p>
+This will generate the structure:</p>
 <div class="highlight"><pre><span></span><code>webdemo/
 ├── defaults/
 │   └── main.yml
@@ -1460,63 +1460,63 @@ Esto generará la estructura:</p>
 │   └── main.yml
 └── ...
 </code></pre></div>
-<p><strong>1. Define las variables por defecto del rol</strong></p>
-<p>En <code>webdemo/defaults/main.yml</code>:
+<p><strong>1. Define the default variables of the role</strong></p>
+<p>In <code>webdemo/defaults/main.yml</code>:
 <div class="highlight"><pre><span></span><code><span class="nt">web_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
 <span class="nt">web_root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/demo</span>
 </code></pre></div></p>
-<p><strong>2. Implementa las tareas del rol</strong></p>
-<p>En <code>webdemo/tasks/main.yml</code>:
+<p><strong>2. Implement the role tasks</strong></p>
+<p>In <code>webdemo/tasks/main.yml</code>:
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Incluimos la logica</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Include logic</span>
 <span class="w">  </span><span class="nt">ansible.builtin.include_tasks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">action.yml</span>
 </code></pre></div></p>
-<p>En <code>webdemo/tasks/action.yml</code>:
+<p>In <code>webdemo/tasks/action.yml</code>:
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Crear directorio web_root</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create web_root directory</span>
 <span class="w">  </span><span class="nt">ansible.builtin.file</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">web_root</span><span class="nv"> </span><span class="s">}}&quot;</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">directory</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Crear archivo index.html</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create index.html file</span>
 <span class="w">  </span><span class="nt">ansible.builtin.copy</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Servidor</span><span class="nv"> </span><span class="s">escuchando</span><span class="nv"> </span><span class="s">en</span><span class="nv"> </span><span class="s">el</span><span class="nv"> </span><span class="s">puerto</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">web_port</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Server</span><span class="nv"> </span><span class="s">listening</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">port</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">web_port</span><span class="nv"> </span><span class="s">}}&quot;</span>
 <span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">web_root</span><span class="nv"> </span><span class="s">}}/index.html&quot;</span>
 </code></pre></div></p>
-<p><strong>3. Crea un playbook que use el rol</strong></p>
-<p>Crea <code>site.yml</code>:
+<p><strong>3. Create a playbook that uses the role</strong></p>
+<p>Create <code>site.yml</code>:
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ejecutar rol webdemo</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run webdemo role</span>
 <span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
 <span class="w">  </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">roles</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webdemo</span>
 </code></pre></div></p>
-<p><strong>4. Ejecuta playbook completo</strong></p>
+<p><strong>4. Run the full playbook</strong></p>
 <div class="highlight"><pre><span></span><code>ansible-playbook<span class="w"> </span>site.yml<span class="w"> </span>-v
 </code></pre></div>
-<p>Para evaluar el ejercicio, ejecuta:
+<p>To grade the exercise, run:
 <div class="highlight"><pre><span></span><code>lab<span class="w"> </span>grade<span class="w"> </span>role
 </code></pre></div></p>
-<p>🔬 <strong>Desafío adicional</strong></p>
+<p>🔬 <strong>Additional Challenge</strong></p>
 <ul>
-<li>Agrega una tarea que muestre con <code>debug:</code> la ruta completa del archivo creado</li>
-<li>Agrega una tarea que muestre con <code>debug:</code> el contenido del archivo creado (se puede hacer en varios pasos)</li>
+<li>Add a task that shows the full path of the created file using <code>debug:</code></li>
+<li>Add a task that shows the content of the created file using <code>debug:</code> (can be done in multiple steps)</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mostrar ruta completa del archivo creado</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Show full path of the created file</span>
 <span class="w">  </span><span class="nt">ansible.builtin.debug</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Archivo</span><span class="nv"> </span><span class="s">creado:</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">web_root</span><span class="nv"> </span><span class="s">}}/index.html&quot;</span>
+<span class="w">    </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Created</span><span class="nv"> </span><span class="s">file:</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">web_root</span><span class="nv"> </span><span class="s">}}/index.html&quot;</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Leer contenido del archivo creado</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Read content of the created file</span>
 <span class="w">  </span><span class="nt">ansible.builtin.slurp</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">web_root</span><span class="nv"> </span><span class="s">}}/index.html&quot;</span>
 <span class="w">  </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index_raw</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mostrar contenido del archivo creado</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Show content of the created file</span>
 <span class="w">  </span><span class="nt">ansible.builtin.debug</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">index_raw.content</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">b64decode</span><span class="nv"> </span><span class="s">}}&quot;</span>
 </code></pre></div>
-<p><strong>5. Ejecuta y prueba sobrescribir variables con <code>-e</code></strong></p>
+<p><strong>5. Run and test overriding variables with <code>-e</code></strong></p>
 <div class="highlight"><pre><span></span><code>ansible-playbook<span class="w"> </span>site.yml<span class="w"> </span>-e<span class="w"> </span><span class="nv">web_port</span><span class="o">=</span><span class="m">9090</span>
 </code></pre></div>
 
@@ -1568,10 +1568,10 @@ Esto generará la estructura:</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="es" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -16,25 +16,25 @@
       
       
         
-          <link rel="alternate" href="./" hreflang="es">
+          <link rel="alternate" href="../../basics/" hreflang="es">
         
-          <link rel="alternate" href="../en/basics/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Fundamentos - Ansible101</title>
+        <title>Basics - Ansible101</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,8 +78,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#2-fundamentos-de-ansible" class="md-skip">
-          Saltar a contenido
+        <a href="#2-ansible-basics" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -93,8 +93,8 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href=".." title="Ansible101" class="md-header__button md-logo" aria-label="Ansible101" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Ansible101" class="md-header__button md-logo" aria-label="Ansible101" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fundamentos
+              Basics
             
           </span>
         </div>
@@ -154,20 +154,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="es" class="md-select__link">
+            <a href="../../basics/" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../en/basics/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -188,16 +188,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -208,7 +208,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando búsqueda
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -220,7 +220,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/rafmarsan/Ansible101" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/rafmarsan/Ansible101" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -254,9 +254,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Ansible101" class="md-nav__button md-logo" aria-label="Ansible101" data-md-component="logo">
+    <a href="../" title="Ansible101" class="md-nav__button md-logo" aria-label="Ansible101" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -266,7 +266,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/rafmarsan/Ansible101" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/rafmarsan/Ansible101" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -286,7 +286,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -333,7 +333,7 @@
   <span class="md-ellipsis">
     
   
-    Contenido
+    Content
   
 
     
@@ -349,7 +349,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Contenido
+    Content
   
 
           </label>
@@ -369,7 +369,7 @@
   <span class="md-ellipsis">
     
   
-    Introduccion
+    Introduction
   
 
     
@@ -406,7 +406,7 @@
   <span class="md-ellipsis">
     
   
-    Fundamentos
+    Basics
   
 
     
@@ -424,7 +424,7 @@
   <span class="md-ellipsis">
     
   
-    Fundamentos
+    Basics
   
 
     
@@ -436,7 +436,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -445,15 +445,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
+  <a href="#objectives" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 Objetivos
+        🎯 Objectives
       
     </span>
   </a>
@@ -461,34 +461,34 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#teoria" class="md-nav__link">
+  <a href="#theory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧠 Teoría
+        🧠 Theory
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧠 Teoría">
+    <nav class="md-nav" aria-label="🧠 Theory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inventarios" class="md-nav__link">
+  <a href="#inventories" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Inventarios
+        Inventories
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Inventarios">
+    <nav class="md-nav" aria-label="Inventories">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-inventario-en-formato-ini" class="md-nav__link">
+  <a href="#ini-format-inventory-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo de inventario en formato INI
+        INI format inventory example
       
     </span>
   </a>
@@ -496,10 +496,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-inventario-en-formato-yaml" class="md-nav__link">
+  <a href="#yaml-format-inventory-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo de inventario en formato YAML
+        YAML format inventory example
       
     </span>
   </a>
@@ -512,10 +512,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#comandos-ad-hoc" class="md-nav__link">
+  <a href="#ad-hoc-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comandos Ad-hoc
+        Ad-hoc Commands
       
     </span>
   </a>
@@ -523,10 +523,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sintaxis-de-un-playbook" class="md-nav__link">
+  <a href="#playbook-syntax" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sintaxis de un Playbook
+        Playbook Syntax
       
     </span>
   </a>
@@ -534,10 +534,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#modulos-comunes" class="md-nav__link">
+  <a href="#common-modules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Módulos Comunes
+        Common Modules
       
     </span>
   </a>
@@ -550,22 +550,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-practico" class="md-nav__link">
+  <a href="#practical-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚙️ Ejemplo Práctico
+        ⚙️ Practical Example
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="⚙️ Ejemplo Práctico">
+    <nav class="md-nav" aria-label="⚙️ Practical Example">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-comando-ad-hoc" class="md-nav__link">
+  <a href="#1-ad-hoc-command" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Comando ad-hoc
+        1. Ad-hoc command
       
     </span>
   </a>
@@ -573,10 +573,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-crear-playbook-con-tareas-extras" class="md-nav__link">
+  <a href="#2-create-playbook-with-extra-tasks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Crear Playbook con tareas extras
+        2. Create Playbook with extra tasks
       
     </span>
   </a>
@@ -589,22 +589,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#errores-comunes-y-buenas-practicas" class="md-nav__link">
+  <a href="#common-errors-and-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚨 Errores Comunes y Buenas Prácticas
+        🚨 Common Errors and Best Practices
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚨 Errores Comunes y Buenas Prácticas">
+    <nav class="md-nav" aria-label="🚨 Common Errors and Best Practices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#errores-comunes" class="md-nav__link">
+  <a href="#common-errors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Errores Comunes
+        Common Errors
       
     </span>
   </a>
@@ -612,10 +612,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buenas-practicas" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Buenas Prácticas
+        Best Practices
       
     </span>
   </a>
@@ -628,10 +628,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-propuesto" class="md-nav__link">
+  <a href="#proposed-exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio Propuesto
+        📚 Proposed Exercise
       
     </span>
   </a>
@@ -689,7 +689,7 @@
   <span class="md-ellipsis">
     
   
-    Tasks, Roles y Handlers
+    Tasks, Roles and Handlers
   
 
     
@@ -745,7 +745,7 @@
   <span class="md-ellipsis">
     
   
-    Configurar WebServers
+    Configure WebServers
   
 
     
@@ -773,7 +773,7 @@
   <span class="md-ellipsis">
     
   
-    Configurar Databases
+    Configure Databases
   
 
     
@@ -801,7 +801,7 @@
   <span class="md-ellipsis">
     
   
-    Proyecto final
+    Final project
   
 
     
@@ -835,7 +835,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -844,15 +844,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
+  <a href="#objectives" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 Objetivos
+        🎯 Objectives
       
     </span>
   </a>
@@ -860,34 +860,34 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#teoria" class="md-nav__link">
+  <a href="#theory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧠 Teoría
+        🧠 Theory
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧠 Teoría">
+    <nav class="md-nav" aria-label="🧠 Theory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inventarios" class="md-nav__link">
+  <a href="#inventories" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Inventarios
+        Inventories
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Inventarios">
+    <nav class="md-nav" aria-label="Inventories">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-inventario-en-formato-ini" class="md-nav__link">
+  <a href="#ini-format-inventory-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo de inventario en formato INI
+        INI format inventory example
       
     </span>
   </a>
@@ -895,10 +895,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-inventario-en-formato-yaml" class="md-nav__link">
+  <a href="#yaml-format-inventory-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo de inventario en formato YAML
+        YAML format inventory example
       
     </span>
   </a>
@@ -911,10 +911,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#comandos-ad-hoc" class="md-nav__link">
+  <a href="#ad-hoc-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Comandos Ad-hoc
+        Ad-hoc Commands
       
     </span>
   </a>
@@ -922,10 +922,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sintaxis-de-un-playbook" class="md-nav__link">
+  <a href="#playbook-syntax" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sintaxis de un Playbook
+        Playbook Syntax
       
     </span>
   </a>
@@ -933,10 +933,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#modulos-comunes" class="md-nav__link">
+  <a href="#common-modules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Módulos Comunes
+        Common Modules
       
     </span>
   </a>
@@ -949,22 +949,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejemplo-practico" class="md-nav__link">
+  <a href="#practical-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚙️ Ejemplo Práctico
+        ⚙️ Practical Example
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="⚙️ Ejemplo Práctico">
+    <nav class="md-nav" aria-label="⚙️ Practical Example">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-comando-ad-hoc" class="md-nav__link">
+  <a href="#1-ad-hoc-command" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Comando ad-hoc
+        1. Ad-hoc command
       
     </span>
   </a>
@@ -972,10 +972,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-crear-playbook-con-tareas-extras" class="md-nav__link">
+  <a href="#2-create-playbook-with-extra-tasks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Crear Playbook con tareas extras
+        2. Create Playbook with extra tasks
       
     </span>
   </a>
@@ -988,22 +988,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#errores-comunes-y-buenas-practicas" class="md-nav__link">
+  <a href="#common-errors-and-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚨 Errores Comunes y Buenas Prácticas
+        🚨 Common Errors and Best Practices
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚨 Errores Comunes y Buenas Prácticas">
+    <nav class="md-nav" aria-label="🚨 Common Errors and Best Practices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#errores-comunes" class="md-nav__link">
+  <a href="#common-errors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Errores Comunes
+        Common Errors
       
     </span>
   </a>
@@ -1011,10 +1011,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buenas-practicas" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Buenas Prácticas
+        Best Practices
       
     </span>
   </a>
@@ -1027,10 +1027,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-propuesto" class="md-nav__link">
+  <a href="#proposed-exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio Propuesto
+        📚 Proposed Exercise
       
     </span>
   </a>
@@ -1061,28 +1061,28 @@
 <!-- Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan) -->
 <!-- Licensed under the GNU GPLv3. See LICENSE file for details. -->
 
-<h1 id="2-fundamentos-de-ansible">🧩 2: Fundamentos de Ansible</h1>
-<h2 id="objetivos">🎯 Objetivos</h2>
-<p>Al finalizar este módulo, serás capaz de:</p>
+<h1 id="2-ansible-basics">🧩 2: Ansible Basics</h1>
+<h2 id="objectives">🎯 Objectives</h2>
+<p>By the end of this module, you will be able to:</p>
 <ol>
-<li>Entender que son los <strong>inventarios</strong> y cómo se usan</li>
-<li>Ejecutar <strong>comandos ad-hoc</strong> para realizar acciones rápidas</li>
-<li>Comprender la <strong>estructura y sintaxis</strong> de un playbook en YAML</li>
-<li>Crear y ejecutar <strong>tareas simples y compuestas</strong> dentro de un playbook</li>
-<li>Utilizar <strong>módulos comunes</strong> de Ansible</li>
-<li>Diferenciar entre la <strong>ejecución puntual (ad-hoc)</strong> y la <strong>automatización persistente (playbooks)</strong></li>
+<li>Understand what <strong>inventories</strong> are and how they are used</li>
+<li>Run <strong>ad-hoc commands</strong> to perform quick actions</li>
+<li>Understand the <strong>structure and syntax</strong> of a playbook in YAML</li>
+<li>Create and run <strong>simple and compound tasks</strong> within a playbook</li>
+<li>Use <strong>common Ansible modules</strong></li>
+<li>Differentiate between <strong>one-off execution (ad-hoc)</strong> and <strong>persistent automation (playbooks)</strong></li>
 </ol>
 <hr />
-<h2 id="teoria">🧠 Teoría</h2>
-<h3 id="inventarios">Inventarios</h3>
-<p>En <strong>Ansible</strong>, un <strong>inventario</strong> es un fichero donde se define <strong>qué máquinas vamos a gestionar</strong> y cómo conectarnos a ellas. Permite organizar tus servidores en <strong>grupos</strong> y asignarles variables específicas.</p>
-<p>Los inventarios pueden estar en varios formatos:</p>
+<h2 id="theory">🧠 Theory</h2>
+<h3 id="inventories">Inventories</h3>
+<p>In <strong>Ansible</strong>, an <strong>inventory</strong> is a file where you define <strong>which machines we are going to manage</strong> and how to connect to them. It allows you to organize your servers into <strong>groups</strong> and assign them specific variables.</p>
+<p>Inventories can be in several formats:</p>
 <ul>
-<li><strong>INI</strong> (el más clásico)</li>
+<li><strong>INI</strong> (the most classic)</li>
 <li><strong>YAML</strong></li>
 <li><strong>JSON</strong></li>
 </ul>
-<h4 id="ejemplo-de-inventario-en-formato-ini">Ejemplo de inventario en formato INI</h4>
+<h4 id="ini-format-inventory-example">INI format inventory example</h4>
 <div class="highlight"><pre><span></span><code><span class="k">[webservers]</span>
 <span class="na">web1 ansible_host</span><span class="o">=</span><span class="s">192.168.1.10</span>
 <span class="na">web2 ansible_host</span><span class="o">=</span><span class="s">192.168.1.11</span>
@@ -1095,16 +1095,16 @@
 <span class="na">dbservers</span>
 </code></pre></div>
 <ul>
-<li><code>webservers</code> y <code>dbservers</code> son <strong>grupos de hosts</strong>.</li>
-<li><code>app</code> es un <strong>grupo que agrupa otros grupos</strong> (children).</li>
-<li><code>ansible_host</code> indica la IP o DNS al que conectarse.</li>
-<li>Podemos definir variables de grupo o de host dentro del inventario, por ejemplo:</li>
+<li><code>webservers</code> and <code>dbservers</code> are <strong>host groups</strong>.</li>
+<li><code>app</code> is a <strong>group that groups other groups</strong> (children).</li>
+<li><code>ansible_host</code> indicates the IP or DNS to connect to.</li>
+<li>We can define group or host variables inside the inventory, for example:</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="k">[webservers:vars]</span>
 <span class="na">ansible_user</span><span class="o">=</span><span class="s">ubuntu</span>
 <span class="na">apache_port</span><span class="o">=</span><span class="s">8080</span>
 </code></pre></div>
-<h4 id="ejemplo-de-inventario-en-formato-yaml">Ejemplo de inventario en formato YAML</h4>
+<h4 id="yaml-format-inventory-example">YAML format inventory example</h4>
 <div class="highlight"><pre><span></span><code><span class="nt">all</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">children</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">webservers</span><span class="p">:</span>
@@ -1126,73 +1126,73 @@
 <span class="w">        </span><span class="nt">dbservers</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 </code></pre></div>
 <div class="admonition info">
-<p class="admonition-title">Resumen</p>
-<p>El inventario <strong>define el inventario físico y lógico de tus hosts</strong>, permite <strong>agruparlao</strong>, asignar <strong>variables por host o por grupo</strong>. Es <strong>la base para ejecutar cualquier playbook o comando ad-hoc</strong>.</p>
+<p class="admonition-title">Summary</p>
+<p>The inventory <strong>defines the physical and logical inventory of your hosts</strong>, allows you to <strong>group them</strong>, and assign <strong>variables per host or per group</strong>. It is <strong>the foundation for running any playbook or ad-hoc command</strong>.</p>
 </div>
-<h3 id="comandos-ad-hoc">Comandos <em>Ad-hoc</em></h3>
-<p>Los <strong>comandos ad-hoc</strong> son una forma rápida de ejecutar tareas simples en uno o varios máquinas <strong>sin escribir un playbook</strong></p>
-<p>Sintaxis general:</p>
-<div class="highlight"><pre><span></span><code>ansible<span class="w"> </span>-i<span class="w"> </span>&lt;fichero_inventario&gt;<span class="w"> </span>&lt;grupo_o_host&gt;<span class="w"> </span>-m<span class="w"> </span>&lt;módulo&gt;<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;&lt;argumentos&gt;&quot;</span>
+<h3 id="ad-hoc-commands"><em>Ad-hoc</em> Commands</h3>
+<p><strong>Ad-hoc commands</strong> are a quick way to run simple tasks on one or multiple machines <strong>without writing a playbook</strong>.</p>
+<p>General syntax:</p>
+<div class="highlight"><pre><span></span><code>ansible<span class="w"> </span>-i<span class="w"> </span>&lt;inventory_file&gt;<span class="w"> </span>&lt;group_or_host&gt;<span class="w"> </span>-m<span class="w"> </span>&lt;module&gt;<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;&lt;arguments&gt;&quot;</span>
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Para evitar tener que usar el <code>-i &lt;inventory_file&gt;</code> todo el rato es recomendable definir la linea <code>inventory = ./inventory</code> en el fichero <strong>ansible.cfg</strong>.    <br />
-Al usar tanto <code>ansible</code> como <code>ansible-playbook</code> en el directorio donde tengamos el fichero, no hará falta usar el <code>-i</code></p>
+<p>To avoid having to use <code>-i &lt;inventory_file&gt;</code> all the time, it is recommended to define the line <code>inventory = ./inventory</code> in the <strong>ansible.cfg</strong> file.
+When using both <code>ansible</code> and <code>ansible-playbook</code> in the directory where we have the file, there will be no need to use <code>-i</code>.</p>
 </div>
-<p>Ejemplos:</p>
+<p>Examples:</p>
 <table>
 <thead>
 <tr>
-<th>Objetivo</th>
-<th>Comando</th>
+<th>Objective</th>
+<th>Command</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Comprobar conectividad</td>
+<td>Check connectivity</td>
 <td><code>ansible -i inventory all -m ping</code></td>
 </tr>
 <tr>
-<td>Ver versión del kernel</td>
+<td>View kernel version</td>
 <td><code>ansible -i inventory all -m command -a "uname -r"</code></td>
 </tr>
 <tr>
-<td>Crear un directorio</td>
+<td>Create a directory</td>
 <td><code>ansible -i inventory all -m file -a "path=/tmp/demo state=directory"</code></td>
 </tr>
 <tr>
-<td>Instalar un paquete</td>
+<td>Install a package</td>
 <td><code>ansible -i inventory webservers -m apt -a "name=nginx state=present become=true"</code></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Los <strong>comandos ad-hoc</strong> sirven para pruebas o tareas simples, pero no son <strong>repetibles ni versionables</strong>.     <br />
-Para automatización completa, siempre se recomienda un <strong>playbook</strong></p>
+<p><strong>Ad-hoc commands</strong> are useful for testing or simple tasks, but they are neither <strong>repeatable nor versionable</strong>.
+For full automation, a <strong>playbook</strong> is always recommended.</p>
 </div>
 <hr />
-<h3 id="sintaxis-de-un-playbook">Sintaxis de un Playbook</h3>
-<p>Un <strong>playbook</strong> es un archivo YAML que describe uno o más <a href="../introduction/#plays"><em>plays</em></a>.
-Cada <em>play</em> define:</p>
+<h3 id="playbook-syntax">Playbook Syntax</h3>
+<p>A <strong>playbook</strong> is a YAML file that describes one or more <a href="../introduction/#plays"><em>plays</em></a>.
+Each <em>play</em> defines:</p>
 <ol>
-<li><strong>A qué hosts</strong> se aplicará (<code>hosts:</code>)</li>
-<li><strong>Qué tareas</strong> se ejecutarán (<code>tasks:</code>)</li>
-<li><strong>Con qué permisos</strong> (<code>become:</code>)</li>
-<li>Opcionalmente, <strong>roles</strong>, <strong>variables</strong>, o <strong>handlers</strong></li>
+<li><strong>Which hosts</strong> it will apply to (<code>hosts:</code>)</li>
+<li><strong>What tasks</strong> will be executed (<code>tasks:</code>)</li>
+<li><strong>With what permissions</strong> (<code>become:</code>)</li>
+<li>Optionally, <strong>roles</strong>, <strong>variables</strong>, or <strong>handlers</strong></li>
 </ol>
-<p>Ejemplo:</p>
+<p>Example:</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Instalar y habilitar Nginx</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install and enable Nginx</span>
 <span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webservers</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Instalar Nginx</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Nginx</span>
 <span class="w">      </span><span class="nt">ansible.builtin.package</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
 <span class="w">        </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Iniciar y habilitar el servicio</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Start and enable the service</span>
 <span class="w">      </span><span class="nt">ansible.builtin.service</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
 <span class="w">        </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">started</span>
@@ -1200,143 +1200,143 @@ Cada <em>play</em> define:</p>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>YAML es <strong>sensible a la indentación</strong> y Ansible, por defecto, requiere el uso de <strong>espacios</strong> (no tabulaciones).</p>
-<p><strong>Recomendación:</strong> Configura tu editor de código para que <strong><code>TAB</code></strong> inserte <strong>dos espacios</strong> en lugar de un carácter de tabulación. Esto previene la mayoría de los errores de sintaxis.</p>
+<p>YAML is <strong>indentation-sensitive</strong> and Ansible, by default, requires the use of <strong>spaces</strong> (not tabs).</p>
+<p><strong>Recommendation:</strong> Configure your code editor so that <strong><code>TAB</code></strong> inserts <strong>two spaces</strong> instead of a tab character. This prevents most syntax errors.</p>
 </div>
 <hr />
-<p>Cada <em>playbook</em> se compone de <strong>bloques lógicos</strong>:</p>
+<p>Each <em>playbook</em> is composed of <strong>logical blocks</strong>:</p>
 <table>
 <thead>
 <tr>
-<th>Elemento</th>
-<th>Descripción</th>
-<th>Ejemplo</th>
+<th>Element</th>
+<th>Description</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>hosts:</code></td>
-<td>Define sobre qué grupo de servidores se ejecutará el play</td>
+<td>Defines on which group of servers the play will run</td>
 <td><code>hosts: webservers</code></td>
 </tr>
 <tr>
 <td><code>become:</code></td>
-<td>Permite ejecutar tareas como superusuario (sudo)</td>
+<td>Allows running tasks as superuser (sudo)</td>
 <td><code>become: true</code></td>
 </tr>
 <tr>
 <td><code>gather_facts:</code></td>
-<td>Recopila automáticamente información del sistema</td>
+<td>Automatically gathers system information</td>
 <td><code>gather_facts: true</code></td>
 </tr>
 <tr>
 <td><code>tasks:</code></td>
-<td>Lista de acciones a ejecutar</td>
-<td>Ver ejemplo arriba</td>
+<td>List of actions to execute</td>
+<td>See example above</td>
 </tr>
 <tr>
 <td><code>vars:</code></td>
-<td>Define variables internas del playbook</td>
+<td>Defines internal variables for the playbook</td>
 <td><code>vars: { pkg_name: nginx }</code></td>
 </tr>
 <tr>
 <td><code>handlers:</code></td>
-<td>Tareas que se ejecutan solo cuando se notifican</td>
-<td><code>notify: Reiniciar Nginx</code></td>
+<td>Tasks that are executed only when notified</td>
+<td><code>notify: Restart Nginx</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
 <p><strong><code>gather_facts</code></strong></p>
-<p>Por defecto, cuando ejecutas un playbook, Ansible <strong>recopila automáticamente información del sistema</strong> de cada host antes de ejecutar las tareas. Esta información se llama <strong>facts</strong> y contiene detalles como:</p>
+<p>By default, when you run a playbook, Ansible <strong>automatically gathers system information</strong> from each host before executing the tasks. This information is called <strong>facts</strong> and contains details like:</p>
 <ul>
-<li>Nombre del sistema operativo (<code>ansible_distribution</code>)</li>
-<li>Versión (<code>ansible_distribution_version</code>)</li>
-<li>Arquitectura (<code>ansible_architecture</code>)</li>
-<li>IPs, interfaces de red, CPU, memoria, etc.</li>
+<li>Operating system name (<code>ansible_distribution</code>)</li>
+<li>Version (<code>ansible_distribution_version</code>)</li>
+<li>Architecture (<code>ansible_architecture</code>)</li>
+<li>IPs, network interfaces, CPU, memory, etc.</li>
 </ul>
-<p>Esta recopilación se realiza con el módulo <a href="https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_vars_facts.html#ansible-facts"><code>setup</code></a> y se activa automáticamente <strong>porque <code>gather_facts: true</code> por defecto</strong>.</p>
-<p><strong>Ejemplo de facts comunes:</strong></p>
+<p>This gathering is performed with the <a href="https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_vars_facts.html#ansible-facts"><code>setup</code></a> module and is activated automatically <strong>because <code>gather_facts: true</code> by default</strong>.</p>
+<p><strong>Common facts example:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="nt">ansible_distribution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ubuntu</span>
 <span class="nt">ansible_distribution_version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;22.04&quot;</span>
 <span class="nt">ansible_architecture</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">x86_64</span>
 <span class="nt">ansible_default_ipv4</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.10</span>
 </code></pre></div>
-<p><strong>Cuándo poner <code>gather_facts: false</code></strong></p>
+<p><strong>When to use <code>gather_facts: false</code></strong></p>
 <ul>
-<li>Si tu playbook no necesita información del sistema (por ejemplo, copia de archivos estáticos o instalación de paquetes conocidos)</li>
-<li>Para <strong>ahorrar tiempo</strong>, sobre todo si gestionas muchos hosts</li>
-<li>Para <strong>evitar errores</strong> en entornos donde la conexión no permite recopilar facts</li>
+<li>If your playbook does not need system information (e.g., copying static files or installing known packages)</li>
+<li>To <strong>save time</strong>, especially if you manage many hosts</li>
+<li>To <strong>avoid errors</strong> in environments where the connection does not allow gathering facts</li>
 </ul>
 <div class="admonition info">
-<p class="admonition-title">Resumen</p>
+<p class="admonition-title">Summary</p>
 <ul>
-<li><code>gather_facts</code> es útil cuando necesitas datos dinámicos del host, pero <strong>ponerlo a <code>false</code> mejora el rendimiento</strong> de la ejecución </li>
-<li>Está activado por defecto si no pones explicitamente <code>gather_facts: false</code></li>
+<li><code>gather_facts</code> is useful when you need dynamic host data, but <strong>setting it to <code>false</code> improves execution performance</strong>.</li>
+<li>It is enabled by default if you do not explicitly set <code>gather_facts: false</code>.</li>
 </ul>
 </div>
 <hr />
-<h3 id="modulos-comunes">Módulos Comunes</h3>
-<p>Los módulos más usados en <strong>comandos ad-hoc</strong> serían:</p>
+<h3 id="common-modules">Common Modules</h3>
+<p>The most used modules in <strong>ad-hoc commands</strong> would be:</p>
 <table>
 <thead>
 <tr>
-<th>Módulo</th>
-<th>Descripción</th>
-<th>Ejemplo</th>
+<th>Module</th>
+<th>Description</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>ping</code></td>
-<td>Verificar conexión y autenticación</td>
+<td>Check connection and authentication</td>
 <td><code>ansible all -m ping</code></td>
 </tr>
 <tr>
 <td><code>command</code></td>
-<td>Ejecutar un comando sin shell</td>
+<td>Execute a command without a shell</td>
 <td><code>ansible all -m command -a "uptime"</code></td>
 </tr>
 <tr>
 <td><code>shell</code></td>
-<td>Ejecutar comandos dentro de una shell</td>
+<td>Execute commands inside a shell</td>
 <td><code>ansible all -m shell -a "cat /etc/os-release"</code></td>
 </tr>
 <tr>
 <td><code>file</code></td>
-<td>Gestionar archivos y permisos</td>
+<td>Manage files and permissions</td>
 <td><code>ansible all -m file -a "path=/tmp/demo state=directory"</code></td>
 </tr>
 <tr>
 <td><code>copy</code></td>
-<td>Copiar archivos locales a hosts remotos</td>
+<td>Copy local files to remote hosts</td>
 <td><code>ansible all -m copy -a "src=./test.txt dest=/tmp/test.txt"</code></td>
 </tr>
 <tr>
 <td><code>service</code></td>
-<td>Controlar servicios del sistema</td>
+<td>Control system services</td>
 <td><code>ansible all -m service -a "name=nginx state=restarted"</code></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Usa el módulo <code>shell</code> <strong>solo cuando sea necesario</strong></p>
-<p>Intenta usar módulos específicos (<code>user</code>, <code>package</code>, <code>service</code>, <code>copy</code>, etc.) para asegurar la <strong>idempotencia</strong> (obtener el mismo resultado aunque se aplique múltiples veces)</p>
+<p>Use the <code>shell</code> module <strong>only when necessary</strong>.</p>
+<p>Try to use specific modules (<code>user</code>, <code>package</code>, <code>service</code>, <code>copy</code>, etc.) to ensure <strong>idempotency</strong> (getting the same result even if applied multiple times).</p>
 </div>
 <hr />
-<h2 id="ejemplo-practico">⚙️ Ejemplo Práctico</h2>
-<p>Vamos a practicar el flujo completo:</p>
+<h2 id="practical-example">⚙️ Practical Example</h2>
+<p>Let's practice the complete flow:</p>
 <ul>
-<li>Ejecutar un comando ad-hoc</li>
-<li>Crear un playbook con tareas equivalentes</li>
+<li>Run an ad-hoc command</li>
+<li>Create a playbook with equivalent tasks</li>
 </ul>
-<h3 id="1-comando-ad-hoc">1. Comando ad-hoc</h3>
-<p>Creamos un directorio <code>/tmp/webdemo</code> en <code>localhost</code>:</p>
+<h3 id="1-ad-hoc-command">1. Ad-hoc command</h3>
+<p>Let's create a directory <code>/tmp/webdemo</code> on <code>localhost</code>:</p>
 <div class="highlight"><pre><span></span><code>ansible<span class="w"> </span>localhost<span class="w"> </span>-m<span class="w"> </span>file<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;path=/tmp/webdemo state=directory&quot;</span>
 </code></pre></div>
-<p>Salida esperada:</p>
+<p>Expected output:</p>
 <div class="highlight"><pre><span></span><code>localhost<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nv">CHANGED</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="o">{</span>
 <span class="w">    </span><span class="s2">&quot;path&quot;</span>:<span class="w"> </span><span class="s2">&quot;/tmp/webdemo&quot;</span>,
 <span class="w">    </span><span class="s2">&quot;state&quot;</span>:<span class="w"> </span><span class="s2">&quot;directory&quot;</span>,
@@ -1344,109 +1344,109 @@ Cada <em>play</em> define:</p>
 <span class="o">}</span>
 </code></pre></div>
 <hr />
-<h3 id="2-crear-playbook-con-tareas-extras">2. Crear Playbook con tareas extras</h3>
+<h3 id="2-create-playbook-with-extra-tasks">2. Create Playbook with extra tasks</h3>
 <blockquote>
-<p>Un <strong>playbook</strong> nos permite ejecutar varias tareas de forma secuencial</p>
+<p>A <strong>playbook</strong> allows us to run multiple tasks sequentially.</p>
 </blockquote>
-<p>Archivo <code>webdemo.yml</code>:</p>
+<p>File <code>webdemo.yml</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Crear estructura de demo web</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create web demo structure</span>
 <span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
 <span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Crear directorio de trabajo</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create working directory</span>
 <span class="w">      </span><span class="nt">ansible.builtin.file</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/webdemo</span>
 <span class="w">        </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">directory</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Crear un index.html básico</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create a basic index.html</span>
 <span class="w">      </span><span class="nt">ansible.builtin.copy</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/webdemo/index.html</span>
-<span class="w">        </span><span class="nt">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;h1&gt;Servidor</span><span class="nv"> </span><span class="s">gestionado</span><span class="nv"> </span><span class="s">con</span><span class="nv"> </span><span class="s">Ansible&lt;/h1&gt;&quot;</span>
+<span class="w">        </span><span class="nt">content</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;h1&gt;Server</span><span class="nv"> </span><span class="s">managed</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">Ansible&lt;/h1&gt;&quot;</span>
 
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mostrar mensaje final</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Show final message</span>
 <span class="w">      </span><span class="nt">ansible.builtin.debug</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;La</span><span class="nv"> </span><span class="s">estructura</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">se</span><span class="nv"> </span><span class="s">ha</span><span class="nv"> </span><span class="s">creado</span><span class="nv"> </span><span class="s">correctamente</span><span class="nv"> </span><span class="s">en</span><span class="nv"> </span><span class="s">/tmp/webdemo&quot;</span>
+<span class="w">        </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;The</span><span class="nv"> </span><span class="s">web</span><span class="nv"> </span><span class="s">structure</span><span class="nv"> </span><span class="s">has</span><span class="nv"> </span><span class="s">been</span><span class="nv"> </span><span class="s">successfully</span><span class="nv"> </span><span class="s">created</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">/tmp/webdemo&quot;</span>
 </code></pre></div>
-<p>Ejecutar:</p>
+<p>Run:</p>
 <div class="highlight"><pre><span></span><code>ansible-playbook<span class="w"> </span>webdemo.yml
 </code></pre></div>
-<p>Salida esperada:</p>
-<div class="highlight"><pre><span></span><code>PLAY<span class="w"> </span><span class="o">[</span>Crear<span class="w"> </span>estructura<span class="w"> </span>de<span class="w"> </span>demo<span class="w"> </span>web<span class="o">]</span><span class="w"> </span>*******************************************
+<p>Expected output:</p>
+<div class="highlight"><pre><span></span><code>PLAY<span class="w"> </span><span class="o">[</span>Create<span class="w"> </span>web<span class="w"> </span>demo<span class="w"> </span>structure<span class="o">]</span><span class="w"> </span>*******************************************
 
-TASK<span class="w"> </span><span class="o">[</span>Crear<span class="w"> </span>directorio<span class="w"> </span>de<span class="w"> </span>trabajo<span class="o">]</span><span class="w"> </span>********************************************
+TASK<span class="w"> </span><span class="o">[</span>Create<span class="w"> </span>working<span class="w"> </span>directory<span class="o">]</span><span class="w"> </span>********************************************
 changed:<span class="w"> </span><span class="o">[</span>localhost<span class="o">]</span>
 
-TASK<span class="w"> </span><span class="o">[</span>Crear<span class="w"> </span>un<span class="w"> </span>index.html<span class="w"> </span>básico<span class="o">]</span><span class="w"> </span>*********************************************
+TASK<span class="w"> </span><span class="o">[</span>Create<span class="w"> </span>a<span class="w"> </span>basic<span class="w"> </span>index.html<span class="o">]</span><span class="w"> </span>*********************************************
 changed:<span class="w"> </span><span class="o">[</span>localhost<span class="o">]</span>
 
-TASK<span class="w"> </span><span class="o">[</span>Mostrar<span class="w"> </span>mensaje<span class="w"> </span>final<span class="o">]</span><span class="w"> </span>**************************************************
+TASK<span class="w"> </span><span class="o">[</span>Show<span class="w"> </span>final<span class="w"> </span>message<span class="o">]</span><span class="w"> </span>**************************************************
 ok:<span class="w"> </span><span class="o">[</span>localhost<span class="o">]</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="s2">&quot;msg&quot;</span>:<span class="w"> </span><span class="s2">&quot;La estructura web se ha creado correctamente en /tmp/webdemo&quot;</span>
+<span class="w">    </span><span class="s2">&quot;msg&quot;</span>:<span class="w"> </span><span class="s2">&quot;The web structure has been successfully created in /tmp/webdemo&quot;</span>
 <span class="o">}</span>
 
 PLAY<span class="w"> </span>RECAP<span class="w"> </span>********************************************************************
 localhost<span class="w"> </span>:<span class="w"> </span><span class="nv">ok</span><span class="o">=</span><span class="m">3</span><span class="w">  </span><span class="nv">changed</span><span class="o">=</span><span class="m">2</span><span class="w">  </span><span class="nv">failed</span><span class="o">=</span><span class="m">0</span>
 </code></pre></div>
 <hr />
-<h2 id="errores-comunes-y-buenas-practicas">🚨 Errores Comunes y Buenas Prácticas</h2>
-<h3 id="errores-comunes">Errores Comunes</h3>
+<h2 id="common-errors-and-best-practices">🚨 Common Errors and Best Practices</h2>
+<h3 id="common-errors">Common Errors</h3>
 <ol>
 <li>
-<p><strong>Indentación incorrecta (YAML)</strong></p>
+<p><strong>Incorrect indentation (YAML)</strong></p>
 <div class="highlight"><pre><span></span><code>Syntax Error while loading YAML.
     mapping values are not allowed in this context
 </code></pre></div>
 </li>
 <li>
-<p><strong>Error de conexión</strong></p>
+<p><strong>Connection error</strong></p>
 <div class="highlight"><pre><span></span><code>UNREACHABLE! =&gt; Failed to connect via ssh
 </code></pre></div>
-<p>→ Verifica el <code>inventory</code> y los permisos de acceso.</p>
+<p>→ Verify the <code>inventory</code> and access permissions.</p>
 </li>
 <li>
-<p><strong>Uso indebido de <code>shell</code></strong>
-   → Si puedes lograrlo con un módulo, <strong>no uses <code>shell</code> o <code>command</code></strong>.</p>
+<p><strong>Improper use of <code>shell</code></strong>
+   → If you can achieve it with a module, <strong>do not use <code>shell</code> or <code>command</code></strong>.</p>
 </li>
 </ol>
 <hr />
-<h3 id="buenas-practicas">Buenas Prácticas</h3>
+<h3 id="best-practices">Best Practices</h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <ul>
-<li>Los <strong>comandos ad-hoc</strong> son para <strong>acciones rápidas</strong>, no para automatizaciones permanentes.</li>
-<li>Los playbooks deben ser <strong>claros y repetibles</strong>, y versionados en Git.</li>
-<li>Usa nombres descriptivos en las tareas (<code>name:</code>).</li>
-<li>Mantén un formato uniforme en YAML y agrupa tareas relacionadas.</li>
-<li>Añade comentarios y usa variables para evitar valores “hardcodeados”.</li>
+<li><strong>Ad-hoc commands</strong> are for <strong>quick actions</strong>, not permanent automations.</li>
+<li>Playbooks should be <strong>clear and repeatable</strong>, and versioned in Git.</li>
+<li>Use descriptive names in tasks (<code>name:</code>).</li>
+<li>Maintain a consistent format in YAML and group related tasks.</li>
+<li>Add comments and use variables to avoid hardcoded values.</li>
 </ul>
 </div>
 <hr />
-<h2 id="ejercicio-propuesto">📚 Ejercicio Propuesto</h2>
-<p>Crea un <strong>playbook llamado <code>system_info.yml</code></strong> que:</p>
+<h2 id="proposed-exercise">📚 Proposed Exercise</h2>
+<p>Create a <strong>playbook named <code>system_info.yml</code></strong> that:</p>
 <ol>
-<li>Se ejecute sobre <code>localhost</code> (conexión local).</li>
-<li>Obtenga y muestre la siguiente información:<ul>
-<li>Nombre del sistema operativo (<code>ansible_distribution</code>)</li>
-<li>Versión (<code>ansible_distribution_version</code>)</li>
-<li>Dirección IP principal (<code>ansible_default_ipv4.address</code>)</li>
+<li>Runs on <code>localhost</code> (local connection).</li>
+<li>Retrieves and displays the following information:<ul>
+<li>Operating system name (<code>ansible_distribution</code>)</li>
+<li>Version (<code>ansible_distribution_version</code>)</li>
+<li>Main IP address (<code>ansible_default_ipv4.address</code>)</li>
 </ul>
 </li>
-<li>Guarde la información en un archivo <code>/tmp/system_info.txt</code> en formato de texto plano.</li>
-<li>Muestre un mensaje final con <code>debug:</code> confirmando la creación del archivo.</li>
+<li>Saves the information in a file <code>/tmp/system_info.txt</code> in plain text format.</li>
+<li>Shows a final message with <code>debug:</code> confirming the file creation.</li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <ul>
-<li>Usa el módulo <code>copy</code> con la opción <code>content:</code> para escribir texto directamente en un fichero</li>
-<li>Puedes obtener información de un sistema usando el módulo <code>setup</code> o añadiendo <code>gather_facts: true</code> en el <strong>play</strong><ul>
-<li>Esa información queda definida en variables especiales que empiezan por <code>ansible_</code> ➜ <a href="https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html">link docs</a></li>
+<li>Use the <code>copy</code> module with the <code>content:</code> option to write text directly to a file</li>
+<li>You can get system information using the <code>setup</code> module or by adding <code>gather_facts: true</code> in the <strong>play</strong><ul>
+<li>That information is defined in special variables starting with <code>ansible_</code> ➜ <a href="https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html">docs link</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Este ejercicio te enseña a combinar <strong>módulos</strong>, <strong>facts</strong> y <strong>variables</strong>, los tres pilares del trabajo diario con Ansible.</p>
+<p>This exercise teaches you how to combine <strong>modules</strong>, <strong>facts</strong>, and <strong>variables</strong>, the three pillars of daily work with Ansible.</p>
 </div>
 
 
@@ -1497,10 +1497,10 @@ localhost<span class="w"> </span>:<span class="w"> </span><span class="nv">ok</s
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

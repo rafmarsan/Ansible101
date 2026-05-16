@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="es" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -16,25 +16,25 @@
       
       
         
-          <link rel="alternate" href="./" hreflang="es">
+          <link rel="alternate" href="../../config_webservers/" hreflang="es">
         
-          <link rel="alternate" href="../en/config_webservers/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Configurar WebServers - Ansible101</title>
+        <title>Configure WebServers - Ansible101</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,8 +78,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#6-configuracion-de-servidores-web" class="md-skip">
-          Saltar a contenido
+        <a href="#6-configuring-web-servers" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -93,8 +93,8 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href=".." title="Ansible101" class="md-header__button md-logo" aria-label="Ansible101" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Ansible101" class="md-header__button md-logo" aria-label="Ansible101" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configurar WebServers
+              Configure WebServers
             
           </span>
         </div>
@@ -154,20 +154,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="es" class="md-select__link">
+            <a href="../../config_webservers/" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../en/config_webservers/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -188,16 +188,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -208,7 +208,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando búsqueda
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -220,7 +220,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/rafmarsan/Ansible101" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/rafmarsan/Ansible101" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -254,9 +254,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Ansible101" class="md-nav__button md-logo" aria-label="Ansible101" data-md-component="logo">
+    <a href="../" title="Ansible101" class="md-nav__button md-logo" aria-label="Ansible101" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -266,7 +266,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/rafmarsan/Ansible101" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/rafmarsan/Ansible101" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -286,7 +286,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -333,7 +333,7 @@
   <span class="md-ellipsis">
     
   
-    Contenido
+    Content
   
 
     
@@ -349,7 +349,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Contenido
+    Content
   
 
           </label>
@@ -369,7 +369,7 @@
   <span class="md-ellipsis">
     
   
-    Introduccion
+    Introduction
   
 
     
@@ -397,7 +397,7 @@
   <span class="md-ellipsis">
     
   
-    Fundamentos
+    Basics
   
 
     
@@ -453,7 +453,7 @@
   <span class="md-ellipsis">
     
   
-    Tasks, Roles y Handlers
+    Tasks, Roles and Handlers
   
 
     
@@ -518,7 +518,7 @@
   <span class="md-ellipsis">
     
   
-    Configurar WebServers
+    Configure WebServers
   
 
     
@@ -536,7 +536,7 @@
   <span class="md-ellipsis">
     
   
-    Configurar WebServers
+    Configure WebServers
   
 
     
@@ -548,7 +548,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -557,15 +557,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivo-general" class="md-nav__link">
+  <a href="#general-objective" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 Objetivo general
+        🎯 General Objective
       
     </span>
   </a>
@@ -573,10 +573,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comandos-del-ejercicio" class="md-nav__link">
+  <a href="#exercise-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✍🏻 Comandos del ejercicio
+        ✍🏻 Exercise Commands
       
     </span>
   </a>
@@ -584,22 +584,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacion-y-configuracion-de-apache-usando-roles" class="md-nav__link">
+  <a href="#installing-and-configuring-apache-using-roles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Instalación y configuración de Apache usando roles
+        📘 Installing and configuring Apache using roles
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📘 Instalación y configuración de Apache usando roles">
+    <nav class="md-nav" aria-label="📘 Installing and configuring Apache using roles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#estructura-del-rol" class="md-nav__link">
+  <a href="#role-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏗️ Estructura del rol
+        🏗️ Role Structure
       
     </span>
   </a>
@@ -612,22 +612,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacion-y-configuracion-de-nginx-reverse-proxy" class="md-nav__link">
+  <a href="#installing-and-configuring-nginx-reverse-proxy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Instalación y configuración de Nginx reverse proxy
+        📘 Installing and configuring Nginx reverse proxy
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📘 Instalación y configuración de Nginx reverse proxy">
+    <nav class="md-nav" aria-label="📘 Installing and configuring Nginx reverse proxy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#estructura-del-rol_1" class="md-nav__link">
+  <a href="#role-structure_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏗️ Estructura del rol
+        🏗️ Role Structure
       
     </span>
   </a>
@@ -640,10 +640,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#playbook-principal" class="md-nav__link">
+  <a href="#main-playbook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Playbook principal
+        📘 Main Playbook
       
     </span>
   </a>
@@ -651,10 +651,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-1-cambiar-el-puerto-de-apache" class="md-nav__link">
+  <a href="#exercise-1-change-the-apache-port" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 1 — Cambiar el puerto de Apache
+        📚 Exercise 1 — Change the Apache port
       
     </span>
   </a>
@@ -662,10 +662,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-2-anadir-una-pagina-html-desde-template" class="md-nav__link">
+  <a href="#exercise-2-add-an-html-page-from-template" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 2 — Añadir una página HTML desde template
+        📚 Exercise 2 — Add an HTML page from template
       
     </span>
   </a>
@@ -673,10 +673,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-3-anadir-health-check-en-nginx" class="md-nav__link">
+  <a href="#exercise-3-add-health-check-in-nginx" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 3 — Añadir health-check en Nginx
+        📚 Exercise 3 — Add health-check in Nginx
       
     </span>
   </a>
@@ -706,7 +706,7 @@
   <span class="md-ellipsis">
     
   
-    Configurar Databases
+    Configure Databases
   
 
     
@@ -734,7 +734,7 @@
   <span class="md-ellipsis">
     
   
-    Proyecto final
+    Final project
   
 
     
@@ -768,7 +768,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -777,15 +777,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivo-general" class="md-nav__link">
+  <a href="#general-objective" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 Objetivo general
+        🎯 General Objective
       
     </span>
   </a>
@@ -793,10 +793,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comandos-del-ejercicio" class="md-nav__link">
+  <a href="#exercise-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✍🏻 Comandos del ejercicio
+        ✍🏻 Exercise Commands
       
     </span>
   </a>
@@ -804,22 +804,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacion-y-configuracion-de-apache-usando-roles" class="md-nav__link">
+  <a href="#installing-and-configuring-apache-using-roles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Instalación y configuración de Apache usando roles
+        📘 Installing and configuring Apache using roles
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📘 Instalación y configuración de Apache usando roles">
+    <nav class="md-nav" aria-label="📘 Installing and configuring Apache using roles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#estructura-del-rol" class="md-nav__link">
+  <a href="#role-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏗️ Estructura del rol
+        🏗️ Role Structure
       
     </span>
   </a>
@@ -832,22 +832,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacion-y-configuracion-de-nginx-reverse-proxy" class="md-nav__link">
+  <a href="#installing-and-configuring-nginx-reverse-proxy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Instalación y configuración de Nginx reverse proxy
+        📘 Installing and configuring Nginx reverse proxy
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📘 Instalación y configuración de Nginx reverse proxy">
+    <nav class="md-nav" aria-label="📘 Installing and configuring Nginx reverse proxy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#estructura-del-rol_1" class="md-nav__link">
+  <a href="#role-structure_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏗️ Estructura del rol
+        🏗️ Role Structure
       
     </span>
   </a>
@@ -860,10 +860,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#playbook-principal" class="md-nav__link">
+  <a href="#main-playbook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Playbook principal
+        📘 Main Playbook
       
     </span>
   </a>
@@ -871,10 +871,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-1-cambiar-el-puerto-de-apache" class="md-nav__link">
+  <a href="#exercise-1-change-the-apache-port" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 1 — Cambiar el puerto de Apache
+        📚 Exercise 1 — Change the Apache port
       
     </span>
   </a>
@@ -882,10 +882,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-2-anadir-una-pagina-html-desde-template" class="md-nav__link">
+  <a href="#exercise-2-add-an-html-page-from-template" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 2 — Añadir una página HTML desde template
+        📚 Exercise 2 — Add an HTML page from template
       
     </span>
   </a>
@@ -893,10 +893,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-3-anadir-health-check-en-nginx" class="md-nav__link">
+  <a href="#exercise-3-add-health-check-in-nginx" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 3 — Añadir health-check en Nginx
+        📚 Exercise 3 — Add health-check in Nginx
       
     </span>
   </a>
@@ -927,27 +927,27 @@
 <!-- Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan) -->
 <!-- Licensed under the GNU GPLv3. See LICENSE file for details. -->
 
-<h1 id="6-configuracion-de-servidores-web">🧩 6: Configuración de Servidores Web</h1>
-<h2 id="objetivo-general">🎯 Objetivo general</h2>
-<p>Al finalizar este módulo, serás capaz de:</p>
+<h1 id="6-configuring-web-servers">🧩 6: Configuring Web Servers</h1>
+<h2 id="general-objective">🎯 General Objective</h2>
+<p>By the end of this module, you will be able to:</p>
 <ol>
-<li>Instalar y configurar Apache usando un <strong>rol completo</strong></li>
-<li>Instalar y configurar Nginx como <strong>reverse proxy</strong> hacia Apache</li>
-<li>Usar <strong>templates</strong>, <strong>handlers</strong>, <strong>variables</strong> y <strong>roles</strong></li>
-<li>Ejecutar todo en un <strong>playbook</strong> que orquesta ambos roles</li>
+<li>Install and configure Apache using a <strong>complete role</strong></li>
+<li>Install and configure Nginx as a <strong>reverse proxy</strong> to Apache</li>
+<li>Use <strong>templates</strong>, <strong>handlers</strong>, <strong>variables</strong>, and <strong>roles</strong></li>
+<li>Run everything in a <strong>playbook</strong> that orchestrates both roles</li>
 </ol>
 <hr />
-<h2 id="comandos-del-ejercicio">✍🏻 Comandos del ejercicio</h2>
-<p>Para iniciar el ejercicio, ejecuta:
+<h2 id="exercise-commands">✍🏻 Exercise Commands</h2>
+<p>To start the exercise, run:
 <div class="highlight"><pre><span></span><code>lab<span class="w"> </span>start<span class="w"> </span>webservers
 </code></pre></div></p>
-<p>Para evaluar el ejercicio, ejecuta:
+<p>To grade the exercise, run:
 <div class="highlight"><pre><span></span><code>lab<span class="w"> </span>grade<span class="w"> </span>webservers
 </code></pre></div></p>
 <hr />
-<h2 id="instalacion-y-configuracion-de-apache-usando-roles">📘 <strong>Instalación y configuración de Apache usando roles</strong></h2>
-<p>Añade el siguiente contenido al rol <code>apache</code> generado</p>
-<h3 id="estructura-del-rol">🏗️ Estructura del rol</h3>
+<h2 id="installing-and-configuring-apache-using-roles">📘 <strong>Installing and configuring Apache using roles</strong></h2>
+<p>Add the following content to the generated <code>apache</code> role</p>
+<h3 id="role-structure">🏗️ Role Structure</h3>
 <div class="highlight"><pre><span></span><code>roles/
   apache/
     tasks/
@@ -974,52 +974,52 @@
 &lt;/VirtualHost&gt;
 </code></pre></div></p>
 <p><strong>tasks/main.yml</strong>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cargamos modulo de instalacion</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Load installation module</span>
 <span class="w">  </span><span class="nt">ansible.builtin.include_tasks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">install.yml</span>
 </code></pre></div></p>
 <p><strong>tasks/install.yml</strong>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Instalar Apache</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Apache</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.package</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">httpd</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Asegurar que Apache esta habilitado y activo</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ensure Apache is enabled and running</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.service</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">httpd</span>
 <span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">started</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Desactivar el listener por defecto en Apache</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Disable default listener in Apache</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.replace</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/httpd/conf/httpd.conf</span>
 <span class="w">    </span><span class="nt">regexp</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;^Listen</span><span class="nv"> </span><span class="s">80&#39;</span>
 <span class="w">    </span><span class="nt">replace</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;#</span><span class="nv"> </span><span class="s">Listen</span><span class="nv"> </span><span class="s">80&#39;</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copiar configuracion de Apache</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copy Apache configuration</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.template</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">httpd.conf.j2</span>
 <span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/httpd/conf.d/main.conf</span>
-<span class="w">  </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Reiniciar</span><span class="nv"> </span><span class="s">Apache&quot;</span>
+<span class="w">  </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Restart</span><span class="nv"> </span><span class="s">Apache&quot;</span>
 
-<span class="c1"># Ejecuta todos los handlers pendientes, en vez de</span>
-<span class="c1"># esperar hasta que se terminen las tasks en el host</span>
+<span class="c1"># Execute all pending handlers, instead of</span>
+<span class="c1"># waiting until tasks on the host finish</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ansible.builtin.meta</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flush_handlers</span>
 </code></pre></div></p>
 <p><strong>handlers/main.yml</strong>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reiniciar Apache</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Restart Apache</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.service</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">httpd</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restarted</span>
 </code></pre></div></p>
 <hr />
-<h2 id="instalacion-y-configuracion-de-nginx-reverse-proxy">📘 <strong>Instalación y configuración de Nginx reverse proxy</strong></h2>
-<p>Añade el siguiente contenido al rol <code>nginx</code> generado</p>
-<h3 id="estructura-del-rol_1">🏗️ Estructura del rol</h3>
+<h2 id="installing-and-configuring-nginx-reverse-proxy">📘 <strong>Installing and configuring Nginx reverse proxy</strong></h2>
+<p>Add the following content to the generated <code>nginx</code> role</p>
+<h3 id="role-structure_1">🏗️ Role Structure</h3>
 <div class="highlight"><pre><span></span><code>roles/
   nginx/
     tasks/
@@ -1141,31 +1141,31 @@ http {
 }
 </code></pre></div></p>
 <p><strong>tasks/main.yml</strong>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cargamos modulo de instalacion</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Load installation module</span>
 <span class="w">  </span><span class="nt">ansible.builtin.include_tasks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">install.yml</span>
 </code></pre></div></p>
 <p><strong>tasks/install.yml</strong>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Instalar Nginx</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Nginx</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.package</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copiar config principal</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copy main config</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.template</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx.conf.j2</span>
 <span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/nginx/nginx.conf</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copiar config reverse proxy</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copy reverse proxy config</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.template</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reverse-proxy.conf.j2</span>
 <span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/nginx/conf.d/reverse-proxy.conf</span>
-<span class="w">  </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Recargar</span><span class="nv"> </span><span class="s">Nginx&quot;</span>
+<span class="w">  </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Reload</span><span class="nv"> </span><span class="s">Nginx&quot;</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Asegurar Nginx activo</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ensure Nginx is running</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.service</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
@@ -1173,15 +1173,15 @@ http {
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">started</span>
 </code></pre></div></p>
 <p><strong>handlers/main.yml</strong></p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recargar Nginx</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reload Nginx</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.service</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reloaded</span>
 </code></pre></div>
 <hr />
-<h2 id="playbook-principal">📘 <strong>Playbook principal</strong></h2>
-<p>Encargado de orquestar la ejecución de los roles</p>
+<h2 id="main-playbook">📘 <strong>Main Playbook</strong></h2>
+<p>Responsible for orchestrating the execution of roles</p>
 <p><strong>webservers.yml</strong>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webservers</span>
@@ -1190,38 +1190,38 @@ http {
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apache</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
 </code></pre></div></p>
-<p>Puntos clave:</p>
+<p>Key points:</p>
 <ul>
-<li>Cómo <strong>un rol depende de la salida del otro</strong> (<code>apache_port</code> → reverse proxy '<code>nginx_upstream_port</code>')</li>
-<li>Cómo <strong>pasar variables al rol</strong> correctamente (su scope es a nivel de play)</li>
-<li>Cómo manejar <strong>handlers independientes</strong></li>
-<li>Cómo separar responsabilidades: <strong>Apache</strong> sirve contenido, <strong>Nginx</strong> lo expone</li>
+<li>How <strong>one role depends on the output of the other</strong> (<code>apache_port</code> → reverse proxy '<code>nginx_upstream_port</code>')</li>
+<li>How to <strong>pass variables to the role</strong> correctly (their scope is at the play level)</li>
+<li>How to handle <strong>independent handlers</strong></li>
+<li>How to separate responsibilities: <strong>Apache</strong> serves content, <strong>Nginx</strong> exposes it</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Tras ejecutar <strong>sin errores</strong> el playbook <code>ansible-playbook webservers.yml</code> deberias ver la página por defecto de Apache en <a href="http://localhost:8080"><code>http://localhost:8080</code></a></p>
-<p><img alt="Apache default" src="../assets/images/apache_default.png" width="300px" /></p>
+<p>After running the playbook <code>ansible-playbook webservers.yml</code> <strong>without errors</strong>, you should see the default Apache page at <a href="http://localhost:8080"><code>http://localhost:8080</code></a></p>
+<p><img alt="Apache default" src="../../assets/images/apache_default.png" width="300px" /></p>
 </div>
 <hr />
-<h2 id="ejercicio-1-cambiar-el-puerto-de-apache">📚 <strong>Ejercicio 1 — Cambiar el puerto de Apache</strong></h2>
-<p>Cambiar el puerto por defecto de Apache:
+<h2 id="exercise-1-change-the-apache-port">📚 <strong>Exercise 1 — Change the Apache port</strong></h2>
+<p>Change the default Apache port:
 <div class="highlight"><pre><span></span><code><span class="nt">apache_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9090</span>
 <span class="nt">nginx_upstream_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">9090</span>
 </code></pre></div>
-→ Modificar el puerto de upstream en la configuración de nginx también</p>
+→ Modify the upstream port in the nginx configuration as well</p>
 <details class="tip">
-<summary>Solucion</summary>
+<summary>Solution</summary>
 <p><strong>apache/defaults/main.yml</strong> : <code>apache_port: 8080</code> → <code>apache_port: 9090</code>   <br />
 <strong>ngnix/defaults/main.yml</strong> : <code>nginx_upstream_port: 8080</code> → <code>nginx_upstream_port: 9090</code></p>
 </details>
 <hr />
-<h2 id="ejercicio-2-anadir-una-pagina-html-desde-template">📚 <strong>Ejercicio 2 — Añadir una página HTML desde template</strong></h2>
-<p>Añadir en el rol Apache:
+<h2 id="exercise-2-add-an-html-page-from-template">📚 <strong>Exercise 2 — Add an HTML page from template</strong></h2>
+<p>Add to the Apache role:
 <div class="highlight"><pre><span></span><code>templates/index.html.j2
-tasks/install.yml → Añadir tarea para desplegar el template
+tasks/install.yml → Add task to deploy the template
 </code></pre></div></p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Lab Webservers<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
@@ -1251,33 +1251,33 @@ tasks/install.yml → Añadir tarea para desplegar el template
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;box&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>¡Apache funcionando!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Has llegado a <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>/var/www/html/index.html<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Si ves esta pagina, tu configuracion de <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>VirtualHost<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> está correcta.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Apache is working!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>You have reached <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>/var/www/html/index.html<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>If you see this page, your <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>VirtualHost<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> configuration is correct.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <details class="tip">
-<summary>Solucion</summary>
-<p>Añadir las task al final de <strong>apache/tasks/install.yml</strong>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Desplegamos la pagina personalizada</span>
+<summary>Solution</summary>
+<p>Add the task at the end of <strong>apache/tasks/install.yml</strong>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy custom page</span>
 <span class="w">  </span><span class="nt">ansible.builtin.template</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.html.j2</span>
 <span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">apache_docroot</span><span class="nv"> </span><span class="s">}}/index.html&quot;</span>
 </code></pre></div>
-Copiar el HTML en <strong>apache/templates/index.html.j2</strong></p>
+Copy the HTML into <strong>apache/templates/index.html.j2</strong></p>
 </details>
 <hr />
-<h2 id="ejercicio-3-anadir-health-check-en-nginx">📚 <strong>Ejercicio 3 — Añadir health-check en Nginx</strong></h2>
-<p>Añadir en el template de <code>reverse-proxy.conf.j2</code>:
+<h2 id="exercise-3-add-health-check-in-nginx">📚 <strong>Exercise 3 — Add health-check in Nginx</strong></h2>
+<p>Add to the <code>reverse-proxy.conf.j2</code> template:
 <div class="highlight"><pre><span></span><code>location /health {
   return 200 &quot;OK\n&quot;;
 }
 </code></pre></div></p>
 <details class="tip">
-<summary>Solucion</summary>
-<p><strong>templates/reverse-proxy.conf.j2</strong> debe quedar asi:
+<summary>Solution</summary>
+<p><strong>templates/reverse-proxy.conf.j2</strong> should look like this:
 <div class="highlight"><pre><span></span><code>server {
   listen {{ nginx_listen_port }};
   location / {
@@ -1340,10 +1340,10 @@ Copiar el HTML en <strong>apache/templates/index.html.j2</strong></p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

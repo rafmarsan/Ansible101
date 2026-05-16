@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="es" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -16,25 +16,25 @@
       
       
         
-          <link rel="alternate" href="./" hreflang="es">
+          <link rel="alternate" href="../../config_databases/" hreflang="es">
         
-          <link rel="alternate" href="../en/config_databases/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Configurar Databases - Ansible101</title>
+        <title>Configure Databases - Ansible101</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,8 +78,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#7-gestion-de-bases-de-datos-con-postgresql" class="md-skip">
-          Saltar a contenido
+        <a href="#7-database-management-with-postgresql" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -93,8 +93,8 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href=".." title="Ansible101" class="md-header__button md-logo" aria-label="Ansible101" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Ansible101" class="md-header__button md-logo" aria-label="Ansible101" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configurar Databases
+              Configure Databases
             
           </span>
         </div>
@@ -154,20 +154,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="es" class="md-select__link">
+            <a href="../../config_databases/" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../en/config_databases/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -188,16 +188,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -208,7 +208,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando búsqueda
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -220,7 +220,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/rafmarsan/Ansible101" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/rafmarsan/Ansible101" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -254,9 +254,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Ansible101" class="md-nav__button md-logo" aria-label="Ansible101" data-md-component="logo">
+    <a href="../" title="Ansible101" class="md-nav__button md-logo" aria-label="Ansible101" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -266,7 +266,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/rafmarsan/Ansible101" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/rafmarsan/Ansible101" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -286,7 +286,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -333,7 +333,7 @@
   <span class="md-ellipsis">
     
   
-    Contenido
+    Content
   
 
     
@@ -349,7 +349,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Contenido
+    Content
   
 
           </label>
@@ -369,7 +369,7 @@
   <span class="md-ellipsis">
     
   
-    Introduccion
+    Introduction
   
 
     
@@ -397,7 +397,7 @@
   <span class="md-ellipsis">
     
   
-    Fundamentos
+    Basics
   
 
     
@@ -453,7 +453,7 @@
   <span class="md-ellipsis">
     
   
-    Tasks, Roles y Handlers
+    Tasks, Roles and Handlers
   
 
     
@@ -509,7 +509,7 @@
   <span class="md-ellipsis">
     
   
-    Configurar WebServers
+    Configure WebServers
   
 
     
@@ -546,7 +546,7 @@
   <span class="md-ellipsis">
     
   
-    Configurar Databases
+    Configure Databases
   
 
     
@@ -564,7 +564,7 @@
   <span class="md-ellipsis">
     
   
-    Configurar Databases
+    Configure Databases
   
 
     
@@ -576,7 +576,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -585,15 +585,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivo-general" class="md-nav__link">
+  <a href="#general-objective" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 Objetivo general
+        🎯 General Objective
       
     </span>
   </a>
@@ -601,10 +601,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comandos-del-ejercicio" class="md-nav__link">
+  <a href="#exercise-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✍🏻 Comandos del ejercicio
+        ✍🏻 Exercise Commands
       
     </span>
   </a>
@@ -612,22 +612,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacion-y-configuracion-de-postgresql-usando-roles" class="md-nav__link">
+  <a href="#installing-and-configuring-postgresql-using-roles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Instalación y Configuración de PostgreSQL usando roles
+        📘 Installing and Configuring PostgreSQL using roles
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📘 Instalación y Configuración de PostgreSQL usando roles">
+    <nav class="md-nav" aria-label="📘 Installing and Configuring PostgreSQL using roles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#estructura-del-rol" class="md-nav__link">
+  <a href="#role-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏗️ Estructura del rol
+        🏗️ Role Structure
       
     </span>
   </a>
@@ -640,10 +640,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#playbook-principal" class="md-nav__link">
+  <a href="#main-playbook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Playbook principal
+        📘 Main Playbook
       
     </span>
   </a>
@@ -651,10 +651,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-1-cambiar-el-puerto-de-postgresql" class="md-nav__link">
+  <a href="#exercise-1-change-the-postgresql-port" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 1 — Cambiar el puerto de PostgreSQL
+        📚 Exercise 1 — Change the PostgreSQL port
       
     </span>
   </a>
@@ -662,10 +662,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-2-anadir-una-tabla" class="md-nav__link">
+  <a href="#exercise-2-add-a-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 2 — Añadir una tabla
+        📚 Exercise 2 — Add a table
       
     </span>
   </a>
@@ -673,10 +673,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-3-insertar-datos-desde-ansible" class="md-nav__link">
+  <a href="#exercise-3-insert-data-from-ansible" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 3 — Insertar datos desde Ansible
+        📚 Exercise 3 — Insert data from Ansible
       
     </span>
   </a>
@@ -684,10 +684,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-4-crear-varios-usuarios-dinamicamente" class="md-nav__link">
+  <a href="#exercise-4-create-multiple-users-dynamically" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 4 — Crear varios usuarios dinámicamente
+        📚 Exercise 4 — Create multiple users dynamically
       
     </span>
   </a>
@@ -717,7 +717,7 @@
   <span class="md-ellipsis">
     
   
-    Proyecto final
+    Final project
   
 
     
@@ -751,7 +751,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -760,15 +760,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivo-general" class="md-nav__link">
+  <a href="#general-objective" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 Objetivo general
+        🎯 General Objective
       
     </span>
   </a>
@@ -776,10 +776,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comandos-del-ejercicio" class="md-nav__link">
+  <a href="#exercise-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✍🏻 Comandos del ejercicio
+        ✍🏻 Exercise Commands
       
     </span>
   </a>
@@ -787,22 +787,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacion-y-configuracion-de-postgresql-usando-roles" class="md-nav__link">
+  <a href="#installing-and-configuring-postgresql-using-roles" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Instalación y Configuración de PostgreSQL usando roles
+        📘 Installing and Configuring PostgreSQL using roles
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📘 Instalación y Configuración de PostgreSQL usando roles">
+    <nav class="md-nav" aria-label="📘 Installing and Configuring PostgreSQL using roles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#estructura-del-rol" class="md-nav__link">
+  <a href="#role-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏗️ Estructura del rol
+        🏗️ Role Structure
       
     </span>
   </a>
@@ -815,10 +815,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#playbook-principal" class="md-nav__link">
+  <a href="#main-playbook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📘 Playbook principal
+        📘 Main Playbook
       
     </span>
   </a>
@@ -826,10 +826,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-1-cambiar-el-puerto-de-postgresql" class="md-nav__link">
+  <a href="#exercise-1-change-the-postgresql-port" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 1 — Cambiar el puerto de PostgreSQL
+        📚 Exercise 1 — Change the PostgreSQL port
       
     </span>
   </a>
@@ -837,10 +837,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-2-anadir-una-tabla" class="md-nav__link">
+  <a href="#exercise-2-add-a-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 2 — Añadir una tabla
+        📚 Exercise 2 — Add a table
       
     </span>
   </a>
@@ -848,10 +848,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-3-insertar-datos-desde-ansible" class="md-nav__link">
+  <a href="#exercise-3-insert-data-from-ansible" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 3 — Insertar datos desde Ansible
+        📚 Exercise 3 — Insert data from Ansible
       
     </span>
   </a>
@@ -859,10 +859,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-4-crear-varios-usuarios-dinamicamente" class="md-nav__link">
+  <a href="#exercise-4-create-multiple-users-dynamically" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio 4 — Crear varios usuarios dinámicamente
+        📚 Exercise 4 — Create multiple users dynamically
       
     </span>
   </a>
@@ -893,25 +893,25 @@
 <!-- Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan) -->
 <!-- Licensed under the GNU GPLv3. See LICENSE file for details. -->
 
-<h1 id="7-gestion-de-bases-de-datos-con-postgresql">🧩 7: Gestión de Bases de Datos con PostgreSQL</h1>
-<h2 id="objetivo-general">🎯 Objetivo general</h2>
-<p>Al finalizar este módulo, serás capaz de:</p>
+<h1 id="7-database-management-with-postgresql">🧩 7: Database Management with PostgreSQL</h1>
+<h2 id="general-objective">🎯 General Objective</h2>
+<p>By the end of this module, you will be able to:</p>
 <ol>
-<li>Instalar y configurar PostgreSQL 16 mediante un <strong>rol dedicado</strong></li>
-<li>Inicializar el cluster (bases de datos, usuarios y permisos) usando Ansible</li>
-<li>Ejecutar consultas SQL desde un playbook</li>
+<li>Install and configure PostgreSQL 16 using a <strong>dedicated role</strong></li>
+<li>Initialize the cluster (databases, users, and permissions) using Ansible</li>
+<li>Execute SQL queries from a playbook</li>
 </ol>
 <hr />
-<h2 id="comandos-del-ejercicio">✍🏻 Comandos del ejercicio</h2>
-<p>Para iniciar el ejercicio, ejecuta:
+<h2 id="exercise-commands">✍🏻 Exercise Commands</h2>
+<p>To start the exercise, run:
 <div class="highlight"><pre><span></span><code>lab<span class="w"> </span>start<span class="w"> </span>databases
 </code></pre></div></p>
-<p>Para evaluar el ejercicio, ejecuta:
+<p>To grade the exercise, run:
 <div class="highlight"><pre><span></span><code>lab<span class="w"> </span>grade<span class="w"> </span>databases
 </code></pre></div></p>
 <hr />
-<h2 id="instalacion-y-configuracion-de-postgresql-usando-roles">📘 Instalación y Configuración de PostgreSQL usando roles</h2>
-<h3 id="estructura-del-rol">🏗️ Estructura del rol</h3>
+<h2 id="installing-and-configuring-postgresql-using-roles">📘 Installing and Configuring PostgreSQL using roles</h2>
+<h3 id="role-structure">🏗️ Role Structure</h3>
 <div class="highlight"><pre><span></span><code>roles/
   postgresql/
     defaults/
@@ -936,35 +936,35 @@
 </code></pre></div></p>
 <hr />
 <p><strong>templates/pg_hba.conf.j2</strong>
-<div class="highlight"><pre><span></span><code># cualquier usuario del sistema puede conectarse a cualquier base de datos sin contraseña usando el socket Unix
+<div class="highlight"><pre><span></span><code># any system user can connect to any database without a password using the Unix socket
 local   all             all                                     trust
-# cualquier host puede conectarse via TCP/IP, pero debe usar contraseña
+# any host can connect via TCP/IP, but must use a password
 host    all             all             0.0.0.0/0               md5
 </code></pre></div></p>
 <hr />
 <p><strong>tasks/main.yml</strong>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Instalar PostgreSQL</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install PostgreSQL</span>
 <span class="w">  </span><span class="nt">ansible.builtin.include_tasks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">install.yml</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Configurar PostgreSQL</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Configure PostgreSQL</span>
 <span class="w">  </span><span class="nt">ansible.builtin.include_tasks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">configure.yml</span>
 </code></pre></div></p>
 <hr />
 <p><strong>tasks/install.yml</strong>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Instalar repositorio oficial de PostgreSQL</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install official PostgreSQL repository</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.dnf</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://download.postgresql.org/pub/repos/yum/reporpms/EL-{{</span><span class="nv"> </span><span class="s">ansible_distribution_major_version</span><span class="nv"> </span><span class="s">}}-{{</span><span class="nv"> </span><span class="s">ansible_architecture</span><span class="nv"> </span><span class="s">}}/pgdg-redhat-repo-latest.noarch.rpm&quot;</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span>
 <span class="w">    </span><span class="nt">disable_gpg_check</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deshabilitar PostgreSQL del AppStream</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Disable PostgreSQL from AppStream</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dnf -qy module disable postgresql</span>
 <span class="w">  </span><span class="nt">ignore_errors</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Instalar PostgreSQL Server</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install PostgreSQL Server</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.package</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span>
@@ -974,48 +974,48 @@ host    all             all             0.0.0.0/0               md5
 </code></pre></div></p>
 <hr />
 <p><strong>tasks/configure.yml</strong>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Inicializar el repositorio</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Initialize repository</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/pgsql-{{ postgresql_version }}/bin/postgresql-{{ postgresql_version }}-setup initdb</span>
 <span class="w">  </span><span class="nt">args</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">creates</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/var/lib/pgsql/{{</span><span class="nv"> </span><span class="s">postgresql_version</span><span class="nv"> </span><span class="s">}}/data/PG_VERSION&quot;</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Configurar el servicio</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Configure service</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.service</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgresql-{{ postgresql_version }}</span>
 <span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">started</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copiar pg_hba.conf</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copy pg_hba.conf</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">become_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
 <span class="w">  </span><span class="nt">ansible.builtin.template</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pg_hba.conf.j2</span>
 <span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/var/lib/pgsql/{{</span><span class="nv"> </span><span class="s">postgresql_version</span><span class="nv"> </span><span class="s">}}/data/pg_hba.conf&quot;</span>
-<span class="w">  </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reiniciar PostgreSQL</span>
+<span class="w">  </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Restart PostgreSQL</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Activamos el listener</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Activate listener</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">become_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
 <span class="w">  </span><span class="nt">ansible.builtin.replace</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/lib/pgsql/{{ postgresql_version }}/data/postgresql.conf</span>
 <span class="w">    </span><span class="nt">regexp</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;^#listen_addresses</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">&#39;localhost&#39;&quot;</span>
 <span class="w">    </span><span class="nt">replace</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;listen_addresses</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">postgresql_listen_address</span><span class="nv"> </span><span class="s">}}&#39;&quot;</span>
-<span class="w">  </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reiniciar PostgreSQL</span>
+<span class="w">  </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Restart PostgreSQL</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Activamos el puerto</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Activate port</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">become_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
 <span class="w">  </span><span class="nt">ansible.builtin.replace</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/lib/pgsql/{{ postgresql_version }}/data/postgresql.conf</span>
 <span class="w">    </span><span class="nt">regexp</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;^\s*#?\s*port\s*=.*$&#39;</span>
 <span class="w">    </span><span class="nt">replace</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;port</span><span class="nv"> </span><span class="s">=</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">postgresql_port</span><span class="nv"> </span><span class="s">}}&#39;</span>
-<span class="w">  </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reiniciar PostgreSQL</span>
+<span class="w">  </span><span class="nt">notify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Restart PostgreSQL</span>
 
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ansible.builtin.meta</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flush_handlers</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Esperar a que {{ postgresql_port }} este activo</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Wait for {{ postgresql_port }} to be active</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.wait_for</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
@@ -1024,7 +1024,7 @@ host    all             all             0.0.0.0/0               md5
 <span class="w">    </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">started</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Testar conexion a la instancia</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test connection to instance</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">become_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
 <span class="w">  </span><span class="nt">become_flags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-i</span>
@@ -1032,29 +1032,29 @@ host    all             all             0.0.0.0/0               md5
 <span class="w">    </span><span class="nt">cmd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">psql -p {{ postgresql_port }} -t -c &quot;select version();&quot;</span>
 <span class="w">  </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">version_output</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Seteamos password al usuario &#39;postgres&#39;</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set password for &#39;postgres&#39; user</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">become_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
 <span class="w">  </span><span class="nt">become_flags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-i</span>
 <span class="w">  </span><span class="nt">ansible.builtin.shell</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">cmd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">psql -p {{ postgresql_port }} -c &quot;ALTER USER postgres WITH PASSWORD &#39;{{ postgresql_db_password }}&#39;;&quot;</span>
 
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mostramos la version instalada</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Show installed version</span>
 <span class="w">  </span><span class="nt">ansible.builtin.debug</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Instalada</span><span class="nv"> </span><span class="s">la</span><span class="nv"> </span><span class="s">version:&quot;</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Installed</span><span class="nv"> </span><span class="s">version:&quot;</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">version_output.stdout</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">trim</span><span class="nv"> </span><span class="s">}}&quot;</span>
 </code></pre></div></p>
 <hr />
 <p><strong>handlers/main.yml</strong>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reiniciar PostgreSQL</span>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Restart PostgreSQL</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">ansible.builtin.service</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;postgresql-{{</span><span class="nv"> </span><span class="s">postgresql_version</span><span class="nv"> </span><span class="s">}}&quot;</span>
 <span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restarted</span>
 </code></pre></div></p>
 <hr />
-<h2 id="playbook-principal">📘 Playbook principal</h2>
+<h2 id="main-playbook">📘 Main Playbook</h2>
 <p><strong>databases.yml</strong>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dbservers</span>
@@ -1063,46 +1063,46 @@ host    all             all             0.0.0.0/0               md5
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgresql</span>
 </code></pre></div></p>
 <div class="admonition info">
-<p class="admonition-title">Ejecución del playbook</p>
-<p>Tras ejecutar <strong>sin errores</strong> el playbook 
+<p class="admonition-title">Running the playbook</p>
+<p>After running the playbook <strong>without errors</strong>
 <div class="highlight"><pre><span></span><code>ansible-playbook<span class="w"> </span>databases.yml
 </code></pre></div>
-deberias poder logar en la máquina con 
+you should be able to log into the machine with
 <div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>db1
 </code></pre></div>
-cambiar al usuario <code>postgres</code> con 
+change to the <code>postgres</code> user with
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>su<span class="w"> </span>-<span class="w"> </span>postgres
 </code></pre></div>
-y logar en la instancia con el comando 
+and log into the instance with the command
 <div class="highlight"><pre><span></span><code>psql
 </code></pre></div></p>
 </div>
 <hr />
-<h2 id="ejercicio-1-cambiar-el-puerto-de-postgresql">📚 Ejercicio 1 — Cambiar el puerto de PostgreSQL</h2>
-<p>Modificar:
+<h2 id="exercise-1-change-the-postgresql-port">📚 Exercise 1 — Change the PostgreSQL port</h2>
+<p>Modify:
 <div class="highlight"><pre><span></span><code><span class="nt">postgresql_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5433</span>
 </code></pre></div></p>
-<p>Y probar conexión, usando como password <code>ansible_123</code>:
+<p>And test the connection, using <code>ansible_123</code> as the password:
 <div class="highlight"><pre><span></span><code>psql<span class="w"> </span>-h<span class="w"> </span>localhost<span class="w"> </span>-p<span class="w"> </span><span class="m">5433</span>
 </code></pre></div></p>
 <details class="tip">
-<summary>Solucion</summary>
-<p>En <strong>postgresql/defaults/main.yml</strong> modificar <code>postgresql_port: 5433</code> PostgreSQL se reiniciará automaticamente por handler.</p>
+<summary>Solution</summary>
+<p>In <strong>postgresql/defaults/main.yml</strong> modify <code>postgresql_port: 5433</code>. PostgreSQL will automatically restart via the handler.</p>
 </details>
 <hr />
-<h2 id="ejercicio-2-anadir-una-tabla">📚 Ejercicio 2 — Añadir una tabla</h2>
+<h2 id="exercise-2-add-a-table">📚 Exercise 2 — Add a table</h2>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>Para el laboratorio vamos a usar la base de datos <strong>postgres</strong>, pero NO es una buena práctica</p>
+<p>For the lab we will use the <strong>postgres</strong> database, but this is NOT a good practice.</p>
 </div>
-<p>Crear el fichero <strong>postgresql/tasks/database.yml</strong>:
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Crear tabla empleados</span>
+<p>Create the file <strong>postgresql/tasks/database.yml</strong>:
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Create employees table</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">become_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
 <span class="w">  </span><span class="nt">become_flags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-i</span>
 <span class="w">  </span><span class="nt">ansible.builtin.shell</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <span class="w">    </span><span class="no">psql -p {{ postgresql_port }} -d &quot;postgres&quot; -c &quot;</span>
-<span class="w">      </span><span class="no">CREATE TABLE IF NOT EXISTS empleados (</span>
+<span class="w">      </span><span class="no">CREATE TABLE IF NOT EXISTS employees (</span>
 <span class="w">        </span><span class="no">id SERIAL PRIMARY KEY,</span>
 <span class="w">        </span><span class="no">username TEXT NOT NULL,</span>
 <span class="w">        </span><span class="no">created_at TIMESTAMP DEFAULT NOW()</span>
@@ -1111,62 +1111,62 @@ y logar en la instancia con el comando
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>RECUERDA añadir el nuevo fichero <strong>database.yml</strong> en <strong>postgresql/tasks/main.yml</strong></p>
+<p>REMEMBER to add the new file <strong>database.yml</strong> in <strong>postgresql/tasks/main.yml</strong></p>
 <details class="tip">
-<summary>Solucion</summary>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Creacion de tablas y usuarios</span>
+<summary>Solution</summary>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Creation of tables and users</span>
 <span class="w">  </span><span class="nt">ansible.builtin.include_tasks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database.yml</span>
 </code></pre></div>
 </details>
 </div>
 <hr />
-<h2 id="ejercicio-3-insertar-datos-desde-ansible">📚 Ejercicio 3 — Insertar datos desde Ansible</h2>
-<p>Añadir una tarea en <strong>postgresql/tasks/database.yml</strong>:
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Insertar usuario admin</span>
+<h2 id="exercise-3-insert-data-from-ansible">📚 Exercise 3 — Insert data from Ansible</h2>
+<p>Add a task in <strong>postgresql/tasks/database.yml</strong>:
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Insert admin user</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">become_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
 <span class="w">  </span><span class="nt">become_flags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-i</span>
 <span class="w">  </span><span class="nt">ansible.builtin.shell</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">    </span><span class="no">psql -p {{ postgresql_port }} -d &quot;postgres&quot; -c &quot;INSERT INTO empleados (username) VALUES (&#39;admin&#39;);&quot;</span>
+<span class="w">    </span><span class="no">psql -p {{ postgresql_port }} -d &quot;postgres&quot; -c &quot;INSERT INTO employees (username) VALUES (&#39;admin&#39;);&quot;</span>
 </code></pre></div></p>
 <hr />
-<h2 id="ejercicio-4-crear-varios-usuarios-dinamicamente">📚 Ejercicio 4 — Crear varios usuarios dinámicamente</h2>
-<p>Añadir lista en <strong>defaults/main.yml</strong>:
+<h2 id="exercise-4-create-multiple-users-dynamically">📚 Exercise 4 — Create multiple users dynamically</h2>
+<p>Add a list in <strong>defaults/main.yml</strong>:
 <div class="highlight"><pre><span></span><code><span class="nt">postgresql_initial_users</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">alice</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bob</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">charlie</span>
 </code></pre></div></p>
-<p>Añadir una tarea en <strong>postgresql/tasks/database.yml</strong>:
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Insertar usuarios iniciales</span>
+<p>Add a task in <strong>postgresql/tasks/database.yml</strong>:
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Insert initial users</span>
 <span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">become_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
 <span class="w">  </span><span class="nt">become_flags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-i</span>
 <span class="w">  </span><span class="nt">ansible.builtin.shell</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">cmd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">psql -p {{ postgresql_port }} -d &quot;postgres&quot; -c &quot;INSERT INTO empleados (username) VALUES (&#39;{{ nombre_empleado }}&#39;);&quot;</span>
+<span class="w">    </span><span class="nt">cmd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">psql -p {{ postgresql_port }} -d &quot;postgres&quot; -c &quot;INSERT INTO employees (username) VALUES (&#39;{{ employee_name }}&#39;);&quot;</span>
 <span class="w">  </span><span class="nt">loop</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">postgresql_initial_users</span><span class="nv"> </span><span class="s">}}&quot;</span>
 <span class="w">  </span><span class="nt">loop_control</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">loop_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nombre_empleado</span>
+<span class="w">    </span><span class="nt">loop_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">employee_name</span>
 </code></pre></div></p>
 <div class="admonition info">
-<p class="admonition-title">Validar</p>
-<p>Tras ejecutar <strong>sin errores</strong> el playbook 
+<p class="admonition-title">Validate</p>
+<p>After running the playbook <strong>without errors</strong>
 <div class="highlight"><pre><span></span><code>ansible-playbook<span class="w"> </span>databases.yml
 </code></pre></div>
-deberias poder logar en la máquina con 
+you should be able to log into the machine with
 <div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>db1
 </code></pre></div>
-cambiar al usuario <code>postgres</code> con 
+change to the <code>postgres</code> user with
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>su<span class="w"> </span>-<span class="w"> </span>postgres
 </code></pre></div>
-y logar en la instancia con el comando 
+and log into the instance with the command
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PGPORT</span><span class="o">=</span><span class="m">5433</span>
 psql
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">empleados</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span>
 </code></pre></div>
-y ver algo como:
-<div class="highlight"><pre><span></span><code>postgres=# select * from empleados;
+and see something like:
+<div class="highlight"><pre><span></span><code>postgres=# select * from employees;
 id | username |         created_at
 ----+----------+----------------------------
   1 | admin    | 2025-11-27 20:55:37.380092
@@ -1224,10 +1224,10 @@ id | username |         created_at
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

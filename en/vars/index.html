@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="es" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -16,13 +16,13 @@
       
       
         
-          <link rel="alternate" href="./" hreflang="es">
+          <link rel="alternate" href="../../vars/" hreflang="es">
         
-          <link rel="alternate" href="../en/vars/" hreflang="en">
+          <link rel="alternate" href="./" hreflang="en">
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,8 +78,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#3-prioridad-de-variables-en-ansible" class="md-skip">
-          Saltar a contenido
+        <a href="#3-ansible-variable-precedence" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -93,8 +93,8 @@
   
 
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href=".." title="Ansible101" class="md-header__button md-logo" aria-label="Ansible101" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Ansible101" class="md-header__button md-logo" aria-label="Ansible101" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -154,20 +154,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+    <button class="md-header__button md-icon" aria-label="Select language">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="es" class="md-select__link">
+            <a href="../../vars/" hreflang="es" class="md-select__link">
               Español
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../en/vars/" hreflang="en" class="md-select__link">
+            <a href="./" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -188,16 +188,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Buscar">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -208,7 +208,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando búsqueda
+            Initializing search
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -220,7 +220,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/rafmarsan/Ansible101" title="Ir al repositorio" class="md-source" data-md-component="source">
+        <a href="https://github.com/rafmarsan/Ansible101" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -254,9 +254,9 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Ansible101" class="md-nav__button md-logo" aria-label="Ansible101" data-md-component="logo">
+    <a href="../" title="Ansible101" class="md-nav__button md-logo" aria-label="Ansible101" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -266,7 +266,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/rafmarsan/Ansible101" title="Ir al repositorio" class="md-source" data-md-component="source">
+      <a href="https://github.com/rafmarsan/Ansible101" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -286,7 +286,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -333,7 +333,7 @@
   <span class="md-ellipsis">
     
   
-    Contenido
+    Content
   
 
     
@@ -349,7 +349,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Contenido
+    Content
   
 
           </label>
@@ -369,7 +369,7 @@
   <span class="md-ellipsis">
     
   
-    Introduccion
+    Introduction
   
 
     
@@ -397,7 +397,7 @@
   <span class="md-ellipsis">
     
   
-    Fundamentos
+    Basics
   
 
     
@@ -464,7 +464,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -473,15 +473,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
+  <a href="#objectives" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 Objetivos
+        🎯 Objectives
       
     </span>
   </a>
@@ -489,22 +489,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#teoria" class="md-nav__link">
+  <a href="#theory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧠 Teoría
+        🧠 Theory
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧠 Teoría">
+    <nav class="md-nav" aria-label="🧠 Theory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#que-son-las-variables-en-ansible" class="md-nav__link">
+  <a href="#what-are-ansible-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ¿Qué son las Variables en Ansible?
+        What are Ansible Variables?
       
     </span>
   </a>
@@ -517,22 +517,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#donde-definir-variables" class="md-nav__link">
+  <a href="#where-to-define-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📜 Dónde Definir Variables
+        📜 Where to Define Variables
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📜 Dónde Definir Variables">
+    <nav class="md-nav" aria-label="📜 Where to Define Variables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-practico-variables-por-niveles" class="md-nav__link">
+  <a href="#practical-example-variables-by-levels" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo Práctico — Variables por Niveles
+        Practical Example — Variables by Levels
       
     </span>
   </a>
@@ -545,34 +545,34 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prioridad-de-variables-de-menor-a-mayor" class="md-nav__link">
+  <a href="#variable-precedence-lowest-to-highest" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧮 Prioridad de Variables (de menor a mayor)
+        🧮 Variable Precedence (lowest to highest)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧮 Prioridad de Variables (de menor a mayor)">
+    <nav class="md-nav" aria-label="🧮 Variable Precedence (lowest to highest)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-sobrescritura-de-variables" class="md-nav__link">
+  <a href="#example-overriding-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo — Sobrescritura de Variables
+        Example — Overriding Variables
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ejemplo — Sobrescritura de Variables">
+    <nav class="md-nav" aria-label="Example — Overriding Variables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#valor-desde-el-playbook" class="md-nav__link">
+  <a href="#value-from-the-playbook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Valor desde el playbook:
+        Value from the playbook:
       
     </span>
   </a>
@@ -580,10 +580,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sobrescribir-desde-la-linea-de-comandos" class="md-nav__link">
+  <a href="#override-from-the-command-line" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sobrescribir desde la línea de comandos:
+        Override from the command line:
       
     </span>
   </a>
@@ -601,10 +601,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-de-entorno" class="md-nav__link">
+  <a href="#environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚙️ Variables de Entorno
+        ⚙️ Environment Variables
       
     </span>
   </a>
@@ -612,10 +612,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-dinamicas-y-facts" class="md-nav__link">
+  <a href="#dynamic-variables-and-facts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💡 Variables Dinámicas y Facts
+        💡 Dynamic Variables and Facts
       
     </span>
   </a>
@@ -623,22 +623,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#errores-comunes-y-buenas-practicas" class="md-nav__link">
+  <a href="#common-errors-and-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚨 Errores Comunes y Buenas Prácticas
+        🚨 Common Errors and Best Practices
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚨 Errores Comunes y Buenas Prácticas">
+    <nav class="md-nav" aria-label="🚨 Common Errors and Best Practices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#errores-comunes" class="md-nav__link">
+  <a href="#common-errors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Errores Comunes
+        Common Errors
       
     </span>
   </a>
@@ -646,10 +646,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buenas-practicas" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Buenas Prácticas
+        Best Practices
       
     </span>
   </a>
@@ -662,10 +662,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-practico" class="md-nav__link">
+  <a href="#practical-exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio Práctico
+        📚 Practical Exercise
       
     </span>
   </a>
@@ -695,7 +695,7 @@
   <span class="md-ellipsis">
     
   
-    Tasks, Roles y Handlers
+    Tasks, Roles and Handlers
   
 
     
@@ -751,7 +751,7 @@
   <span class="md-ellipsis">
     
   
-    Configurar WebServers
+    Configure WebServers
   
 
     
@@ -779,7 +779,7 @@
   <span class="md-ellipsis">
     
   
-    Configurar Databases
+    Configure Databases
   
 
     
@@ -807,7 +807,7 @@
   <span class="md-ellipsis">
     
   
-    Proyecto final
+    Final project
   
 
     
@@ -841,7 +841,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -850,15 +850,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Tabla de contenidos
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objetivos" class="md-nav__link">
+  <a href="#objectives" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 Objetivos
+        🎯 Objectives
       
     </span>
   </a>
@@ -866,22 +866,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#teoria" class="md-nav__link">
+  <a href="#theory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧠 Teoría
+        🧠 Theory
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧠 Teoría">
+    <nav class="md-nav" aria-label="🧠 Theory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#que-son-las-variables-en-ansible" class="md-nav__link">
+  <a href="#what-are-ansible-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ¿Qué son las Variables en Ansible?
+        What are Ansible Variables?
       
     </span>
   </a>
@@ -894,22 +894,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#donde-definir-variables" class="md-nav__link">
+  <a href="#where-to-define-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📜 Dónde Definir Variables
+        📜 Where to Define Variables
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📜 Dónde Definir Variables">
+    <nav class="md-nav" aria-label="📜 Where to Define Variables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-practico-variables-por-niveles" class="md-nav__link">
+  <a href="#practical-example-variables-by-levels" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo Práctico — Variables por Niveles
+        Practical Example — Variables by Levels
       
     </span>
   </a>
@@ -922,34 +922,34 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prioridad-de-variables-de-menor-a-mayor" class="md-nav__link">
+  <a href="#variable-precedence-lowest-to-highest" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🧮 Prioridad de Variables (de menor a mayor)
+        🧮 Variable Precedence (lowest to highest)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧮 Prioridad de Variables (de menor a mayor)">
+    <nav class="md-nav" aria-label="🧮 Variable Precedence (lowest to highest)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ejemplo-sobrescritura-de-variables" class="md-nav__link">
+  <a href="#example-overriding-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Ejemplo — Sobrescritura de Variables
+        Example — Overriding Variables
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ejemplo — Sobrescritura de Variables">
+    <nav class="md-nav" aria-label="Example — Overriding Variables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#valor-desde-el-playbook" class="md-nav__link">
+  <a href="#value-from-the-playbook" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Valor desde el playbook:
+        Value from the playbook:
       
     </span>
   </a>
@@ -957,10 +957,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sobrescribir-desde-la-linea-de-comandos" class="md-nav__link">
+  <a href="#override-from-the-command-line" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sobrescribir desde la línea de comandos:
+        Override from the command line:
       
     </span>
   </a>
@@ -978,10 +978,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-de-entorno" class="md-nav__link">
+  <a href="#environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚙️ Variables de Entorno
+        ⚙️ Environment Variables
       
     </span>
   </a>
@@ -989,10 +989,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variables-dinamicas-y-facts" class="md-nav__link">
+  <a href="#dynamic-variables-and-facts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💡 Variables Dinámicas y Facts
+        💡 Dynamic Variables and Facts
       
     </span>
   </a>
@@ -1000,22 +1000,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#errores-comunes-y-buenas-practicas" class="md-nav__link">
+  <a href="#common-errors-and-best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚨 Errores Comunes y Buenas Prácticas
+        🚨 Common Errors and Best Practices
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚨 Errores Comunes y Buenas Prácticas">
+    <nav class="md-nav" aria-label="🚨 Common Errors and Best Practices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#errores-comunes" class="md-nav__link">
+  <a href="#common-errors" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Errores Comunes
+        Common Errors
       
     </span>
   </a>
@@ -1023,10 +1023,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#buenas-practicas" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Buenas Prácticas
+        Best Practices
       
     </span>
   </a>
@@ -1039,10 +1039,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-practico" class="md-nav__link">
+  <a href="#practical-exercise" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📚 Ejercicio Práctico
+        📚 Practical Exercise
       
     </span>
   </a>
@@ -1073,105 +1073,105 @@
 <!-- Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan) -->
 <!-- Licensed under the GNU GPLv3. See LICENSE file for details. -->
 
-<h1 id="3-prioridad-de-variables-en-ansible">🧩 3: Prioridad de variables en Ansible</h1>
-<h2 id="objetivos">🎯 Objetivos</h2>
-<p>Al finalizar este módulo, serás capaz de:</p>
+<h1 id="3-ansible-variable-precedence">🧩 3: Ansible Variable Precedence</h1>
+<h2 id="objectives">🎯 Objectives</h2>
+<p>By the end of this module, you will be able to:</p>
 <ol>
-<li>Definir variables en distintos niveles de Ansible (inventario, playbook, roles, etc.)</li>
-<li>Comprender la <strong>precedencia y prioridades</strong> entre ellas</li>
-<li>Utilizar <strong>variables de entorno, facts y prompts</strong> dentro de playbooks</li>
-<li>Aplicar buenas prácticas en el uso de variables</li>
+<li>Define variables at different levels of Ansible (inventory, playbook, roles, etc.)</li>
+<li>Understand the <strong>precedence and priorities</strong> among them</li>
+<li>Use <strong>environment variables, facts, and prompts</strong> within playbooks</li>
+<li>Apply best practices when using variables</li>
 </ol>
 <hr />
-<h2 id="teoria">🧠 Teoría</h2>
-<h3 id="que-son-las-variables-en-ansible">¿Qué son las Variables en Ansible?</h3>
-<p>Las <strong>variables</strong> permiten <strong>parametrizar</strong> los playbooks y tareas para que sean <strong>reutilizables</strong> y <strong>flexibles</strong>.
-Pueden almacenar valores como rutas, nombres de paquetes, usuarios, direcciones IP, contraseñas, etc.</p>
-<p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Instalar paquete configurable</span>
+<h2 id="theory">🧠 Theory</h2>
+<h3 id="what-are-ansible-variables">What are Ansible Variables?</h3>
+<p><strong>Variables</strong> allow you to <strong>parameterize</strong> playbooks and tasks so they are <strong>reusable</strong> and <strong>flexible</strong>.
+They can store values like paths, package names, users, IP addresses, passwords, etc.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install configurable package</span>
 <span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
 <span class="w">  </span><span class="nt">vars</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">pkg_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
 <span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Instalar paquete</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install package</span>
 <span class="w">      </span><span class="nt">ansible.builtin.package</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">pkg_name</span><span class="nv"> </span><span class="s">}}&quot;</span>
 <span class="w">        </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Las variables se expanden con doble llave <code>{{ variable }}</code></p>
-<p>Deben entrecomillarse cuando se usan al inicio:   <br />
+<p>Variables are expanded with double curly braces <code>{{ variable }}</code></p>
+<p>They must be quoted when used at the beginning of a value:
 <code>app_path: {{ base_path }}/22</code> ➜ <code>app_path: "{{ base_path }}/22"</code></p>
-<p>Pueden usarse en cualquier parte de un playbook: rutas, nombres, comandos, etc.</p>
+<p>They can be used anywhere in a playbook: paths, names, commands, etc.</p>
 </div>
 <hr />
-<h2 id="donde-definir-variables">📜 Dónde Definir Variables</h2>
-<p>Ansible permite definir variables en <strong>muchos lugares</strong>, según el contexto:</p>
+<h2 id="where-to-define-variables">📜 Where to Define Variables</h2>
+<p>Ansible allows defining variables in <strong>many places</strong>, depending on the context:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Nivel</th>
-<th style="text-align: left;">Ubicación</th>
-<th style="text-align: left;">Ejemplo o archivo</th>
-<th style="text-align: left;">Comentario</th>
+<th style="text-align: left;">Level</th>
+<th style="text-align: left;">Location</th>
+<th style="text-align: left;">Example or file</th>
+<th style="text-align: left;">Comment</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Inventario</strong></td>
-<td style="text-align: left;">Archivo <code>inventory</code> o <code>group_vars/</code> / <code>host_vars/</code></td>
-<td style="text-align: left;">Define variables por host o grupo</td>
-<td style="text-align: left;">Ideal para información de infraestructura</td>
+<td style="text-align: left;"><strong>Inventory</strong></td>
+<td style="text-align: left;"><code>inventory</code> file or <code>group_vars/</code> / <code>host_vars/</code></td>
+<td style="text-align: left;">Defines variables per host or group</td>
+<td style="text-align: left;">Ideal for infrastructure information</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Playbook</strong></td>
-<td style="text-align: left;">Dentro de <code>vars:</code> o <code>vars_files:</code></td>
+<td style="text-align: left;">Inside <code>vars:</code> or <code>vars_files:</code></td>
 <td style="text-align: left;"><code>vars: { pkg_name: nginx }</code></td>
-<td style="text-align: left;">Variables locales al playbook</td>
+<td style="text-align: left;">Variables local to the playbook</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Rol</strong></td>
-<td style="text-align: left;">En <code>defaults/</code> o <code>vars/</code> del rol</td>
+<td style="text-align: left;"><strong>Role</strong></td>
+<td style="text-align: left;">In <code>defaults/</code> or <code>vars/</code> of the role</td>
 <td style="text-align: left;"><code>roles/webserver/defaults/main.yml</code></td>
-<td style="text-align: left;">Prioridad distinta según carpeta</td>
+<td style="text-align: left;">Different priority based on folder</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Variables de entorno</strong></td>
-<td style="text-align: left;">Exportadas desde el sistema</td>
+<td style="text-align: left;"><strong>Environment variables</strong></td>
+<td style="text-align: left;">Exported from the system</td>
 <td style="text-align: left;"><code>export ANSIBLE_VAR=value</code></td>
-<td style="text-align: left;">Se usan con <code>lookup('env', 'ANSIBLE_VAR')</code></td>
+<td style="text-align: left;">Used with <code>lookup('env', 'ANSIBLE_VAR')</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Línea de comandos</strong></td>
-<td style="text-align: left;">Usando <code>-e</code> o <code>--extra-vars</code></td>
+<td style="text-align: left;"><strong>Command line</strong></td>
+<td style="text-align: left;">Using <code>-e</code> or <code>--extra-vars</code></td>
 <td style="text-align: left;"><code>ansible-playbook play.yml -e "pkg_name=nginx"</code></td>
-<td style="text-align: left;">Máxima prioridad</td>
+<td style="text-align: left;">Highest priority</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Facts del sistema</strong></td>
-<td style="text-align: left;">Recogidos automáticamente con <code>gather_facts</code></td>
+<td style="text-align: left;"><strong>System facts</strong></td>
+<td style="text-align: left;">Gathered automatically with <code>gather_facts</code></td>
 <td style="text-align: left;"><code>ansible_hostname</code>, <code>ansible_distribution</code></td>
-<td style="text-align: left;">Variables especiales del sistema remoto</td>
+<td style="text-align: left;">Special variables from the remote system</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<p><a href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable">Link</a> a la documentación oficial</p>
+<p><a href="https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable">Link</a> to the official documentation</p>
 </div>
 <hr />
-<h3 id="ejemplo-practico-variables-por-niveles">Ejemplo Práctico — Variables por Niveles</h3>
-<p>Supongamos que tenemos este inventario:</p>
+<h3 id="practical-example-variables-by-levels">Practical Example — Variables by Levels</h3>
+<p>Suppose we have this inventory:</p>
 <div class="highlight"><pre><span></span><code><span class="k">[webservers]</span>
 <span class="na">web1 ansible_host</span><span class="o">=</span><span class="s">192.168.1.10</span>
 <span class="na">web2 ansible_host</span><span class="o">=</span><span class="s">192.168.1.11</span>
 <span class="k">[webservers:vars]</span>
 <span class="na">app_port</span><span class="o">=</span><span class="s">80</span>
 </code></pre></div>
-<p>Y este playbook <code>vars_demo.yml</code>:</p>
+<p>And this playbook <code>vars_demo.yml</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Demostración de variables</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Variable demonstration</span>
 <span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webservers</span>
 <span class="w">  </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 
@@ -1179,196 +1179,196 @@ Pueden almacenar valores como rutas, nombres de paquetes, usuarios, direcciones 
 <span class="w">    </span><span class="nt">app_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
 
 <span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mostrar el valor de app_port</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Show the value of app_port</span>
 <span class="w">      </span><span class="nt">ansible.builtin.debug</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;El</span><span class="nv"> </span><span class="s">puerto</span><span class="nv"> </span><span class="s">definido</span><span class="nv"> </span><span class="s">es</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">app_port</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">        </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;The</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">port</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">app_port</span><span class="nv"> </span><span class="s">}}&quot;</span>
 </code></pre></div>
-<p>Ejecuta el playbook:</p>
+<p>Run the playbook:</p>
 <div class="highlight"><pre><span></span><code>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory<span class="w"> </span>vars_demo.yml
 </code></pre></div>
-<p><strong>Salida esperada:</strong></p>
-<div class="highlight"><pre><span></span><code>TASK<span class="w"> </span><span class="o">[</span>Mostrar<span class="w"> </span>el<span class="w"> </span>valor<span class="w"> </span>de<span class="w"> </span>app_port<span class="o">]</span><span class="w"> </span>********************************************
+<p><strong>Expected output:</strong></p>
+<div class="highlight"><pre><span></span><code>TASK<span class="w"> </span><span class="o">[</span>Show<span class="w"> </span>the<span class="w"> </span>value<span class="w"> </span>of<span class="w"> </span>app_port<span class="o">]</span><span class="w"> </span>********************************************
 ok:<span class="w"> </span><span class="o">[</span>web1<span class="o">]</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="s2">&quot;msg&quot;</span>:<span class="w"> </span><span class="s2">&quot;El puerto definido es 8080&quot;</span>
+<span class="w">    </span><span class="s2">&quot;msg&quot;</span>:<span class="w"> </span><span class="s2">&quot;The defined port is 8080&quot;</span>
 <span class="o">}</span>
 </code></pre></div>
-<p>👉 Aunque en el <em>inventory</em> definimos <code>app_port=80</code>, el valor dentro del <strong>playbook (<code>vars</code>) tiene prioridad</strong> y sobreescribe el del inventario.</p>
+<p>👉 Although we defined <code>app_port=80</code> in the <em>inventory</em>, the value inside the <strong>playbook (<code>vars</code>) takes precedence</strong> and overrides the inventory's value.</p>
 <hr />
-<h2 id="prioridad-de-variables-de-menor-a-mayor">🧮 Prioridad de Variables (de menor a mayor)</h2>
-<p>La precedencia determina <strong>cuál valor “gana”</strong> cuando una variable se define en varios lugares. </p>
-<p>Un número más alto en la prioridad sobreescribe al resto</p>
+<h2 id="variable-precedence-lowest-to-highest">🧮 Variable Precedence (lowest to highest)</h2>
+<p>Precedence determines <strong>which value “wins”</strong> when a variable is defined in multiple places. </p>
+<p>A higher priority number overwrites the rest.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Prioridad</th>
-<th style="text-align: left;">Nivel</th>
-<th style="text-align: left;">Ejemplo</th>
+<th style="text-align: center;">Priority</th>
+<th style="text-align: left;">Level</th>
+<th style="text-align: left;">Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: center;">1</td>
-<td style="text-align: left;"><code>defaults/</code> dentro de un rol</td>
-<td style="text-align: left;">Valores por defecto, seguros pero sobrescribibles</td>
+<td style="text-align: left;"><code>defaults/</code> inside a role</td>
+<td style="text-align: left;">Default values, safe but overridable</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
-<td style="text-align: left;">Variables del inventario (<code>group_vars</code>, <code>host_vars</code>)</td>
-<td style="text-align: left;">Valores específicos de infraestructura</td>
+<td style="text-align: left;">Inventory variables (<code>group_vars</code>, <code>host_vars</code>)</td>
+<td style="text-align: left;">Infrastructure-specific values</td>
 </tr>
 <tr>
 <td style="text-align: center;">3</td>
-<td style="text-align: left;">Variables definidas en el playbook (<code>vars:</code> o <code>vars_files:</code>)</td>
-<td style="text-align: left;">Definiciones locales</td>
+<td style="text-align: left;">Variables defined in the playbook (<code>vars:</code> or <code>vars_files:</code>)</td>
+<td style="text-align: left;">Local definitions</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
-<td style="text-align: left;">Variables de registro (<code>set_fact</code>)</td>
-<td style="text-align: left;">Variables dinámicas dentro de tareas</td>
+<td style="text-align: left;">Registered variables (<code>set_fact</code>)</td>
+<td style="text-align: left;">Dynamic variables inside tasks</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
-<td style="text-align: left;">Variables de entorno (<code>lookup('env')</code>)</td>
-<td style="text-align: left;">Valores del entorno del sistema</td>
+<td style="text-align: left;">Environment variables (<code>lookup('env')</code>)</td>
+<td style="text-align: left;">System environment values</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
-<td style="text-align: left;">Variables pasadas por línea de comandos (<code>-e</code>)</td>
-<td style="text-align: left;">Tienen <strong>máxima prioridad</strong></td>
+<td style="text-align: left;">Variables passed via command line (<code>-e</code>)</td>
+<td style="text-align: left;">Have <strong>highest priority</strong></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Cuando dos variables con el mismo nombre existen en distintos niveles, <strong>Ansible usa la de mayor prioridad</strong>, ignorando el resto.</p>
+<p>When two variables with the same name exist at different levels, <strong>Ansible uses the one with the highest priority</strong>, ignoring the rest.</p>
 </div>
 <hr />
-<h3 id="ejemplo-sobrescritura-de-variables">Ejemplo — Sobrescritura de Variables</h3>
-<p>Creamos el archivo <code>inventory</code>:</p>
+<h3 id="example-overriding-variables">Example — Overriding Variables</h3>
+<p>We create the <code>inventory</code> file:</p>
 <div class="highlight"><pre><span></span><code><span class="k">[all]</span>
 <span class="na">localhost app_name</span><span class="o">=</span><span class="s">nginx</span>
 </code></pre></div>
-<p>Y el playbook <code>vars_priority.yml</code>:</p>
+<p>And the playbook <code>vars_priority.yml</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Prioridades de variables</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Variable priorities</span>
 <span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
 <span class="w">  </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">vars</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">app_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apache2</span>
 <span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mostrar variable definida</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Show defined variable</span>
 <span class="w">      </span><span class="nt">ansible.builtin.debug</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Aplicación:</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">app_name</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">        </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Application:</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">app_name</span><span class="nv"> </span><span class="s">}}&quot;</span>
 </code></pre></div>
-<h4 id="valor-desde-el-playbook">Valor desde el playbook:</h4>
+<h4 id="value-from-the-playbook">Value from the playbook:</h4>
 <div class="highlight"><pre><span></span><code>ansible-playbook<span class="w"> </span>vars_priority.yml
 </code></pre></div>
-<p>Salida:</p>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;msg&quot;</span>:<span class="w"> </span><span class="s2">&quot;Aplicación: apache2&quot;</span>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;msg&quot;</span>:<span class="w"> </span><span class="s2">&quot;Application: apache2&quot;</span>
 </code></pre></div>
-<h4 id="sobrescribir-desde-la-linea-de-comandos">Sobrescribir desde la línea de comandos:</h4>
+<h4 id="override-from-the-command-line">Override from the command line:</h4>
 <div class="highlight"><pre><span></span><code>ansible-playbook<span class="w"> </span>vars_priority.yml<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;app_name=nginx&quot;</span>
 </code></pre></div>
-<p>Salida:</p>
-<div class="highlight"><pre><span></span><code><span class="s2">&quot;msg&quot;</span>:<span class="w"> </span><span class="s2">&quot;Aplicación: nginx&quot;</span>
+<p>Output:</p>
+<div class="highlight"><pre><span></span><code><span class="s2">&quot;msg&quot;</span>:<span class="w"> </span><span class="s2">&quot;Application: nginx&quot;</span>
 </code></pre></div>
-<p>Las variables pasadas con <code>-e</code> tienen <strong>máxima prioridad</strong>.</p>
+<p>Variables passed with <code>-e</code> have the <strong>highest priority</strong>.</p>
 <hr />
-<h2 id="variables-de-entorno">⚙️ Variables de Entorno</h2>
-<p>Puedes acceder a variables del sistema con el <em>lookup plugin</em>:</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mostrar usuario actual</span>
+<h2 id="environment-variables">⚙️ Environment Variables</h2>
+<p>You can access system variables with the <em>lookup plugin</em>:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Show current user</span>
 <span class="w">  </span><span class="nt">ansible.builtin.debug</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Usuario:</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">lookup(&#39;env&#39;,&#39;USER&#39;)</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">    </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;User:</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">lookup(&#39;env&#39;,&#39;USER&#39;)</span><span class="nv"> </span><span class="s">}}&quot;</span>
 </code></pre></div>
-<p>Ejemplo de uso práctico en una ruta dinámica:</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copiar archivo al home del usuario</span>
+<p>Practical usage example in a dynamic path:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Copy file to user home</span>
 <span class="w">  </span><span class="nt">ansible.builtin.copy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test.txt</span>
 <span class="w">    </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">lookup(&#39;env&#39;,&#39;HOME&#39;)</span><span class="nv"> </span><span class="s">}}/test.txt&quot;</span>
 </code></pre></div>
 <hr />
-<h2 id="variables-dinamicas-y-facts">💡 Variables Dinámicas y Facts</h2>
-<p>Ansible puede recopilar automáticamente información del sistema remoto (facts) si <code>gather_facts: true</code>.</p>
-<p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mostrar información del host</span>
+<h2 id="dynamic-variables-and-facts">💡 Dynamic Variables and Facts</h2>
+<p>Ansible can automatically gather remote system information (facts) if <code>gather_facts: true</code>.</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Show host information</span>
 <span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost</span>
 <span class="w">  </span><span class="nt">gather_facts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ansible.builtin.debug</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Sistema</span><span class="nv"> </span><span class="s">operativo:</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">ansible_distribution</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">ansible_distribution_version</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">        </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Operating</span><span class="nv"> </span><span class="s">system:</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">ansible_distribution</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">ansible_distribution_version</span><span class="nv"> </span><span class="s">}}&quot;</span>
 </code></pre></div>
-<p>También puedes definir variables dinámicas durante la ejecución con <code>set_fact</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Calcular ruta temporal</span>
+<p>You can also define dynamic variables during execution with <code>set_fact</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Calculate temporary path</span>
 <span class="w">  </span><span class="nt">ansible.builtin.set_fact</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">tmp_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/tmp/{{</span><span class="nv"> </span><span class="s">ansible_hostname</span><span class="nv"> </span><span class="s">}}_{{</span><span class="nv"> </span><span class="s">ansible_date_time.hour</span><span class="nv"> </span><span class="s">}}.log&quot;</span>
 </code></pre></div>
 <hr />
-<h2 id="errores-comunes-y-buenas-practicas">🚨 Errores Comunes y Buenas Prácticas</h2>
-<h3 id="errores-comunes">Errores Comunes</h3>
+<h2 id="common-errors-and-best-practices">🚨 Common Errors and Best Practices</h2>
+<h3 id="common-errors">Common Errors</h3>
 <ol>
 <li>
-<p><strong>Variables no definidas</strong></p>
+<p><strong>Undefined variables</strong></p>
 <div class="highlight"><pre><span></span><code>ERROR! &#39;pkg_name&#39; is undefined
 The task includes an option with an undefined variable.
 The error was: &#39;pkg_name&#39; is undefined
 </code></pre></div>
-<p>→ Usa <code>default()</code> en tus expresiones: <code>{{ pkg_name | default('nginx',true) }}</code></p>
-<p>→ Añadir la <code>true</code> hace que se asigne el valor default ante cadenas vacías</p>
+<p>→ Use <code>default()</code> in your expressions: <code>{{ pkg_name | default('nginx',true) }}</code></p>
+<p>→ Adding <code>true</code> assigns the default value for empty strings as well</p>
 </li>
 <li>
-<p><strong>Indentación incorrecta</strong></p>
-<p>→ Afecta especialmente en bloques <code>vars:</code> y <code>vars_files:</code>.</p>
+<p><strong>Incorrect indentation</strong></p>
+<p>→ Especially affects <code>vars:</code> and <code>vars_files:</code> blocks.</p>
 </li>
 </ol>
 <hr />
-<h3 id="buenas-practicas">Buenas Prácticas</h3>
+<h3 id="best-practices">Best Practices</h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <ul>
-<li>Define variables <strong>al nivel más bajo posible</strong> (local antes que global).</li>
-<li>Usa <code>defaults/main.yml</code> en roles para asegurar valores seguros.</li>
-<li>Evita nombres genéricos (<code>port</code>, <code>user</code>); usa prefijos (<code>web_port</code>, <code>db_user</code>).</li>
-<li>Documenta el propósito de las variables.</li>
+<li>Define variables <strong>at the lowest possible level</strong> (local rather than global).</li>
+<li>Use <code>defaults/main.yml</code> in roles to ensure safe values.</li>
+<li>Avoid generic names (<code>port</code>, <code>user</code>); use prefixes (<code>web_port</code>, <code>db_user</code>).</li>
+<li>Document the purpose of your variables.</li>
 </ul>
 </div>
 <hr />
-<h2 id="ejercicio-practico">📚 Ejercicio Práctico</h2>
-<p>Para iniciar el ejercicio, ejecuta:
+<h2 id="practical-exercise">📚 Practical Exercise</h2>
+<p>To start the exercise, run:
 <div class="highlight"><pre><span></span><code>lab<span class="w"> </span>start<span class="w"> </span>vars
 </code></pre></div></p>
-<p>Crea un playbook llamado <code>vars_lab.yml</code> que:</p>
+<p>Create a playbook named <code>vars_lab.yml</code> that:</p>
 <ol>
-<li>Se ejecute sobre <code>localhost</code></li>
+<li>Runs on <code>localhost</code></li>
 <li>
-<p>Defina las variables:</p>
+<p>Defines the variables:</p>
 <p><div class="highlight"><pre><span></span><code><span class="nt">web_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
 <span class="nt">web_root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/tmp/demo</span>
 </code></pre></div>
-3. Crea el directorio <code>{{ web_root }}</code> y dentro de este un archivo <code>index.html</code> con el contenido:</p>
-<p><div class="highlight"><pre><span></span><code>Servidor escuchando en el puerto {{ web_port }}
+3. Creates the <code>{{ web_root }}</code> directory and inside it an <code>index.html</code> file with the content:</p>
+<p><div class="highlight"><pre><span></span><code>Server listening on port {{ web_port }}
 </code></pre></div>
-4. Prueba sobrescribir <code>web_port</code> desde la línea de comandos con <code>-e</code>.</p>
+4. Test overriding <code>web_port</code> from the command line with <code>-e</code>.</p>
 </li>
 </ol>
-<p>Para evaluar el ejercicio, ejecuta:
+<p>To grade the exercise, run:
 <div class="highlight"><pre><span></span><code>lab<span class="w"> </span>grade<span class="w"> </span>vars
 </code></pre></div></p>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <ul>
-<li><a href="https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/debug_module.html">Módulo debug</a></li>
-<li><a href="https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/copy_module.html#parameter-content">Módulo copy</a></li>
+<li><a href="https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/debug_module.html">Debug module</a></li>
+<li><a href="https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/copy_module.html#parameter-content">Copy module</a></li>
 </ul>
 </div>
-<p>🔬 <strong>Desafío adicional:</strong></p>
+<p>🔬 <strong>Additional Challenge:</strong></p>
 <ul>
-<li>Agrega una tarea que muestre con <code>debug:</code> la ruta completa del archivo creado</li>
-<li>Agrega una tarea que muestre con <code>debug:</code> el contenido del archivo creado (se puede hacer en varios pasos)</li>
+<li>Add a task that shows the full path of the created file using <code>debug:</code></li>
+<li>Add a task that shows the content of the created file using <code>debug:</code> (can be done in multiple steps)</li>
 </ul>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
 <ul>
-<li><a href="https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/slurp_module.html">Módulo slurp</a></li>
+<li><a href="https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/slurp_module.html">Slurp module</a></li>
 </ul>
 </div>
 
@@ -1420,10 +1420,10 @@ The error was: &#39;pkg_name&#39; is undefined
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
