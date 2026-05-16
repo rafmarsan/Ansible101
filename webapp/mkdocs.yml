@@ -1,5 +1,6 @@
 site_name: Ansible101
 repo_url: https://github.com/rafmarsan/Ansible101
+site_url: https://rafmarsan.github.io/Ansible101
 theme:
   features:
     - navigation.expand
