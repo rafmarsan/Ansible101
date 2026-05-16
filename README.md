@@ -52,12 +52,12 @@ lab grade <nombre_ejercicio>
 
 Para usuarios que solo quieran probar el proyecto:
 
-- Descargar la última versión del binario
-- Agregar al PATH el directorio donde hemos movido el binario lab
-
 ```shell
-export PATH=$(pwd):$PATH
-lab --help
+mkdir -p ansible101
+cd ansible101
+python -m venv venv
+source venv/bin/activate
+pip install https://github.com/rafmarsan/Ansible101/releases/download/v1.0.0/lab-1.0.0-py3-none-any.whl
 ```
 
 > Para desarrolladores que quieran modificar o compilar desde el código fuente, revisar [README.md](cliapp/README.md).

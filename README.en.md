@@ -54,8 +54,11 @@ lab grade <exercise_name>
 For users who just want to try the project:
 
 ```shell
-pip install https://github.com/rafmarsan/Ansible101/releases/download/vX.Y.Z/lab-X.Y.Z-py3-none-any.whl
-lab --help
+mkdir -p ansible101
+cd ansible101
+python -m venv venv
+source venv/bin/activate
+pip install https://github.com/rafmarsan/Ansible101/releases/download/v1.0.0/lab-1.0.0-py3-none-any.whl
 ```
 
 > For developers who want to modify or build from source, see [cliapp/README.md](cliapp/README.md).
