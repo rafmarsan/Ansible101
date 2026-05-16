@@ -1,5 +1,5 @@
 <!-- This file is part of LAB CLI. -->
-<!-- Copyright (C) 2025 Rafael Marín Sánchez (dravel04 - rafa marsan) -->
+<!-- Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan) -->
 <!-- Licensed under the GNU GPLv3. See LICENSE file for details. -->
 
 # Bienvenido a Ansible101 Lab
@@ -50,7 +50,7 @@ Si aparece, la API está habilitada.
 
 ## Instalación
 
-1. Descargar la última versión del binario [aquí](https://github.com/dravel04/Ansible101/releases)
+1. Descargar la última versión del binario [aquí](https://github.com/rafmarsan/Ansible101/releases)
 2. Crear directorio de trabajo y mover el binario descargado dentro la carpeta
 ```shell
 mkdir -p <ruta_directorio>

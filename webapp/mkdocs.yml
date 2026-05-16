@@ -1,5 +1,5 @@
 site_name: Ansible101
-repo_url: https://github.com/dravel04/Ansible101
+repo_url: https://github.com/rafmarsan/Ansible101
 theme:
   features:
     - navigation.expand

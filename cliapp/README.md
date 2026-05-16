@@ -4,6 +4,8 @@ CLI de gestión de laboratorio para el curso Ansible101. Permite a los estudiant
 
 **Licencia:** GPLv3 · **Python:** `>=3.10`
 
+🌐 **Español** | [English](README.en.md)
+
 ---
 
 ## Índice

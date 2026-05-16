@@ -1,5 +1,5 @@
 <!-- This file is part of LAB CLI. -->
-<!-- Copyright (C) 2025 Rafael Marín Sánchez (dravel04 - rafa marsan) -->
+<!-- Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan) -->
 <!-- Licensed under the GNU GPLv3. See LICENSE file for details. -->
 
 # 🧩 6: Configuración de Servidores Web
