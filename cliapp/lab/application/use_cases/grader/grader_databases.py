@@ -2,9 +2,10 @@
 # Copyright (C) 2025 Rafael Marín Sánchez (dravel04 - rafa marsan)
 # Licensed under the GNU GPLv3. See LICENSE file for details.
 
-# lab/application/use_cases/grader/grader_vars.py
+# lab/application/use_cases/grader/grader_databases.py
 from typing import Tuple, Union, List
 from rich.text import Text
+from lab.infrastructure.ui.i18n import get_text, get_current_language
 import logging
 import sys
 import time
@@ -13,6 +14,7 @@ from lab.core.dtos.EventInfo import EventInfo
 from lab.core.interfaces.progress_notifier_port import ProgressNotifierPort
 
 logger = logging.getLogger("lab")
+LANG = get_current_language()
 
 class GraderDatabases:
     """
@@ -54,11 +56,11 @@ class GraderDatabases:
             exit_status = stdout.channel.recv_exit_status()
             if exit_status != 0:
                 failed = True
-                error_output = f"Error ejecutando el comando en db1: {stderr.read().decode().strip()}"
+                error_output = get_text(LANG,'error_exec_db1', error=stderr.read().decode().strip())
                 return failed, error_output
             if not int(output) == 1:
                 failed = True
-                error_output = f"PostgreSQL no tiene configurado el puerto 5433. Revise roles/postgresql/defaults/main.yml"
+                error_output = get_text(LANG,'error_pg_port')
             return failed, error_output
         except Exception as e:
             failed = True
@@ -97,11 +99,11 @@ class GraderDatabases:
             exit_status = stdout.channel.recv_exit_status()
             if exit_status != 0:
                 failed = True
-                error_output = f"Error ejecutando el comando en db1: {stderr.read().decode().strip()}"
+                error_output = get_text(LANG,'error_exec_db1', error=stderr.read().decode().strip())
                 return failed, error_output
             if not int(output) == 1:
                 failed = True
-                error_output = f"No existe la tabla 'empleados' en PostgreSQL . Repase 'Ejercicio 2 — Añadir una tabla'"
+                error_output = get_text(LANG,'error_no_tabla_empleados')
             return failed, error_output
         except Exception as e:
             failed = True
@@ -140,11 +142,11 @@ class GraderDatabases:
             exit_status = stdout.channel.recv_exit_status()
             if exit_status != 0:
                 failed = True
-                error_output = f"Error ejecutando el comando en db1: {stderr.read().decode().strip()}"
+                error_output = get_text(LANG,'error_exec_db1', error=stderr.read().decode().strip())
                 return failed, error_output
             if not int(output) >= 4:
                 failed = True
-                error_output = f"No se han creados los usuarios en la tabla 'empleados' en PostgreSQL . Repase 'Ejercicio 3 y 4'"
+                error_output = get_text(LANG,'error_no_usuarios')
             return failed, error_output
         except Exception as e:
             failed = True
@@ -156,21 +158,21 @@ class GraderDatabases:
         """
         Orquestacion del inicio: Define la secuencia de eventos.
         """
-        event_info = EventInfo(name='Verificamos la configuracion del listener')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_config_listener'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_listener_config()
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Verificamos si existe la tabla empleados')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_tabla_empleados'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_table()
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Verificamos si se han creados los usuarios')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_usuarios_creados'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_users()
         event_info.failed = failed; event_info.error_msg = error_output

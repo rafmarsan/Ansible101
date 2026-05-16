@@ -58,20 +58,20 @@ class LabInitializer:
     def execute(self, service: LabPort, repo_adapter: LabRepository, lab: Lab) -> None:
         notifier = ProgressNotifierAdapter()
 
-        event_info = EventInfo(name=get_text('definiendo_fichero'))
+        event_info = EventInfo(name=get_text(lab.language,'definiendo_fichero'))
         spinner_handle, finished_event = notifier.start(event_info)
         repo_adapter.save(lab)
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name=get_text('verificando_ansible'))
+        event_info = EventInfo(name=get_text(lab.language,'verificando_ansible'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = service.verify_context()
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name=get_text('inicializando_lab'))
+        event_info = EventInfo(name=get_text(lab.language,'inicializando_lab'))
         spinner_handle, finished_event = notifier.start(event_info)
         LAB_IMAGES = RegistryAdapter().auto_discover_images()
         failed, error_output = service.init(ContainerAdapter(engine=lab.engine), LAB_IMAGES)
@@ -79,7 +79,7 @@ class LabInitializer:
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name=get_text('desplegando_clave'))
+        event_info = EventInfo(name=get_text(lab.language,'desplegando_clave'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._deploy_priv_key()
         event_info.failed = failed; event_info.error_msg = error_output

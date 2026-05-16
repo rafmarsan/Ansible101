@@ -5,6 +5,7 @@
 # lab/application/use_cases/grader/grader_vars.py
 from typing import Tuple, Union, List
 from rich.text import Text
+from lab.infrastructure.ui.i18n import get_text, get_current_language
 import logging
 import sys
 import time
@@ -13,6 +14,7 @@ from lab.core.dtos.EventInfo import EventInfo
 from lab.core.interfaces.progress_notifier_port import ProgressNotifierPort
 
 logger = logging.getLogger("lab")
+LANG = get_current_language()
 
 class GraderVars:
     """
@@ -31,7 +33,7 @@ class GraderVars:
             error_output = ""
         else:
             failed = True
-            error_output = f"El directorio {directory_path} NO existe"
+            error_output = get_text(LANG,'error_dir_no_existe', dir=directory_path)
         return failed, error_output
 
     def _verify_file(self) -> Tuple[bool, str]:
@@ -43,7 +45,7 @@ class GraderVars:
             error_output = ""
         else:
             failed = True
-            error_output = f"El fichero {file_path} NO existe"
+            error_output = get_text(LANG,'error_fichero_no_existe', file=file_path)
         return failed, error_output
 
     def _verify_playbook_content(self) -> Tuple[bool, str]:
@@ -61,7 +63,7 @@ class GraderVars:
                 remaining = vars_to_search - vars_in_play.keys()
             if remaining:
                 failed = True
-                error_output = f"No se han definido las variables {','.join(sorted(vars_to_search))}"
+                error_output = get_text(LANG,'error_vars_no_definidas', vars=','.join(sorted(vars_to_search)))
             else:
                 failed = False
                 error_output = ""
@@ -83,7 +85,7 @@ class GraderVars:
                 error_output = ""
             else:
                 failed = True
-                error_output = f"El contenido de index.html NO es el solicitado"
+                error_output = get_text(LANG,'error_contenido_index')
             return failed, error_output
         except Exception as e:
             failed = True
@@ -94,21 +96,21 @@ class GraderVars:
         """
         Orquestacion del inicio: Define la secuencia de eventos.
         """
-        event_info = EventInfo(name='Verificamos la definicion del playbook')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_def_playbook'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_playbook_content()
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Verificamos el directorio /tmp/demo')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_dir_tmp_demo'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_directory()
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Verificamos el fichero /tmp/demo/index.html')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_fichero_index'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_file()
         event_info.failed = failed; event_info.error_msg = error_output
@@ -116,7 +118,7 @@ class GraderVars:
         sys.exit(1) if event_info.failed else None
 
 
-        event_info = EventInfo(name='Verificamos el contenido del fichero /tmp/demo/index.html')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_contenido_fichero'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_playbook_content()
         event_info.failed = failed; event_info.error_msg = error_output

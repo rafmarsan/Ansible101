@@ -12,17 +12,7 @@ from pathlib import Path
 
 from lab.infrastructure.ui.progress_notifier_adapter import ProgressNotifierAdapter
 from lab.infrastructure.adapters.registry_adapter import RegistryAdapter
-from lab.infrastructure.ui.i18n import get_text
-
-def get_current_language():
-    config_path = Path.cwd() / ".lab_config.json"
-    if config_path.exists():
-        try:
-            data = json.loads(config_path.read_text())
-            return data.get("language", "es")
-        except:
-            pass
-    return "es"
+from lab.infrastructure.ui.i18n import get_text, get_current_language
 
 LANG = get_current_language()
 
