@@ -42,24 +42,9 @@ Active: active (listening)
 ```
 
 ## Installation
-
-1. Download the latest binary release [here](https://github.com/rafmarsan/Ansible101/releases)
-2. Create a working directory and move the downloaded binary inside
-```shell
-mkdir -p <directory_path>
-mv <binary_path> <directory_path>
-```
-
-    !!! note
-        Since the commands **create files in the path where they are launched**, it is recommended to create a **new folder** to work in
-
-3. Add the directory where we moved the `lab` binary to the `PATH`
-```shell
-export PATH=$(pwd):$PATH
-```
-
-4. Install Ansible
 > Python >= 3.10
+
+1. Create a working directory and create a working **virtual environment**: 
 
     !!! warning
         On Debian/Ubuntu systems using Python3.1X (where X is the minor version)
@@ -67,11 +52,22 @@ export PATH=$(pwd):$PATH
         sudo apt install python3.1X-venv
         ```
 
-    Create a working **virtual environment**:
-    ```shell
-    python -m venv venv
-    source venv/bin/activate
-    ```
+```shell
+mkdir -p ansible101
+cd ansible101
+python -m venv venv
+source venv/bin/activate
+```
+
+2. Install labaratory cli
+```shell
+pip install https://github.com/rafmarsan/Ansible101/releases/download/v1.0.0/lab-1.0.0-py3-none-any.whl
+```
+
+    !!! note
+        Since the commands **create files in the path where they are launched**, it is recommended to create a **new folder** to work in
+
+3. Install Ansible
 
     Install **ansible-core**:
     ```

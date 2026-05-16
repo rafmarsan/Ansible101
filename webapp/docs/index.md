@@ -49,36 +49,32 @@ ls -l /run/user/$UID/podman/podman.sock
 Si aparece, la API está habilitada.
 
 ## Instalación
-
-1. Descargar la última versión del binario [aquí](https://github.com/rafmarsan/Ansible101/releases)
-2. Crear directorio de trabajo y mover el binario descargado dentro la carpeta
-```shell
-mkdir -p <ruta_directorio>
-mv <ruta_binario> <ruta_directorio>
-```
-
-    !!! nota
-        Ya que los comando **crean ficheros en la ruta donde se lanzan**, se recomienda crear una **carpeta nueva** donde trabajar
-
-3. Agregar al `PATH` el directorio donde hemos movido el binario `lab`
-```shell
-export PATH=$(pwd):$PATH
-```
-
-4. Instalar Ansible
 > Python >= 3.10
+
+1. Crear directorio de trabajo y crear un **virtual enviroment** de trabajo:
 
     !!! warning
         En sistemas Debian/Ubuntu con Python3.1X (donde X es la version minor de python)
         ```
         sudo apt install python3.1X-venv
         ```
+    
+```shell
+mkdir -p ansible101
+cd ansible101
+python -m venv venv
+source venv/bin/activate
+```
 
-    Crear un **virtual enviroment** de trabajo:
-    ```shell
-    python -m venv venv
-    source venv/bin/activate
-    ```
+2. Instalar el cli del labaratorio
+```shell
+pip install https://github.com/rafmarsan/Ansible101/releases/download/v1.0.0/lab-1.0.0-py3-none-any.whl
+```
+
+    !!! nota
+        Ya que los comando **crean ficheros en la ruta donde se lanzan**, se recomienda crear una **carpeta nueva** donde trabajar
+
+3. Instalar Ansible
 
     Instalar **ansible-core**:
     ```
