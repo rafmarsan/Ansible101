@@ -1,5 +1,5 @@
 <!-- This file is part of LAB CLI. -->
-<!-- Copyright (C) 2025 Rafael Marín Sánchez (dravel04 - rafa marsan) -->
+<!-- Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan) -->
 <!-- Licensed under the GNU GPLv3. See LICENSE file for details. -->
 
 # Bienvenido a Ansible101 Lab
@@ -7,7 +7,7 @@
 ## Requisitos
 
 !!! info
-    **SOLO** sorpotado en Linux (`glibc >= 2.28`) y en [Windows con WSL](./wsl.md)
+    **SOLO** sorpotado en Linux y en [Windows con WSL](./wsl.md)
 
 Es necesario instalar Podman: [https://podman.io/docs/installation#installing-on-linux](https://podman.io/docs/installation#installing-on-linux)
 
@@ -49,30 +49,32 @@ ls -l /run/user/$UID/podman/podman.sock
 Si aparece, la API está habilitada.
 
 ## Instalación
+> Python >= 3.10
 
-1. Descargar la última versión del binario [aquí](https://github.com/dravel04/Ansible101/releases)
-2. Crear directorio de trabajo y mover el binario descargado dentro la carpeta
+1. Crear directorio de trabajo y crear un **virtual enviroment** de trabajo:
+
+    !!! warning
+        En sistemas Debian/Ubuntu con Python3.1X (donde X es la version minor de python)
+        ```
+        sudo apt install python3.1X-venv
+        ```
+    
 ```shell
-mkdir -p <ruta_directorio>
-mv <ruta_binario> <ruta_directorio>
+mkdir -p ansible101
+cd ansible101
+python -m venv venv
+source venv/bin/activate
+```
+
+2. Instalar el cli del labaratorio
+```shell
+pip install https://github.com/rafmarsan/Ansible101/releases/download/v1.0.0/lab-1.0.0-py3-none-any.whl
 ```
 
     !!! nota
         Ya que los comando **crean ficheros en la ruta donde se lanzan**, se recomienda crear una **carpeta nueva** donde trabajar
 
-3. Agregar al `PATH` el directorio donde hemos movido el binario `lab`
-```shell
-export PATH=$(pwd):$PATH
-```
-
-4. Instalar Ansible
-> Python >= 3.10
-
-    Crear un **virtual enviroment** de trabajo:
-    ```shell
-    python -m venv venv
-    source venv/bin/activate
-    ```
+3. Instalar Ansible
 
     Instalar **ansible-core**:
     ```
@@ -110,7 +112,7 @@ lab init
 esto comenzará realizar varias comprobaciones, buildear la imagen necesaria, generará un fichero de configuración `.lab_config.json`
 
 !!! nota
-    La inicialización del labarotario puede tardar varios **MINUTOS** ya que tiene que:
+    La inicialización del labarotario puede tardar **VARIOS MINUTOS** ya que tiene que:
     
     - Generar claves SSH
     - Hacer build de la imagen que usamos durante el laboratorio

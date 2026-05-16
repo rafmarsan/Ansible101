@@ -2,35 +2,35 @@
 <!-- Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan) -->
 <!-- Licensed under the GNU GPLv3. See LICENSE file for details. -->
 
-# 🧩 7: Gestión de Bases de Datos con PostgreSQL
+# 🧩 7: Database Management with PostgreSQL
 
-## 🎯 Objetivo general
+## 🎯 General Objective
 
-Al finalizar este módulo, serás capaz de:
+By the end of this module, you will be able to:
 
-1. Instalar y configurar PostgreSQL 16 mediante un **rol dedicado**
-2. Inicializar el cluster (bases de datos, usuarios y permisos) usando Ansible
-3. Ejecutar consultas SQL desde un playbook
+1. Install and configure PostgreSQL 16 using a **dedicated role**
+2. Initialize the cluster (databases, users, and permissions) using Ansible
+3. Execute SQL queries from a playbook
 
 ---
 
-## ✍🏻 Comandos del ejercicio
+## ✍🏻 Exercise Commands
 
-Para iniciar el ejercicio, ejecuta:
+To start the exercise, run:
 ```shell
 lab start databases
 ```
 
-Para evaluar el ejercicio, ejecuta:
+To grade the exercise, run:
 ```shell
 lab grade databases
 ```
 
 ---
 
-## 📘 Instalación y Configuración de PostgreSQL usando roles
+## 📘 Installing and Configuring PostgreSQL using roles
 
-### 🏗️ Estructura del rol
+### 🏗️ Role Structure
 
 ```
 roles/
@@ -63,9 +63,9 @@ postgresql_db_password: ansible_123
 
 **templates/pg_hba.conf.j2**
 ```
-# cualquier usuario del sistema puede conectarse a cualquier base de datos sin contraseña usando el socket Unix
+# any system user can connect to any database without a password using the Unix socket
 local   all             all                                     trust
-# cualquier host puede conectarse via TCP/IP, pero debe usar contraseña
+# any host can connect via TCP/IP, but must use a password
 host    all             all             0.0.0.0/0               md5
 ```
 
@@ -73,10 +73,10 @@ host    all             all             0.0.0.0/0               md5
 
 **tasks/main.yml**
 ```yaml
-- name: Instalar PostgreSQL
+- name: Install PostgreSQL
   ansible.builtin.include_tasks: install.yml
 
-- name: Configurar PostgreSQL
+- name: Configure PostgreSQL
   ansible.builtin.include_tasks: configure.yml
 ```
 
@@ -85,19 +85,19 @@ host    all             all             0.0.0.0/0               md5
 **tasks/install.yml**
 ```yaml
 ---
-- name: Instalar repositorio oficial de PostgreSQL
+- name: Install official PostgreSQL repository
   become: true
   ansible.builtin.dnf:
     name: "https://download.postgresql.org/pub/repos/yum/reporpms/EL-{{ ansible_distribution_major_version }}-{{ ansible_architecture }}/pgdg-redhat-repo-latest.noarch.rpm"
     state: present
     disable_gpg_check: true
 
-- name: Deshabilitar PostgreSQL del AppStream
+- name: Disable PostgreSQL from AppStream
   become: true
   ansible.builtin.shell: dnf -qy module disable postgresql
   ignore_errors: true
 
-- name: Instalar PostgreSQL Server
+- name: Install PostgreSQL Server
   become: true
   ansible.builtin.package:
     name:
@@ -110,48 +110,48 @@ host    all             all             0.0.0.0/0               md5
 
 **tasks/configure.yml**
 ```yaml
-- name: Inicializar el repositorio
+- name: Initialize repository
   become: true
   ansible.builtin.shell: /usr/pgsql-{{ postgresql_version }}/bin/postgresql-{{ postgresql_version }}-setup initdb
   args:
     creates: "/var/lib/pgsql/{{ postgresql_version }}/data/PG_VERSION"
 
-- name: Configurar el servicio
+- name: Configure service
   become: true
   ansible.builtin.service:
     name: postgresql-{{ postgresql_version }}
     enabled: true
     state: started
 
-- name: Copiar pg_hba.conf
+- name: Copy pg_hba.conf
   become: true
   become_user: postgres
   ansible.builtin.template:
     src: pg_hba.conf.j2
     dest: "/var/lib/pgsql/{{ postgresql_version }}/data/pg_hba.conf"
-  notify: Reiniciar PostgreSQL
+  notify: Restart PostgreSQL
 
-- name: Activamos el listener
+- name: Activate listener
   become: true
   become_user: postgres
   ansible.builtin.replace:
     path: /var/lib/pgsql/{{ postgresql_version }}/data/postgresql.conf
     regexp: "^#listen_addresses = 'localhost'"
     replace: "listen_addresses = '{{ postgresql_listen_address }}'"
-  notify: Reiniciar PostgreSQL
+  notify: Restart PostgreSQL
 
-- name: Activamos el puerto
+- name: Activate port
   become: true
   become_user: postgres
   ansible.builtin.replace:
     path: /var/lib/pgsql/{{ postgresql_version }}/data/postgresql.conf
     regexp: '^\s*#?\s*port\s*=.*$'
     replace: 'port = {{ postgresql_port }}'
-  notify: Reiniciar PostgreSQL
+  notify: Restart PostgreSQL
 
 - ansible.builtin.meta: flush_handlers
 
-- name: Esperar a que {{ postgresql_port }} este activo
+- name: Wait for {{ postgresql_port }} to be active
   become: true
   ansible.builtin.wait_for:
     host: localhost
@@ -160,7 +160,7 @@ host    all             all             0.0.0.0/0               md5
     timeout: 60
     state: started
 
-- name: Testar conexion a la instancia
+- name: Test connection to instance
   become: true
   become_user: postgres
   become_flags: -i
@@ -168,17 +168,17 @@ host    all             all             0.0.0.0/0               md5
     cmd: psql -p {{ postgresql_port }} -t -c "select version();"
   register: version_output
 
-- name: Seteamos password al usuario 'postgres'
+- name: Set password for 'postgres' user
   become: true
   become_user: postgres
   become_flags: -i
   ansible.builtin.shell:
     cmd: psql -p {{ postgresql_port }} -c "ALTER USER postgres WITH PASSWORD '{{ postgresql_db_password }}';"
 
-- name: Mostramos la version instalada
+- name: Show installed version
   ansible.builtin.debug:
     msg: 
-      - "Instalada la version:"
+      - "Installed version:"
       - "{{ version_output.stdout | trim }}"
 ```
 
@@ -186,7 +186,7 @@ host    all             all             0.0.0.0/0               md5
 
 **handlers/main.yml**
 ```yaml
-- name: Reiniciar PostgreSQL
+- name: Restart PostgreSQL
   become: true
   ansible.builtin.service:
     name: "postgresql-{{ postgresql_version }}"
@@ -195,7 +195,7 @@ host    all             all             0.0.0.0/0               md5
 
 ---
 
-## 📘 Playbook principal
+## 📘 Main Playbook
 
 **databases.yml**
 ```yaml
@@ -206,56 +206,56 @@ host    all             all             0.0.0.0/0               md5
     - role: postgresql
 ```
 
-!!! info "Ejecución del playbook"
-    Tras ejecutar **sin errores** el playbook 
+!!! info "Running the playbook"
+    After running the playbook **without errors**
     ```shell
     ansible-playbook databases.yml
     ```
-    deberias poder logar en la máquina con 
+    you should be able to log into the machine with
     ```shell
     ssh db1
     ```
-    cambiar al usuario `postgres` con 
+    change to the `postgres` user with
     ```shell
     sudo su - postgres
     ```
-    y logar en la instancia con el comando 
+    and log into the instance with the command
     ```shell
     psql
     ```
 
 ---
 
-## 📚 Ejercicio 1 — Cambiar el puerto de PostgreSQL
+## 📚 Exercise 1 — Change the PostgreSQL port
 
-Modificar:
+Modify:
 ```yaml
 postgresql_port: 5433
 ```
 
-Y probar conexión, usando como password `ansible_123`:
+And test the connection, using `ansible_123` as the password:
 ```bash
 psql -h localhost -p 5433
 ```
 
-??? tip "Solucion"
-    En **postgresql/defaults/main.yml** modificar `postgresql_port: 5433` PostgreSQL se reiniciará automaticamente por handler.
+??? tip "Solution"
+    In **postgresql/defaults/main.yml** modify `postgresql_port: 5433`. PostgreSQL will automatically restart via the handler.
 ---
 
-## 📚 Ejercicio 2 — Añadir una tabla
+## 📚 Exercise 2 — Add a table
 
 !!! danger
-    Para el laboratorio vamos a usar la base de datos **postgres**, pero NO es una buena práctica
+    For the lab we will use the **postgres** database, but this is NOT a good practice.
 
-Crear el fichero **postgresql/tasks/database.yml**:
+Create the file **postgresql/tasks/database.yml**:
 ```yaml
-- name: Crear tabla empleados
+- name: Create employees table
   become: true
   become_user: postgres
   become_flags: -i
   ansible.builtin.shell: |
     psql -p {{ postgresql_port }} -d "postgres" -c "
-      CREATE TABLE IF NOT EXISTS empleados (
+      CREATE TABLE IF NOT EXISTS employees (
         id SERIAL PRIMARY KEY,
         username TEXT NOT NULL,
         created_at TIMESTAMP DEFAULT NOW()
@@ -264,32 +264,32 @@ Crear el fichero **postgresql/tasks/database.yml**:
 ```
 
 !!! note
-    RECUERDA añadir el nuevo fichero **database.yml** en **postgresql/tasks/main.yml**
-    ??? tip "Solucion"
+    REMEMBER to add the new file **database.yml** in **postgresql/tasks/main.yml**
+    ??? tip "Solution"
         ```yaml
-        - name: Creacion de tablas y usuarios
+        - name: Creation of tables and users
           ansible.builtin.include_tasks: database.yml
         ```
 
 ---
 
-## 📚 Ejercicio 3 — Insertar datos desde Ansible
+## 📚 Exercise 3 — Insert data from Ansible
 
-Añadir una tarea en **postgresql/tasks/database.yml**:
+Add a task in **postgresql/tasks/database.yml**:
 ```yaml
-- name: Insertar usuario admin
+- name: Insert admin user
   become: true
   become_user: postgres
   become_flags: -i
   ansible.builtin.shell: |
-    psql -p {{ postgresql_port }} -d "postgres" -c "INSERT INTO empleados (username) VALUES ('admin');"
+    psql -p {{ postgresql_port }} -d "postgres" -c "INSERT INTO employees (username) VALUES ('admin');"
 ```
 
 ---
 
-## 📚 Ejercicio 4 — Crear varios usuarios dinámicamente
+## 📚 Exercise 4 — Create multiple users dynamically
 
-Añadir lista en **defaults/main.yml**:
+Add a list in **defaults/main.yml**:
 ```yaml
 postgresql_initial_users:
   - alice
@@ -297,43 +297,43 @@ postgresql_initial_users:
   - charlie
 ```
 
-Añadir una tarea en **postgresql/tasks/database.yml**:
+Add a task in **postgresql/tasks/database.yml**:
 ```yaml
-- name: Insertar usuarios iniciales
+- name: Insert initial users
   become: true
   become_user: postgres
   become_flags: -i
   ansible.builtin.shell:
-    cmd: psql -p {{ postgresql_port }} -d "postgres" -c "INSERT INTO empleados (username) VALUES ('{{ nombre_empleado }}');"
+    cmd: psql -p {{ postgresql_port }} -d "postgres" -c "INSERT INTO employees (username) VALUES ('{{ employee_name }}');"
   loop: "{{ postgresql_initial_users }}"
   loop_control:
-    loop_var: nombre_empleado
+    loop_var: employee_name
 ```
 
-!!! info "Validar"
-    Tras ejecutar **sin errores** el playbook 
+!!! info "Validate"
+    After running the playbook **without errors**
     ```shell
     ansible-playbook databases.yml
     ```
-    deberias poder logar en la máquina con 
+    you should be able to log into the machine with
     ```shell
     ssh db1
     ```
-    cambiar al usuario `postgres` con 
+    change to the `postgres` user with
     ```shell
     sudo su - postgres
     ```
-    y logar en la instancia con el comando 
+    and log into the instance with the command
     ```shell
     export PGPORT=5433
     psql
     ```
     ```sql
-    select * from empleados;
+    select * from employees;
     ```
-    y ver algo como:
+    and see something like:
     ```
-    postgres=# select * from empleados;
+    postgres=# select * from employees;
     id | username |         created_at
     ----+----------+----------------------------
       1 | admin    | 2025-11-27 20:55:37.380092

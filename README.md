@@ -1,5 +1,7 @@
 # Ansible101
 
+🌐 **Español** | [English](README.en.md)
+
 **Proyecto para iniciar a profesionales en el apasionante mundo de Ansible de forma práctica y dinámica.**
 
 Este repositorio contiene:
@@ -16,7 +18,7 @@ El curso comienza totalmente desde cero y utiliza un laboratorio local para prac
 
 Toda la explicación detallada, ejemplos y guías paso a paso están disponibles en la **página del curso**:
 
-👉 [Ver documentación completa](https://dravel04.github.io/Ansible101/)
+👉 [Ver documentación completa](https://rafmarsan.github.io/Ansible101/)
 
 > Sigue el enlace para empezar a aprender con el laboratorio interactivo.
 
@@ -58,7 +60,7 @@ export PATH=$(pwd):$PATH
 lab --help
 ```
 
-> Para desarrolladores que quieran modificar o compilar desde el código fuente, revisar [DEVELOPMENT.md](DEVELOPMENT.md).
+> Para desarrolladores que quieran modificar o compilar desde el código fuente, revisar [README.md](cliapp/README.md).
 
 ## 📚 Recursos
 

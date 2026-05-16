@@ -1,5 +1,5 @@
 # This file is part of LAB CLI.
-# Copyright (C) 2025 Rafael Marín Sánchez (dravel04 - rafa marsan)
+# Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan)
 # Licensed under the GNU GPLv3. See LICENSE file for details.
 
 # podman run -d --name web1 --hostname web1 --systemd=always --privileged -p 2232:22 -p 8080:80 lab-ssh-ol8

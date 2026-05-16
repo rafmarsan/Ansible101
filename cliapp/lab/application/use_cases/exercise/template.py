@@ -1,10 +1,11 @@
 # This file is part of LAB CLI.
-# Copyright (C) 2025 Rafael Marín Sánchez (dravel04 - rafa marsan)
+# Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan)
 # Licensed under the GNU GPLv3. See LICENSE file for details.
 
-# lab/application/use_cases/exercise/exercise_a.py
+# lab/application/use_cases/exercise/template.py
 from typing import Tuple, Union, List
 from rich.text import Text
+from lab.infrastructure.ui.i18n import get_text, get_current_language
 import logging
 import sys
 import time
@@ -15,6 +16,7 @@ from lab.core.interfaces.progress_notifier_port import ProgressNotifierPort
 from lab.infrastructure.adapters.container_adapter import ContainerAdapter
 
 logger = logging.getLogger("lab")
+LANG = get_current_language()
 
 class ExerciseA:
     """
@@ -78,7 +80,7 @@ class ExerciseA:
         """
         container_service = ContainerAdapter()
         container_service.init_client()
-        event_info = EventInfo(name='Eliminando containers del ejercicio')
+        event_info = EventInfo(name=get_text(LANG,'eliminando_containers_ejercicio'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._delete_containers(container_service)
         event_info.failed = failed; event_info.error_msg = error_output

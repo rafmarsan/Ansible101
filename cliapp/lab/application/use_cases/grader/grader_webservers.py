@@ -1,10 +1,11 @@
 # This file is part of LAB CLI.
-# Copyright (C) 2025 Rafael Marín Sánchez (dravel04 - rafa marsan)
+# Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan)
 # Licensed under the GNU GPLv3. See LICENSE file for details.
 
-# lab/application/use_cases/grader/grader_vars.py
+# lab/application/use_cases/grader/grader_webservers.py
 from typing import Tuple, Union, List
 from rich.text import Text
+from lab.infrastructure.ui.i18n import get_text, get_current_language
 import logging
 import sys
 import time
@@ -13,6 +14,7 @@ from lab.core.dtos.EventInfo import EventInfo
 from lab.core.interfaces.progress_notifier_port import ProgressNotifierPort
 
 logger = logging.getLogger("lab")
+LANG = get_current_language()
 
 class GraderWebservers:
     """
@@ -52,7 +54,7 @@ class GraderWebservers:
                 content = f.read().decode('utf-8')
             if not line_to_search in content:
                 failed = True
-                error_output = f"Apache no tiene configurado el puerto 9090. Revise roles/apache/defaults/main.yml"
+                error_output = get_text(LANG,'error_apache_puerto')
             return failed, error_output
         except Exception as e:
             failed = True
@@ -69,16 +71,16 @@ class GraderWebservers:
         error_output = ""
         time.sleep(0.5)
         url = "http://localhost:8080"
-        expected_snippet = "¡Apache funcionando!"
+        expected_snippet = get_text(LANG,'expected_snippet')
         try:
             response = requests.get(url, timeout=2)
             if response.status_code != 200:
                 failed = True
-                error_output = f"HTTP {response.status_code}: la pagina no responde correctamente"
+                error_output = get_text(LANG,'error_http_status', status=response.status_code)
             content = response.text
             if not expected_snippet in content:
                 failed = True
-                error_output = f"El servidor Apache no esta devolviendo la pagina esperada. Revise el template 'index.html.j2' y la tarea de despliegue del template"
+                error_output = get_text(LANG,'error_apache_pagina')
             return failed, error_output
         except Exception as e:
             return True, f"{type(e).__name__}: {e}"
@@ -96,11 +98,11 @@ class GraderWebservers:
             response = requests.get(url, timeout=2)
             if response.status_code != 200:
                 failed = True
-                error_output = f"HTTP {response.status_code}: la pagina no responde correctamente"
+                error_output = get_text(LANG,'error_http_status', status=response.status_code)
             content = response.text
             if not 'OK' in content:
                 failed = True
-                error_output = f"El endpoint de NGINX /health no devuelve 200 OK. Revise el template 'reverse-proxy.conf.j2' y la tarea de despliegue del template"
+                error_output = get_text(LANG,'error_nginx_health')
             return failed, error_output
         except Exception as e:
             return True, f"{type(e).__name__}: {e}"
@@ -109,21 +111,21 @@ class GraderWebservers:
         """
         Orquestacion del inicio: Define la secuencia de eventos.
         """
-        event_info = EventInfo(name='Verificamos la configuracion de Apache')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_config_apache'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_apache_config()
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Verificamos el despliegue de la pagina custom')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_despliegue_custom'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_custom_index()
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Verificamos el endpoint /health')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_endpoint_health'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_endpoint()
         event_info.failed = failed; event_info.error_msg = error_output

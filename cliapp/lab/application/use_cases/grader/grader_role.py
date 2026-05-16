@@ -1,10 +1,11 @@
 # This file is part of LAB CLI.
-# Copyright (C) 2025 Rafael Marín Sánchez (dravel04 - rafa marsan)
+# Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan)
 # Licensed under the GNU GPLv3. See LICENSE file for details.
 
-# lab/application/use_cases/grader/grader_vars.py
+# lab/application/use_cases/grader/grader_role.py
 from typing import Tuple, Union, List
 from rich.text import Text
+from lab.infrastructure.ui.i18n import get_text, get_current_language
 import logging
 import sys
 import time
@@ -13,6 +14,7 @@ from lab.core.dtos.EventInfo import EventInfo
 from lab.core.interfaces.progress_notifier_port import ProgressNotifierPort
 
 logger = logging.getLogger("lab")
+LANG = get_current_language()
 
 class GraderRole:
     """
@@ -36,7 +38,7 @@ class GraderRole:
                 roles = play.get("roles", {})
             if not roles:
                 failed = True
-                error_output = f"No se han definido el rol"
+                error_output = get_text(LANG,'error_no_rol_definido')
             return failed, error_output
         except Exception as e:
             failed = True
@@ -55,7 +57,7 @@ class GraderRole:
                 _includes = task.get("ansible.builtin.include_tasks", {})
             if not _includes:
                 failed = True
-                error_output = f"No se usado 'include_tasks' en el punto de entrada del rol"
+                error_output = get_text(LANG,'error_no_include_tasks')
             else:
                 failed = False
                 error_output = ""
@@ -74,7 +76,7 @@ class GraderRole:
             error_output = ""
         else:
             failed = True
-            error_output = f"El directorio {directory_path} NO existe"
+            error_output = get_text(LANG,'error_dir_no_existe', dir=directory_path)
         return failed, error_output
 
     def _verify_file(self) -> Tuple[bool, str]:
@@ -86,12 +88,12 @@ class GraderRole:
             error_output = ""
         else:
             failed = True
-            error_output = f"El fichero {file_path} NO existe"
+            error_output = get_text(LANG,'error_fichero_no_existe', file=file_path)
         return failed, error_output
 
     def _verify_file_content(self) -> Tuple[bool, str]:
         file_path = "/tmp/demo/index.html"
-        line_to_search = "Servidor escuchando en el puerto 8080"
+        line_to_search = get_text(LANG,'grade_role_file_content')
         time.sleep(0.5)
         try:
             with open(file_path, "r", encoding="utf-8") as f:
@@ -101,7 +103,7 @@ class GraderRole:
                 error_output = ""
             else:
                 failed = True
-                error_output = f"El contenido de index.html NO es el solicitado"
+                error_output = get_text(LANG,'error_contenido_index')
             return failed, error_output
         except Exception as e:
             failed = True
@@ -112,28 +114,28 @@ class GraderRole:
         """
         Orquestacion del inicio: Define la secuencia de eventos.
         """
-        event_info = EventInfo(name='Verificamos la definicion del playbook')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_def_playbook'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_playbook_content()
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Verificamos la definicion del role')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_def_role'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_role_content()
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Verificamos SI EXISTE el directorio /tmp/demo')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_existe_dir'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_directory()
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Verificamos SI EXISTE el fichero /tmp/demo/index.html')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_existe_fichero'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_file()
         event_info.failed = failed; event_info.error_msg = error_output
@@ -141,7 +143,7 @@ class GraderRole:
         sys.exit(1) if event_info.failed else None
 
 
-        event_info = EventInfo(name='Verificamos el contenido del fichero /tmp/demo/index.html')
+        event_info = EventInfo(name=get_text(LANG,'verificamos_contenido_fichero'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._verify_file_content()
         event_info.failed = failed; event_info.error_msg = error_output

@@ -1,10 +1,11 @@
 # This file is part of LAB CLI.
-# Copyright (C) 2025 Rafael Marín Sánchez (dravel04 - rafa marsan)
+# Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan)
 # Licensed under the GNU GPLv3. See LICENSE file for details.
 
-# lab/application/use_cases/exercise/exercise_a.py
+# lab/application/use_cases/exercise/exercise_final.py
 from typing import Tuple, Union, List
 from rich.text import Text
+from lab.infrastructure.ui.i18n import get_text, get_current_language
 import logging
 import sys
 import time
@@ -16,6 +17,7 @@ from lab.core.interfaces.progress_notifier_port import ProgressNotifierPort
 from lab.infrastructure.adapters.container_adapter import ContainerAdapter
 
 logger = logging.getLogger("lab")
+LANG = get_current_language()
 
 class ExerciseFinal:
     """
@@ -106,7 +108,7 @@ class ExerciseFinal:
             return failed, error_output
         except Exception as e:
             failed = True
-            error_output = f"Error configurando ~/.ssh/config: {e}"
+            error_output = get_text(LANG,'error_ssh_config', e=e)
             return failed, error_output
     
     def _ansible_config(self) -> Tuple[bool, str]:
@@ -132,7 +134,7 @@ class ExerciseFinal:
             time.sleep(1)
         except: 
             failed = True
-            error_output = "Fallo en la configuracion del entorno"
+            error_output = get_text(LANG,'error_env_config')
         return failed, error_output
 
     def _role_creation(self, role_name: str) -> Tuple[bool, str]:
@@ -175,7 +177,7 @@ class ExerciseFinal:
             return failed, error_output
         except Exception as e:
             failed = True
-            error_output = f"Error eliminando el role '{role_name}': {e}"
+            error_output = get_text(LANG,'error_delete_role', role_name=role_name, e=e)
             return failed, error_output
         
     def _create_playbook(self) -> Tuple[bool, str]:
@@ -187,7 +189,7 @@ class ExerciseFinal:
             time.sleep(1)
         except: 
             failed = True
-            error_output = "Fallo en la creacion del fichero: site.yml"
+            error_output = get_text(LANG,'error_create_site_yml')
         return failed, error_output
 
     def _delete_containers(self, container_provider: ContainerPort) -> Tuple[bool, str]:
@@ -203,21 +205,21 @@ class ExerciseFinal:
         """
         container_service = ContainerAdapter()
         container_service.init_client()
-        event_info = EventInfo(name='Creando containers: web1, db1')
+        event_info = EventInfo(name=get_text(LANG,'creando_containers_web1_db1'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._create_containers(container_service)
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Configurando ~/.ssh para acceder al contenedor')
+        event_info = EventInfo(name=get_text(LANG,'configurando_ssh_contenedor'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._config_ssh_env()
         event_info.failed = failed; event_info.error_msg = error_output
         notifier.finish(spinner_handle, finished_event)
         sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Preprando el entorno de Ansible')
+        event_info = EventInfo(name=get_text(LANG,'preparando_entorno_ansible'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._ansible_config()
         event_info.failed = failed; event_info.error_msg = error_output
@@ -225,21 +227,21 @@ class ExerciseFinal:
         sys.exit(1) if event_info.failed else None
 
         for role_name in ['apache','nginx','postgresql']:
-            event_info = EventInfo(name=f'Creando ansible role: {role_name.capitalize()}')
+            event_info = EventInfo(name=get_text(LANG,'creando_role_dynamic', role_name=role_name.capitalize()))
             spinner_handle, finished_event = notifier.start(event_info)
             failed, error_output = self._role_creation(role_name=role_name)
             event_info.failed = failed; event_info.error_msg = error_output
             notifier.finish(spinner_handle, finished_event)
             sys.exit(1) if event_info.failed else None
 
-            event_info = EventInfo(name=f'Limpiando carpetas NO necesarias del rol {role_name.capitalize()}')
+            event_info = EventInfo(name=get_text(LANG,'limpiando_carpetas_dynamic', role_name=role_name.capitalize()))
             spinner_handle, finished_event = notifier.start(event_info)
             failed, error_output = self._role_cleanup(role_name=role_name)
             event_info.failed = failed; event_info.error_msg = error_output
             notifier.finish(spinner_handle, finished_event)
             sys.exit(1) if event_info.failed else None
 
-        event_info = EventInfo(name='Creacion del playbook principal: site.yml')
+        event_info = EventInfo(name=get_text(LANG,'creacion_playbook_site'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._create_playbook()
         event_info.failed = failed; event_info.error_msg = error_output
@@ -253,7 +255,7 @@ class ExerciseFinal:
         """
         container_service = ContainerAdapter()
         container_service.init_client()
-        event_info = EventInfo(name='Eliminando containers: web1, db1')
+        event_info = EventInfo(name=get_text(LANG,'eliminando_containers_web1_db1'))
         spinner_handle, finished_event = notifier.start(event_info)
         failed, error_output = self._delete_containers(container_service)
         event_info.failed = failed; event_info.error_msg = error_output

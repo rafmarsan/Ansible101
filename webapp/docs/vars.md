@@ -1,5 +1,5 @@
 <!-- This file is part of LAB CLI. -->
-<!-- Copyright (C) 2025 Rafael Marín Sánchez (dravel04 - rafa marsan) -->
+<!-- Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan) -->
 <!-- Licensed under the GNU GPLv3. See LICENSE file for details. -->
 
 # 🧩 3: Prioridad de variables en Ansible
@@ -216,7 +216,7 @@ Ejemplo:
   hosts: localhost
   gather_facts: true
   tasks:
-    - debug:
+    - ansible.builtin.debug:
         msg: "Sistema operativo: {{ ansible_distribution }} {{ ansible_distribution_version }}"
 ```
 
@@ -224,7 +224,7 @@ También puedes definir variables dinámicas durante la ejecución con `set_fact
 
 ```yaml
 - name: Calcular ruta temporal
-  set_fact:
+  ansible.builtin.set_fact:
     tmp_file: "/tmp/{{ ansible_hostname }}_{{ ansible_date_time.hour }}.log"
 ```
 

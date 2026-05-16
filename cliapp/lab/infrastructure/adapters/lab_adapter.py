@@ -1,5 +1,5 @@
 # This file is part of LAB CLI.
-# Copyright (C) 2025 Rafael Marín Sánchez (dravel04 - rafa marsan)
+# Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan)
 # Licensed under the GNU GPLv3. See LICENSE file for details.
 
 # lab/infrastructure/adapters/lab_adapter.py
@@ -7,8 +7,10 @@ from typing import Tuple, Dict
 import logging
 
 from lab.core.interfaces.container_port import ContainerPort
+from lab.infrastructure.ui.i18n import get_text, get_current_language
 
 logger = logging.getLogger("lab")
+LANG = get_current_language()
 
 class LabAdapter:
 
@@ -22,7 +24,7 @@ class LabAdapter:
         # if ansible_path is None:
         if ansible_path is None:
             failed = True
-            error_output = 'Ansible no esta disponible en el entorno actual'
+            error_output = get_text(LANG,'ansible_no_disponible')
             return failed, error_output 
         try:
             result = subprocess.run(
@@ -35,11 +37,11 @@ class LabAdapter:
             return failed, error_output
         except subprocess.CalledProcessError as e:
             failed = True
-            error_output = "No se pudo ejecutar `ansible --version`. Verifica la instalacion"
+            error_output = get_text(LANG,'error_ansible_version')
             return failed, error_output 
         except FileNotFoundError:
             failed = True
-            error_output = "No se encontro el ejecutable de Ansible en el PATH"
+            error_output = get_text(LANG,'error_ansible_path')
             return failed, error_output 
 
     

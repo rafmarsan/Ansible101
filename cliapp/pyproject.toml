@@ -1,7 +1,7 @@
 [project]
 # Información general del proyecto
 name = "lab"  # Nombre del proyecto. Usado para empaquetado e instalación.
-version = "0.7.3"  # Versión actual del proyecto.
+version = "1.0.0"  # Versión actual del proyecto.
 description = "CLI para la gestión de ejercicios de laboratorio de un curso Ansible."  # Descripción corta.
 authors = [
   { name = "Rafael Marín", email = "trainedbronze@gmail.com" }
@@ -16,10 +16,12 @@ dependencies = [
   "rich==14.1.0",
   "podman==5.6.0",
   "paramiko==4.0.0",
+  "PyYAML==6.0.3",
 ]
 # "docker==7.1.0",
 
-license = { text = "GPL-3.0-or-later" }
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
 
 [project.scripts]
 # Define los scripts de consola que se instalan con el paquete.
@@ -28,25 +30,19 @@ license = { text = "GPL-3.0-or-later" }
 lab = "lab.main:app"
 
 [build-system]
-# Información necesaria para construir el paquete.
-requires = [               # Herramientas necesarias para construirlo
-  "setuptools==80.1.0",      # Backend clásico de empaquetado Python
-  "wheel",                 # Para generar archivos .whl
-  "toml",                  # Parser para pyproject.toml
-]
-# build-backend indica qué herramienta se usa para construir
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-license-files = ["LICENSE"]
+# 1. Escanea de forma recursiva TODAS las subcarpetas del proyecto automáticamente
+packages = { find = {} }
 
-# Opcional: secciones de datos adicionales para setuptools
+# 2. Configuración de datos estáticos (rutas relativas al paquete 'lab')
 [tool.setuptools.package-data]
 lab = [
-  'lab/application/use_cases/exercise/*.py',
-  'lab/application/use_cases/grader/*.py',
-  'lab/infrastructure/containerfiles/*',
+  'infrastructure/containerfiles/*',
 ]
 
-# Otras opciones avanzadas (comentadas) para excluir ciertos módulos o tests
-# nofollow-import-to = ["*.tests", "*.distutils"]
+[project.urls]
+Homepage = "https://github.com/rafmarsan/Ansible101"
+Issues = "https://github.com/rafmarsan/Ansible101/issues"

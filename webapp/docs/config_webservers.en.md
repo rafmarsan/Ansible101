@@ -2,37 +2,37 @@
 <!-- Copyright (C) 2025 Rafael Marín Sánchez (rafmarsan - rafa marsan) -->
 <!-- Licensed under the GNU GPLv3. See LICENSE file for details. -->
 
-# 🧩 6: Configuración de Servidores Web
+# 🧩 6: Configuring Web Servers
 
-## 🎯 Objetivo general
+## 🎯 General Objective
 
-Al finalizar este módulo, serás capaz de:
+By the end of this module, you will be able to:
 
-1. Instalar y configurar Apache usando un **rol completo**
-2. Instalar y configurar Nginx como **reverse proxy** hacia Apache
-3. Usar **templates**, **handlers**, **variables** y **roles**
-4. Ejecutar todo en un **playbook** que orquesta ambos roles
+1. Install and configure Apache using a **complete role**
+2. Install and configure Nginx as a **reverse proxy** to Apache
+3. Use **templates**, **handlers**, **variables**, and **roles**
+4. Run everything in a **playbook** that orchestrates both roles
 
 ---
 
-## ✍🏻 Comandos del ejercicio
+## ✍🏻 Exercise Commands
 
-Para iniciar el ejercicio, ejecuta:
+To start the exercise, run:
 ```shell
 lab start webservers
 ```
 
-Para evaluar el ejercicio, ejecuta:
+To grade the exercise, run:
 ```shell
 lab grade webservers
 ```
 
 ---
 
-## 📘 **Instalación y configuración de Apache usando roles**
-Añade el siguiente contenido al rol `apache` generado
+## 📘 **Installing and configuring Apache using roles**
+Add the following content to the generated `apache` role
 
-### 🏗️ Estructura del rol
+### 🏗️ Role Structure
 
 ```
 roles/
@@ -67,47 +67,47 @@ Listen {{ apache_port }}
 
 **tasks/main.yml**
 ```yaml
-- name: Cargamos modulo de instalacion
+- name: Load installation module
   ansible.builtin.include_tasks: install.yml
 ```
 
 **tasks/install.yml**
 ```yaml
-- name: Instalar Apache
+- name: Install Apache
   become: true
   ansible.builtin.package:
     name: httpd
     state: present
 
-- name: Asegurar que Apache esta habilitado y activo
+- name: Ensure Apache is enabled and running
   become: true
   ansible.builtin.service:
     name: httpd
     enabled: yes
     state: started
 
-- name: Desactivar el listener por defecto en Apache
+- name: Disable default listener in Apache
   become: true
   ansible.builtin.replace:
     path: /etc/httpd/conf/httpd.conf
     regexp: '^Listen 80'
     replace: '# Listen 80'
 
-- name: Copiar configuracion de Apache
+- name: Copy Apache configuration
   become: true
   ansible.builtin.template:
     src: httpd.conf.j2
     dest: /etc/httpd/conf.d/main.conf
-  notify: "Reiniciar Apache"
+  notify: "Restart Apache"
 
-# Ejecuta todos los handlers pendientes, en vez de
-# esperar hasta que se terminen las tasks en el host
+# Execute all pending handlers, instead of
+# waiting until tasks on the host finish
 - ansible.builtin.meta: flush_handlers
 ```
 
 **handlers/main.yml**
 ```yaml
-- name: Reiniciar Apache
+- name: Restart Apache
   become: true
   ansible.builtin.service:
     name: httpd
@@ -116,10 +116,10 @@ Listen {{ apache_port }}
 
 ---
 
-## 📘 **Instalación y configuración de Nginx reverse proxy**
-Añade el siguiente contenido al rol `nginx` generado
+## 📘 **Installing and configuring Nginx reverse proxy**
+Add the following content to the generated `nginx` role
 
-### 🏗️ Estructura del rol
+### 🏗️ Role Structure
 
 ```
 roles/
@@ -251,33 +251,33 @@ http {
 
 **tasks/main.yml**
 ```yaml
-- name: Cargamos modulo de instalacion
+- name: Load installation module
   ansible.builtin.include_tasks: install.yml
 ```
 
 **tasks/install.yml**
 ```yaml
 ---
-- name: Instalar Nginx
+- name: Install Nginx
   become: true
   ansible.builtin.package:
     name: nginx
     state: present
 
-- name: Copiar config principal
+- name: Copy main config
   become: true
   ansible.builtin.template:
     src: nginx.conf.j2
     dest: /etc/nginx/nginx.conf
 
-- name: Copiar config reverse proxy
+- name: Copy reverse proxy config
   become: true
   ansible.builtin.template:
     src: reverse-proxy.conf.j2
     dest: /etc/nginx/conf.d/reverse-proxy.conf
-  notify: "Recargar Nginx"
+  notify: "Reload Nginx"
 
-- name: Asegurar Nginx activo
+- name: Ensure Nginx is running
   become: true
   ansible.builtin.service:
     name: nginx
@@ -288,7 +288,7 @@ http {
 **handlers/main.yml**
 
 ```yaml
-- name: Recargar Nginx
+- name: Reload Nginx
   become: true
   ansible.builtin.service:
     name: nginx
@@ -297,9 +297,9 @@ http {
 
 ---
 
-## 📘 **Playbook principal**
+## 📘 **Main Playbook**
 
-Encargado de orquestar la ejecución de los roles
+Responsible for orchestrating the execution of roles
 
 **webservers.yml**
 ```yaml
@@ -311,46 +311,46 @@ Encargado de orquestar la ejecución de los roles
     - role: nginx
 ```
 
-Puntos clave:
+Key points:
 
-- Cómo **un rol depende de la salida del otro** (`apache_port` → reverse proxy '`nginx_upstream_port`')
-- Cómo **pasar variables al rol** correctamente (su scope es a nivel de play)
-- Cómo manejar **handlers independientes**
-- Cómo separar responsabilidades: **Apache** sirve contenido, **Nginx** lo expone
+- How **one role depends on the output of the other** (`apache_port` → reverse proxy '`nginx_upstream_port`')
+- How to **pass variables to the role** correctly (their scope is at the play level)
+- How to handle **independent handlers**
+- How to separate responsibilities: **Apache** serves content, **Nginx** exposes it
 
 !!! info
-    Tras ejecutar **sin errores** el playbook `ansible-playbook webservers.yml` deberias ver la página por defecto de Apache en [`http://localhost:8080`](http://localhost:8080)
+    After running the playbook `ansible-playbook webservers.yml` **without errors**, you should see the default Apache page at [`http://localhost:8080`](http://localhost:8080)
 
     ![Apache default](assets/images/apache_default.png){ width="300px" }
 
 ---
 
-## 📚 **Ejercicio 1 — Cambiar el puerto de Apache**
+## 📚 **Exercise 1 — Change the Apache port**
 
-Cambiar el puerto por defecto de Apache:
+Change the default Apache port:
 ```yaml
 apache_port: 9090
 nginx_upstream_port: 9090
 ```
-→ Modificar el puerto de upstream en la configuración de nginx también
+→ Modify the upstream port in the nginx configuration as well
 
-??? tip "Solucion"
+??? tip "Solution"
     **apache/defaults/main.yml** : `apache_port: 8080` → `apache_port: 9090`     
     **ngnix/defaults/main.yml** : `nginx_upstream_port: 8080` → `nginx_upstream_port: 9090`
 
 ---
 
-## 📚 **Ejercicio 2 — Añadir una página HTML desde template**
+## 📚 **Exercise 2 — Add an HTML page from template**
 
-Añadir en el rol Apache:
+Add to the Apache role:
 ```
 templates/index.html.j2
-tasks/install.yml → Añadir tarea para desplegar el template
+tasks/install.yml → Add task to deploy the template
 ```
 
 ```html
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Lab Webservers</title>
@@ -380,37 +380,37 @@ tasks/install.yml → Añadir tarea para desplegar el template
 </head>
 <body>
   <div class="box">
-    <h1>¡Apache funcionando!</h1>
-    <p>Has llegado a <strong>/var/www/html/index.html</strong></p>
-    <p>Si ves esta pagina, tu configuracion de <em>VirtualHost</em> está correcta.</p>
+    <h1>Apache is working!</h1>
+    <p>You have reached <strong>/var/www/html/index.html</strong></p>
+    <p>If you see this page, your <em>VirtualHost</em> configuration is correct.</p>
   </div>
 </body>
 </html>
 ```
 
-??? tip "Solucion"
-    Añadir las task al final de **apache/tasks/install.yml**
+??? tip "Solution"
+    Add the task at the end of **apache/tasks/install.yml**
     ```yaml
-    - name: Desplegamos la pagina personalizada
+    - name: Deploy custom page
       ansible.builtin.template:
         src: index.html.j2
         dest: "{{ apache_docroot }}/index.html"
     ```
-    Copiar el HTML en **apache/templates/index.html.j2**
+    Copy the HTML into **apache/templates/index.html.j2**
 
 ---
 
-## 📚 **Ejercicio 3 — Añadir health-check en Nginx**
+## 📚 **Exercise 3 — Add health-check in Nginx**
 
-Añadir en el template de `reverse-proxy.conf.j2`:
+Add to the `reverse-proxy.conf.j2` template:
 ```
 location /health {
   return 200 "OK\n";
 }
 ```
 
-??? tip "Solucion"
-    **templates/reverse-proxy.conf.j2** debe quedar asi:
+??? tip "Solution"
+    **templates/reverse-proxy.conf.j2** should look like this:
     ```
     server {
       listen {{ nginx_listen_port }};
