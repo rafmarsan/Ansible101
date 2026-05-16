@@ -38,3 +38,7 @@ build-backend = "setuptools.build_meta"
 lab = [
   'lab/infrastructure/containerfiles/*',
 ]
+
+[project.urls]
+Homepage = "https://github.com/rafmarsan/Ansible101"
+Issues = "https://github.com/rafmarsan/Ansible101/issues"

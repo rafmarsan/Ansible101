@@ -58,7 +58,7 @@ export PATH=$(pwd):$PATH
 lab --help
 ```
 
-> Para desarrolladores que quieran modificar o compilar desde el código fuente, revisar [DEVELOPMENT.md](DEVELOPMENT.md).
+> Para desarrolladores que quieran modificar o compilar desde el código fuente, revisar [README.md](cliapp/README.md).
 
 ## 📚 Recursos
 
