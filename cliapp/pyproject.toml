@@ -1,7 +1,7 @@
 [project]
 # Información general del proyecto
 name = "lab"  # Nombre del proyecto. Usado para empaquetado e instalación.
-version = "0.8.7"  # Versión actual del proyecto.
+version = "1.0.0"  # Versión actual del proyecto.
 description = "CLI para la gestión de ejercicios de laboratorio de un curso Ansible."  # Descripción corta.
 authors = [
   { name = "Rafael Marín", email = "trainedbronze@gmail.com" }

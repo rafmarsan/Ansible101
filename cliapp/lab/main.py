@@ -154,7 +154,7 @@ def finish(
 
 def version_callback(value: bool):
     if value:
-        __version__ = "0.8.7-final"
+        __version__ = "1.0.0"
         print('Ansible101 Lab')
         print('version :',__version__)
         raise typer.Exit()

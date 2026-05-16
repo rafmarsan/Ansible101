@@ -406,7 +406,7 @@ Con `-e` (editable), cualquier cambio en el código fuente es inmediato sin rein
 ```shell
 cd cliapp/
 pip install -r build_requirements.txt   # instala el módulo 'build'
-python -m build
+rm -rf build/ dist/ *.egg-info && python -m build
 ```
 
 Genera `dist/lab-X.Y.Z-py3-none-any.whl`. Los estudiantes instalan directamente desde GitHub Releases:

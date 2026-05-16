@@ -386,7 +386,7 @@ With `-e` (editable), any code change takes effect immediately without reinstall
 ```shell
 cd cliapp/
 pip install -r build_requirements.txt   # installs the 'build' module
-python -m build
+rm -rf build/ dist/ *.egg-info && python -m build
 ```
 
 Generates `dist/lab-X.Y.Z-py3-none-any.whl`. Students install directly from GitHub Releases:
