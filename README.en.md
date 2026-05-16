@@ -19,7 +19,7 @@ The course starts from scratch and uses a local lab environment for hands-on pra
 
 All detailed explanations, examples and step-by-step guides are available on the **course page**:
 
-👉 [View full documentation](https://rafmarsan.github.io/Ansible101/)
+👉 [View full documentation](https://rafmarsan.github.io/Ansible101/en/)
 
 > Follow the link to start learning with the interactive lab.
 
