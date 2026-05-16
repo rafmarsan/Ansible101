@@ -30,37 +30,11 @@ license-files = ["LICENSE"]
 lab = "lab.main:app"
 
 [build-system]
-# Información necesaria para construir el paquete.
-requires = [               # Herramientas necesarias para construirlo
-  "setuptools==80.1.0",      # Backend clásico de empaquetado Python
-  "wheel",                 # Para generar archivos .whl
-  "toml",                  # Parser para pyproject.toml
-]
-# build-backend indica qué herramienta se usa para construir
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
-# Opcional: secciones de datos adicionales para setuptools
+# Ficheros no-Python que deben incluirse en el wheel (setuptools no los incluye automáticamente)
 [tool.setuptools.package-data]
 lab = [
-  'lab/application/use_cases/exercise/*.py',
-  'lab/application/use_cases/grader/*.py',
   'lab/infrastructure/containerfiles/*',
 ]
-
-# Otras opciones avanzadas (comentadas) para excluir ciertos módulos o tests
-# nofollow-import-to = ["*.tests", "*.distutils"]
-
-[tool.nuitka]
-# Forzar comportamiento standalone y empaquetar en un solo ejecutable
-standalone = true
-onefile = true
-static-libpython = "no"
-# Incluir explícitamente todo tu paquete 'lab' y sus submódulos
-include-package = ["lab"]
-# Solucionar el problema de PyYAML forzando la inclusión del módulo 'yaml'
-include-module = ["yaml"]
-# Metadatos del proyecto requeridos en tiempo de ejecución
-include-distribution-metadata = ["lab"]
-# Copiar tus archivos de configuración/infraestructura dentro del binario
-include-data-dir = ["lab/infrastructure/containerfiles=lab/infrastructure/containerfiles"]
-
