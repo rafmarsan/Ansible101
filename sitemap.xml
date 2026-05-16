@@ -1,157 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>None./</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="None"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/"/>
     </url>
     <url>
-        <loc>Noneadmonitions_list/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/admonitions_list/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="Noneadmonitions_list/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/admonitions_list/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/admonitions_list/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/admonitions_list/"/>
     </url>
     <url>
-        <loc>Nonebasics/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/basics/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="Nonebasics/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/basics/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/basics/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/basics/"/>
     </url>
     <url>
-        <loc>Noneconfig_databases/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/config_databases/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="Noneconfig_databases/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/config_databases/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/config_databases/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/config_databases/"/>
     </url>
     <url>
-        <loc>Noneconfig_webservers/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/config_webservers/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="Noneconfig_webservers/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/config_webservers/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/config_webservers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/config_webservers/"/>
     </url>
     <url>
-        <loc>Nonefinal_project/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/final_project/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="Nonefinal_project/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/final_project/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/final_project/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/final_project/"/>
     </url>
     <url>
-        <loc>Noneintroduction/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/introduction/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="Noneintroduction/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/introduction/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/introduction/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/introduction/"/>
     </url>
     <url>
-        <loc>Nonetask_roles_handlers/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/task_roles_handlers/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="Nonetask_roles_handlers/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/task_roles_handlers/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/task_roles_handlers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/task_roles_handlers/"/>
     </url>
     <url>
-        <loc>Nonetemplates/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/templates/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="Nonetemplates/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/templates/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/templates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/templates/"/>
     </url>
     <url>
-        <loc>Nonevars/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/vars/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="Nonevars/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/vars/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/vars/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/vars/"/>
     </url>
     <url>
-        <loc>Nonewsl/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/wsl/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="es" href="Nonewsl/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/wsl/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/wsl/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/wsl/"/>
     </url>
     <url>
-        <loc>Noneen/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/en/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="None"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/"/>
     </url>
     <url>
-        <loc>Noneen/admonitions_list/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/en/admonitions_list/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/admonitions_list/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="Noneadmonitions_list/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/admonitions_list/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/admonitions_list/"/>
     </url>
     <url>
-        <loc>Noneen/basics/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/en/basics/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/basics/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="Nonebasics/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/basics/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/basics/"/>
     </url>
     <url>
-        <loc>Noneen/config_databases/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/en/config_databases/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/config_databases/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="Noneconfig_databases/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/config_databases/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/config_databases/"/>
     </url>
     <url>
-        <loc>Noneen/config_webservers/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/en/config_webservers/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/config_webservers/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="Noneconfig_webservers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/config_webservers/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/config_webservers/"/>
     </url>
     <url>
-        <loc>Noneen/final_project/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/en/final_project/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/final_project/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="Nonefinal_project/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/final_project/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/final_project/"/>
     </url>
     <url>
-        <loc>Noneen/introduction/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/en/introduction/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/introduction/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="Noneintroduction/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/introduction/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/introduction/"/>
     </url>
     <url>
-        <loc>Noneen/task_roles_handlers/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/en/task_roles_handlers/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/task_roles_handlers/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="Nonetask_roles_handlers/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/task_roles_handlers/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/task_roles_handlers/"/>
     </url>
     <url>
-        <loc>Noneen/templates/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/en/templates/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/templates/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="Nonetemplates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/templates/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/templates/"/>
     </url>
     <url>
-        <loc>Noneen/vars/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/en/vars/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/vars/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="Nonevars/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/vars/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/vars/"/>
     </url>
     <url>
-        <loc>Noneen/wsl/</loc>
+        <loc>https://rafmarsan.github.io/Ansible101/en/wsl/</loc>
         <lastmod>2026-05-16</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneen/wsl/"/>
-        <xhtml:link rel="alternate" hreflang="es" href="Nonewsl/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://rafmarsan.github.io/Ansible101/en/wsl/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://rafmarsan.github.io/Ansible101/wsl/"/>
     </url>
 </urlset>
