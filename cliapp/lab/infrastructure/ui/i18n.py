@@ -84,7 +84,10 @@ TEXTS = {
         "error_ansible_path": "No se encontro el ejecutable de Ansible en el PATH",
         "definiendo_fichero": "Definiendo fichero de configuracion",
         "inicializando_lab": "Inicializando laboratorio",
-        "desplegando_clave": "Desplegando la clave privada del laboratorio"
+        "desplegando_clave": "Desplegando la clave privada del laboratorio",
+        "grade_role_file_content": "Servidor escuchando en el puerto 8080",
+        "expected_snippet": "¡Apache funcionando!",
+        "table_name": "empleados"
     },
     "en": {
         "error_nginx_health": "The NGINX /health endpoint does not return 200 OK. Check the 'reverse-proxy.conf.j2' template and the deployment task",
@@ -107,10 +110,10 @@ TEXTS = {
         "verificamos_def_role": "Verifying role definition",
         "error_no_rol_definido": "Role has not been defined",
         "verificamos_def_playbook": "Verifying playbook definition",
-        "error_no_usuarios": "Users were not created in the 'empleados' table in PostgreSQL. Review 'Exercise 3 and 4'",
+        "error_no_usuarios": "Users were not created in the 'employees' table in PostgreSQL. Review 'Exercise 3 and 4'",
         "verificamos_usuarios_creados": "Verifying if users were created",
-        "error_no_tabla_empleados": "Table 'empleados' does not exist in PostgreSQL. Review 'Exercise 2 — Add a table'",
-        "verificamos_tabla_empleados": "Verifying if 'empleados' table exists",
+        "error_no_tabla_empleados": "Table 'employees' does not exist in PostgreSQL. Review 'Exercise 2 — Add a table'",
+        "verificamos_tabla_empleados": "Verifying if 'employees' table exists",
         "error_pg_port": "PostgreSQL is not configured on port 5433. Check roles/postgresql/defaults/main.yml",
         "error_exec_db1": "Error executing command in db1: {error}",
         "verificamos_config_listener": "Verifying listener configuration",
@@ -167,7 +170,10 @@ TEXTS = {
         "error_ansible_path": "Ansible executable not found in PATH",
         "definiendo_fichero": "Defining configuration file",
         "inicializando_lab": "Initializing lab",
-        "desplegando_clave": "Deploying lab private key"
+        "desplegando_clave": "Deploying lab private key",
+        "grade_role_file_content": "Server listening on port 8080",
+        "expected_snippet": "Apache is working!",
+        "table_name": "employees"
     }
 }
 

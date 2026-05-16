@@ -33,10 +33,14 @@ lab = "lab.main:app"
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
-# Ficheros no-Python que deben incluirse en el wheel (setuptools no los incluye automáticamente)
+[tool.setuptools]
+# 1. Escanea de forma recursiva TODAS las subcarpetas del proyecto automáticamente
+packages = { find = {} }
+
+# 2. Configuración de datos estáticos (rutas relativas al paquete 'lab')
 [tool.setuptools.package-data]
 lab = [
-  'lab/infrastructure/containerfiles/*',
+  'infrastructure/containerfiles/*',
 ]
 
 [project.urls]

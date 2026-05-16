@@ -71,7 +71,7 @@ class GraderWebservers:
         error_output = ""
         time.sleep(0.5)
         url = "http://localhost:8080"
-        expected_snippet = "¡Apache funcionando!"
+        expected_snippet = get_text(LANG,'expected_snippet')
         try:
             response = requests.get(url, timeout=2)
             if response.status_code != 200:

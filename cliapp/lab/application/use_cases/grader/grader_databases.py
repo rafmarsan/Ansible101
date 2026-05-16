@@ -93,7 +93,8 @@ class GraderDatabases:
                 allow_agent=True,
                 look_for_keys=True
             )
-            command = "sudo -u postgres psql -t -c psql -t -p 5433 -c \"SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'empleados';\""
+            table_name = get_text(LANG,'table_name')
+            command = f"sudo -u postgres psql -t -c psql -t -p 5433 -c \"SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'public' AND table_name = '{table_name}';\""
             stdin, stdout, stderr = ssh.exec_command(command)
             output = stdout.read().decode().strip()
             exit_status = stdout.channel.recv_exit_status()
@@ -136,7 +137,8 @@ class GraderDatabases:
                 allow_agent=True,
                 look_for_keys=True
             )
-            command = "sudo -u postgres psql -t -c psql -t -p 5433 -c \"SELECT COUNT(*) FROM empleados;\""
+            table_name = get_text(LANG,'table_name')
+            command = f"sudo -u postgres psql -t -c psql -t -p 5433 -c \"SELECT COUNT(*) FROM {table_name};\""
             stdin, stdout, stderr = ssh.exec_command(command)
             output = stdout.read().decode().strip()
             exit_status = stdout.channel.recv_exit_status()

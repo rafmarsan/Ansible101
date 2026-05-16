@@ -93,7 +93,7 @@ class GraderRole:
 
     def _verify_file_content(self) -> Tuple[bool, str]:
         file_path = "/tmp/demo/index.html"
-        line_to_search = "Servidor escuchando en el puerto 8080"
+        line_to_search = get_text(LANG,'grade_role_file_content')
         time.sleep(0.5)
         try:
             with open(file_path, "r", encoding="utf-8") as f:
