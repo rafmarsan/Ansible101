@@ -14,7 +14,7 @@ By the end of this module, you will be able to:
 
 ---
 
-## 🛞 Exercise Commands
+## ✍🏻 Exercise Commands
 
 To start the exercise, run:
 ```shell
@@ -255,7 +255,7 @@ Create the file **postgresql/tasks/database.yml**:
   become_flags: -i
   ansible.builtin.shell: |
     psql -p {{ postgresql_port }} -d "postgres" -c "
-      CREATE TABLE IF NOT EXISTS empleados (
+      CREATE TABLE IF NOT EXISTS employees (
         id SERIAL PRIMARY KEY,
         username TEXT NOT NULL,
         created_at TIMESTAMP DEFAULT NOW()
@@ -282,7 +282,7 @@ Add a task in **postgresql/tasks/database.yml**:
   become_user: postgres
   become_flags: -i
   ansible.builtin.shell: |
-    psql -p {{ postgresql_port }} -d "postgres" -c "INSERT INTO empleados (username) VALUES ('admin');"
+    psql -p {{ postgresql_port }} -d "postgres" -c "INSERT INTO employees (username) VALUES ('admin');"
 ```
 
 ---
@@ -304,7 +304,7 @@ Add a task in **postgresql/tasks/database.yml**:
   become_user: postgres
   become_flags: -i
   ansible.builtin.shell:
-    cmd: psql -p {{ postgresql_port }} -d "postgres" -c "INSERT INTO empleados (username) VALUES ('{{ employee_name }}');"
+    cmd: psql -p {{ postgresql_port }} -d "postgres" -c "INSERT INTO employees (username) VALUES ('{{ employee_name }}');"
   loop: "{{ postgresql_initial_users }}"
   loop_control:
     loop_var: employee_name
@@ -329,11 +329,11 @@ Add a task in **postgresql/tasks/database.yml**:
     psql
     ```
     ```sql
-    select * from empleados;
+    select * from employees;
     ```
     and see something like:
     ```
-    postgres=# select * from empleados;
+    postgres=# select * from employees;
     id | username |         created_at
     ----+----------+----------------------------
       1 | admin    | 2025-11-27 20:55:37.380092

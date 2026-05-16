@@ -15,7 +15,7 @@ By the end of this module, you will be able to:
 
 ---
 
-## 🛞 Exercise Commands
+## ✍🏻 Exercise Commands
 
 To start the exercise, run:
 ```shell
@@ -30,7 +30,7 @@ lab grade webservers
 ---
 
 ## 📘 **Installing and configuring Apache using roles**
-
+Add the following content to the generated `apache` role
 
 ### 🏗️ Role Structure
 
@@ -117,6 +117,7 @@ Listen {{ apache_port }}
 ---
 
 ## 📘 **Installing and configuring Nginx reverse proxy**
+Add the following content to the generated `nginx` role
 
 ### 🏗️ Role Structure
 
@@ -329,6 +330,7 @@ Key points:
 Change the default Apache port:
 ```yaml
 apache_port: 9090
+nginx_upstream_port: 9090
 ```
 → Modify the upstream port in the nginx configuration as well
 

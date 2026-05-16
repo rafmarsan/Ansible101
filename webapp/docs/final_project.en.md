@@ -15,7 +15,7 @@ By the end of this module you will be able to:
 
 ---
 
-## 🛞 Exercise Commands
+## ✍🏻 Exercise Commands
 
 To start the exercise, run:
 ```shell
@@ -77,7 +77,7 @@ We add a **dynamic query** to obtain employees from Ansible in **postgresql/task
       become_user: postgres
       become_flags: -i
       ansible.builtin.shell:
-        cmd: psql -p {{ postgresql_port }} -d "postgres" -t -A -F"," -c "SELECT json_agg(empleados ORDER BY id) FROM empleados;"
+        cmd: psql -p {{ postgresql_port }} -d "postgres" -t -A -F"," -c "SELECT json_agg(employees ORDER BY id) FROM employees;"
       register: employees_list
     ```
 
@@ -226,7 +226,7 @@ Create the main playbook to orchestrate the entire flow.
     This allows you to easily run a playbook:
 
     ```sh
-    ansible-playbook -i inventory app.yml
+    ansible-playbook -i inventory site.yml
     ```
 
     The playbook will be applied to both **web1** and **db1**, without the need to list them individually.
@@ -286,7 +286,7 @@ ansible-playbook site.yml
 you should be able to access from your browser at:
 
 ```
-http://localhost/
+http://localhost:8080/
 ```
 
 and see a **dynamic list of employees** obtained from PostgreSQL (the number of entries may vary depending on how many times the playbook is launched)

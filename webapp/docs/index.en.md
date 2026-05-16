@@ -7,7 +7,7 @@
 ## Requirements
 
 !!! info
-    **ONLY** supported on Linux (`glibc >= 2.28`) and on [Windows with WSL](./wsl.md)
+    **ONLY** supported on Linux and on [Windows with WSL](./wsl.md)
 
 It is necessary to install Podman: [https://podman.io/docs/installation#installing-on-linux](https://podman.io/docs/installation#installing-on-linux)
 
@@ -61,6 +61,12 @@ export PATH=$(pwd):$PATH
 4. Install Ansible
 > Python >= 3.10
 
+    !!! warning
+        On Debian/Ubuntu systems using Python3.1X (where X is the minor version)
+        ```
+        sudo apt install python3.1X-venv
+        ```
+
     Create a working **virtual environment**:
     ```shell
     python -m venv venv
@@ -103,7 +109,7 @@ lab init
 This will begin to perform various checks, build the necessary image, and generate a `.lab_config.json` configuration file.
 
 !!! note
-    The lab initialization can take several **MINUTES** because it has to:
+    The lab initialization can take **SEVERAL MINUTES** because it has to:
     
     - Generate SSH keys
     - Build the image used during the lab

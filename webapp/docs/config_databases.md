@@ -14,7 +14,7 @@ Al finalizar este módulo, serás capaz de:
 
 ---
 
-## 🛞 Comandos del ejercicio
+## ✍🏻 Comandos del ejercicio
 
 Para iniciar el ejercicio, ejecuta:
 ```shell

@@ -216,7 +216,7 @@ Example:
   hosts: localhost
   gather_facts: true
   tasks:
-    - debug:
+    - ansible.builtin.debug:
         msg: "Operating system: {{ ansible_distribution }} {{ ansible_distribution_version }}"
 ```
 
@@ -224,7 +224,7 @@ You can also define dynamic variables during execution with `set_fact`:
 
 ```yaml
 - name: Calculate temporary path
-  set_fact:
+  ansible.builtin.set_fact:
     tmp_file: "/tmp/{{ ansible_hostname }}_{{ ansible_date_time.hour }}.log"
 ```
 

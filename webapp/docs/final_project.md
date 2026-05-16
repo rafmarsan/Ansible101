@@ -15,7 +15,7 @@ Al finalizar este módulo serás capaz de:
 
 ---
 
-## 🛞 Comandos del ejercicio
+## ✍🏻 Comandos del ejercicio
 
 Para iniciar el ejercicio, ejecuta:
 ```shell
@@ -227,7 +227,7 @@ Crear el playbook principal para orquestar todo el flujo.
     Esto permite ejecutar un playbook de forma más sencilla:
 
     ```sh
-    ansible-playbook -i inventory app.yml
+    ansible-playbook -i inventory site.yml
     ```
 
     El playbook se aplicará tanto sobre **web1** como **db1**, sin necesidad de enumerarlos individualmente.
@@ -287,7 +287,7 @@ ansible-playbook site.yml
 debes poder acceder desde tu navegador a:
 
 ```
-http://localhost/
+http://localhost:8080/
 ```
 
 y ver una **lista dinámica de empleados** obtenida desde PostgreSQL (el número de entradas pueda variar según las veces que se lance en playbook)

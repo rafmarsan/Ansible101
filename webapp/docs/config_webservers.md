@@ -15,7 +15,7 @@ Al finalizar este módulo, serás capaz de:
 
 ---
 
-## 🛞 Comandos del ejercicio
+## ✍🏻 Comandos del ejercicio
 
 Para iniciar el ejercicio, ejecuta:
 ```shell
@@ -30,7 +30,7 @@ lab grade webservers
 ---
 
 ## 📘 **Instalación y configuración de Apache usando roles**
-
+Añade el siguiente contenido al rol `apache` generado
 
 ### 🏗️ Estructura del rol
 
@@ -117,6 +117,7 @@ Listen {{ apache_port }}
 ---
 
 ## 📘 **Instalación y configuración de Nginx reverse proxy**
+Añade el siguiente contenido al rol `nginx` generado
 
 ### 🏗️ Estructura del rol
 
@@ -329,6 +330,7 @@ Puntos clave:
 Cambiar el puerto por defecto de Apache:
 ```yaml
 apache_port: 9090
+nginx_upstream_port: 9090
 ```
 → Modificar el puerto de upstream en la configuración de nginx también
 
