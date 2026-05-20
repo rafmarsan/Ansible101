@@ -1,7 +1,7 @@
 [project]
 # Información general del proyecto
 name = "lab"  # Nombre del proyecto. Usado para empaquetado e instalación.
-version = "1.0.0"  # Versión actual del proyecto.
+version = "1.0.1"  # Versión actual del proyecto.
 description = "CLI para la gestión de ejercicios de laboratorio de un curso Ansible."  # Descripción corta.
 authors = [
   { name = "Rafael Marín", email = "trainedbronze@gmail.com" }
@@ -15,7 +15,7 @@ dependencies = [
   "typing_extensions==4.15.0",
   "rich==14.1.0",
   "podman==5.6.0",
-  "paramiko==4.0.0",
+  "paramiko==5.0.0",
   "PyYAML==6.0.3",
 ]
 # "docker==7.1.0",

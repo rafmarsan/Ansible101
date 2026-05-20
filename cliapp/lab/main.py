@@ -7,8 +7,8 @@ from typing_extensions import Annotated
 from rich.logging import RichHandler
 import logging
 import sys
-import json
-from pathlib import Path
+# import json
+# from pathlib import Path
 
 from lab.infrastructure.ui.progress_notifier_adapter import ProgressNotifierAdapter
 from lab.infrastructure.adapters.registry_adapter import RegistryAdapter
@@ -154,7 +154,7 @@ def finish(
 
 def version_callback(value: bool):
     if value:
-        __version__ = "1.0.0"
+        __version__ = "1.0.1"
         print('Ansible101 Lab')
         print('version :',__version__)
         raise typer.Exit()
