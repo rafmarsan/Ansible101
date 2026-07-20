@@ -21,6 +21,7 @@ lab.egg-info/
 pyenv/
 .direnv
 .envrc
+uv.lock
 
 # Archivos de .git
 .gitignore~
